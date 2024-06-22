@@ -1,0 +1,96 @@
+
+latency is time
+bandwidth is amount
+
+WHERE YOUR GRAPHICS COMMAND GOES THROUGH
+    The Application
+        my code, my bugs
+
+    API Runtime
+        handles
+            - state
+            - validation
+
+    user mode driver (UMD)
+        nvd3dum.dll
+        running in the same context and address space as my Application
+        no elivated privalages
+        creates space for textures
+        swizzling textures?
+
+    The scheduler (Graphics scheduler)
+        timeslices access to the 3D pipeline for different apps
+        only one process gets to submit commands to the 3D pipeline at once
+
+    Kernel mode driver (KMD)
+        only one
+        dont crash this.
+        jamputer will bluescreen
+        the only one calling the shots for the GPU for all the apps fighting over it
+        allocates and maps physical memory
+        inits the GPU at start up
+        proteced path from the DRM and the GPU so no screen cap
+        manages the ACTUAL command buffer
+            - its just a small ring buffer. lol
+
+    The bus
+        The cable to the GPU
+
+    Command Processor
+        the frontend of the GPU
+        reads the commands from the KMD
+
+NOW YOU WANT SOME MEMORY
+    GPU The memory subsystem
+        GPU memory subsystems are FAST (bandwidth)
+        GPU memory subsystems are slow (latency and cache misses)
+            - its a trade off :D
+        DRAM is organized in a 2D grid
+            - both logicaly and physicaly
+            - try to keep it at one DRAM row plz
+
+    PCIe host interface
+        - its not a problem untill it becomes a problem
+
+    Final memory bits and pieces
+        we have video memory and mapped system memory
+            - they both take forever
+            - just make an extra address line that tells us witch way to go
+                - game consols are funny cause its just the memory
+        
+        memory managment unit (MMU)
+            - you can defragment your video memory space without touching it
+        
+    The command proccesser
+        - buffering!
+        - both memory paths lead here, with high-bandwidth and high latency
+            - solution: add a large enough buffer
+                and prefetch far enough ahead to avoid hicups
+            - a bunch of tiny threads? 
+                - cant: some things need to be executed in a specific order
+        from the buffer it goes to the front end
+            - a state machine that proccesses commands
+                - some GPU's have dedicated 2D hardware for VGA and text
+            - it even changes state
+                - the GPU is a huge parrelel machine that runs on state
+                    - WHAT THE FREAK
+                - state changes can be long because of the checks required to not break your GPU
+                    - it flushes the pipeline for every state change
+            - for small things you can just pass the state upstream and not do the whole ordeal
+                - like 4 bits or something lol
+            - multiple instances of the state for modification
+    
+    Synchronization
+        - has the form of "if event X happens, do Y"
+        - "do Y" : 2 types
+            - GPU yelling at the CPU
+                - implemented with interupts
+                - used for infruqent high urgency events
+            - pull-model thing where the GPU keeps it to herself so the CPU can ask about it later
+            - operations of X are called fences
+            - but what if we are trying to Synchroniz on only the GPU
+                - framebuffer example, cant use that texture untill the render is done
+                - the solution is a wait style instruction
+                - THIS DOES NOT ACOUNT FOR COMPUTE SHADERS
+
+    

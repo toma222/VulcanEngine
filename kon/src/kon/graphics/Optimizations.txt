@@ -1,0 +1,4 @@
+
+Memory management
+    - implement the vk memory library thing
+    - i am not making managing my own management
