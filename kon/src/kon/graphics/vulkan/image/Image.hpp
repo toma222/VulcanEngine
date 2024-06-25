@@ -1,6 +1,7 @@
 
 #pragma once
 
+#include "kon/graphics/vulkan/commands/CommandPool.hpp"
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -27,14 +28,17 @@ namespace kon
         uint32_t GetWidth() { return m_width; }
         uint32_t GetHeight() { return m_height; }
 
+		void Destroy();
+
     public:
         static VkFormat FindSupportedFormat(Device *device, const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
-        static void TransitionImageLayout(VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout, uint32_t mipLevels);
+        void TransitionImageLayout(CommandPool *pool, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout, uint32_t mipLevels);
 
     private:
         VkImage m_image { VK_NULL_HANDLE };
         VkDeviceMemory m_imageMemory { VK_NULL_HANDLE };
         VkDevice m_device { VK_NULL_HANDLE };
+		VkImageLayout m_layout;
 
         uint32_t m_width;
         uint32_t m_height;

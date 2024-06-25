@@ -1,13 +1,1 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":7479.8,"name":"CleanupSwapChain","ph":"X","pid":0,"tid":0,"ts":1854}
-,{"cat":"function","dur":3056.2,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":10194}
-,{"cat":"function","dur":25.2,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":13302}
-,{"cat":"function","dur":2915.8,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":13344}
-,{"cat":"function","dur":14455.8,"name":"Clean","ph":"X","pid":0,"tid":0,"ts":1851}
-,{"cat":"function","dur":14226.5,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":16320}
-,{"cat":"function","dur":1798.2,"name":"ClearModules","ph":"X","pid":0,"tid":0,"ts":70837}
-,{"cat":"function","dur":42109.4,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":30596}
-,{"cat":"function","dur":72711.7,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":6}
-,{"cat":"function","dur":4002.9,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":72728}
-
-]}

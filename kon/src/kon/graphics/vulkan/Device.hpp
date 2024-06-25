@@ -59,6 +59,8 @@ namespace kon
 
         PhysicalDeviceProperties &GetPhysicalDeviceProperties() { return m_deviceProperties; }
         VkPhysicalDevice GetPhysicalDevice() { return m_physicalDevice; }
+		VkQueue GetGraphicsQueue() { return m_graphicsQueue; }
+		VkQueue GetPresentQueue() { return m_presentQueue; }
 
         SwapChainSupportDetails QuerySwapChainSupport() { return QuerySwapChainSupport(m_physicalDevice); }
         QueueFamilyIndices FindQueueFamilies() { return FindQueueFamilies(m_physicalDevice); }
@@ -68,6 +70,7 @@ namespace kon
     private:
         void CreatePhysicalDevice();
         void CreateLogicalDevice();
+		void CreateDeviceQueue();
         void PopulatePhysicalDeviceProperties();
 
         QueueFamilyIndices FindQueueFamilies(VkPhysicalDevice device);
@@ -81,6 +84,8 @@ namespace kon
     private:
         VkPhysicalDevice m_physicalDevice {VK_NULL_HANDLE};
         VkDevice m_device;
+		VkQueue m_graphicsQueue;
+		VkQueue m_presentQueue;
         Instance *m_instance;
         PhysicalDeviceProperties m_deviceProperties;
         QueueFamilyIndices m_queueFamilyIndices;

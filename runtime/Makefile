@@ -12,19 +12,19 @@ endif
 
 ifeq ($(config),debug)
   RESCOMP = windres
-  TARGETDIR = ../bin/Debug-windows-x86_64/runtime
-  TARGET = $(TARGETDIR)/runtime.exe
-  OBJDIR = ../bin-int/Debug-windows-x86_64/runtime
+  TARGETDIR = ../bin/Debug-linux-x86_64/runtime
+  TARGET = $(TARGETDIR)/runtime
+  OBJDIR = ../bin-int/Debug-linux-x86_64/runtime
   DEFINES += -DDEBUG -DKN_DEBUG
-  INCLUDES += -I../kon/src -I../external/glfw/include -I../external/glm -IC:/VulkanSDK/1.3.283.0/Include
+  INCLUDES += -I../kon/src -I../external/glfw/include -I../external/glm -I../../../vulkan/1.3.283.0/x86_64/Include
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
   ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS += ../bin/Debug-windows-x86_64/kon/kon.lib ../bin/Debug-windows-x86_64/GLFW/GLFW.lib -lvulkan-1
-  LDDEPS += ../bin/Debug-windows-x86_64/kon/kon.lib ../bin/Debug-windows-x86_64/GLFW/GLFW.lib
-  ALL_LDFLAGS += $(LDFLAGS) -LC:/VulkanSDK/1.3.283.0/Lib -L/usr/lib64 -m64
+  LIBS += ../bin/Debug-linux-x86_64/kon/libkon.a ../bin/Debug-linux-x86_64/GLFW/libGLFW.so -lvulkan
+  LDDEPS += ../bin/Debug-linux-x86_64/kon/libkon.a ../bin/Debug-linux-x86_64/GLFW/libGLFW.so
+  ALL_LDFLAGS += $(LDFLAGS) -L../../../vulkan/1.3.283.0/x86_64/lib -L/usr/lib64 -Wl,-rpath,'$$ORIGIN/../GLFW' -m64
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
   endef
@@ -39,19 +39,19 @@ endif
 
 ifeq ($(config),release)
   RESCOMP = windres
-  TARGETDIR = ../bin/Release-windows-x86_64/runtime
-  TARGET = $(TARGETDIR)/runtime.exe
-  OBJDIR = ../bin-int/Release-windows-x86_64/runtime
+  TARGETDIR = ../bin/Release-linux-x86_64/runtime
+  TARGET = $(TARGETDIR)/runtime
+  OBJDIR = ../bin-int/Release-linux-x86_64/runtime
   DEFINES += -DNDEBUG -DKN_RELEASE
-  INCLUDES += -I../kon/src -I../external/glfw/include -I../external/glm -IC:/VulkanSDK/1.3.283.0/Include
+  INCLUDES += -I../kon/src -I../external/glfw/include -I../external/glm -I../../../vulkan/1.3.283.0/x86_64/Include
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
   ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS += ../bin/Release-windows-x86_64/kon/kon.lib ../bin/Release-windows-x86_64/GLFW/GLFW.lib -lvulkan-1
-  LDDEPS += ../bin/Release-windows-x86_64/kon/kon.lib ../bin/Release-windows-x86_64/GLFW/GLFW.lib
-  ALL_LDFLAGS += $(LDFLAGS) -LC:/VulkanSDK/1.3.283.0/Lib -L/usr/lib64 -m64 -s
+  LIBS += ../bin/Release-linux-x86_64/kon/libkon.a ../bin/Release-linux-x86_64/GLFW/libGLFW.so -lvulkan.lib
+  LDDEPS += ../bin/Release-linux-x86_64/kon/libkon.a ../bin/Release-linux-x86_64/GLFW/libGLFW.so
+  ALL_LDFLAGS += $(LDFLAGS) -L../../../vulkan/1.3.283.0/x86_64/lib -L/usr/lib64 -Wl,-rpath,'$$ORIGIN/../GLFW' -m64 -s
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
   endef

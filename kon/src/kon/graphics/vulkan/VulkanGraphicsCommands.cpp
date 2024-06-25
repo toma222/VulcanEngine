@@ -2,6 +2,10 @@
 #include "VulkanGraphicsCommands.hpp"
 
 #include "kon/core/Logging.hpp"
+#include "kon/graphics/vulkan/Swapchain.hpp"
+#include "kon/graphics/vulkan/commands/CommandPool.hpp"
+#include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
+#include "vulkan/vulkan_core.h"
 
 #include <cstdio>
 #include <cassert>
@@ -68,8 +72,9 @@ namespace kon
     {
         VkPhysicalDeviceMemoryProperties memProperties;
         vkGetPhysicalDeviceMemoryProperties(m_device->GetPhysicalDevice(), &memProperties);
+
         for (uint32_t i = 0; i < memProperties.memoryTypeCount; i++) {
-            if (typeFilter & (1 << i)) {
+            if ((typeFilter & (1 << i)) && (memProperties.memoryTypes[i].propertyFlags & properties) == properties) {
                 return i;
             }
         }
@@ -222,6 +227,7 @@ namespace kon
         "VK_LAYER_KHRONOS_validation"
     };
 
+	/*
     VkPresentModeKHR chooseSwapPresentMode(const std::vector<VkPresentModeKHR> &availablePresentModes)
     {
         for(const auto &availablePresentMode : availablePresentModes)
@@ -235,6 +241,7 @@ namespace kon
         // :3
         return VK_PRESENT_MODE_FIFO_KHR;
     }
+	*/
 
     VkFormat VulkanGraphicsCommands::findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
     {
@@ -318,7 +325,7 @@ namespace kon
         VkCommandBufferAllocateInfo allocInfo{};
         allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
         allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
-        allocInfo.commandPool = m_commandPool;
+        allocInfo.commandPool = m_commandPool->Get();
         allocInfo.commandBufferCount = 1;
 
         VkCommandBuffer commandBuffer;
@@ -342,10 +349,11 @@ namespace kon
         submitInfo.commandBufferCount = 1;
         submitInfo.pCommandBuffers = &commandBuffer;
 
-        vkQueueSubmit(m_graphicsQueue, 1, &submitInfo, VK_NULL_HANDLE);
-        vkQueueWaitIdle(m_graphicsQueue);
+        vkQueueSubmit(m_device->GetGraphicsQueue(), 1, &submitInfo, VK_NULL_HANDLE);
+        vkQueueWaitIdle(m_device->GetGraphicsQueue());
 
-        vkFreeCommandBuffers(m_device->Get(), m_commandPool, 1, &commandBuffer);
+		// VkCommand
+        vkFreeCommandBuffers(m_device->Get(), m_commandPool->Get(), 1, &commandBuffer);
     }
 
     void VulkanGraphicsCommands::CopyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size)
@@ -456,6 +464,7 @@ namespace kon
         endSingleTimeCommands(commandBuffer);
     }
 
+	/*
     VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR> &availableFormats)
     {
         for (const auto &availableFormat : availableFormats)
@@ -469,7 +478,7 @@ namespace kon
 
         return availableFormats[0];
     }
-
+	*/
 
 
     VkSampleCountFlagBits VulkanGraphicsCommands::getMaxUsableSampleCount() {
@@ -740,6 +749,7 @@ namespace kon
     }
     */
 
+	/*
     void VulkanGraphicsCommands::CreateSwapchain()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -755,11 +765,11 @@ namespace kon
             imageCount = swapChainSupport.capabilities.maxImageCount;
         }
 
-        /*
+        
             It is also possible that you’ll render images to a separate image first to perform operations like post-processing.
             In that case you may use a value like VK_IMAGE_USAGE_TRANSFER_DST_BIT instead and use a memory operation
-            to transfer the rendered image to a swap chain image.
-        */
+        o transfer the rendered image to a swap chain image.
+        
 
         VkSwapchainCreateInfoKHR createInfo{};
         createInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
@@ -804,7 +814,9 @@ namespace kon
         m_swapChainImageFormat = surfaceFormat.format;
         m_swapChainExtent = extent;
     }
+	*/
 
+	/*
     void VulkanGraphicsCommands::CreateImageViews()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -814,6 +826,7 @@ namespace kon
             m_swapChainImageViews[i] = createImageView(m_swapChainImages[i], m_swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
         }
     }
+	*/
 
     void VulkanGraphicsCommands::CreateDescriptorSetLayout()
     {
@@ -861,6 +874,7 @@ namespace kon
         }
     }
 
+	/*
     void VulkanGraphicsCommands::CreateRenderPass()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -937,6 +951,7 @@ namespace kon
             assert("failed to create render pass!");
         }
     }
+	*/
 
     void VulkanGraphicsCommands::CreateGraphicsPipeline()
     {
@@ -988,14 +1003,14 @@ namespace kon
         VkViewport viewport{};
         viewport.x = 0.0f;
         viewport.y = 0.0f;
-        viewport.width = (float) m_swapChainExtent.width;
-        viewport.height = (float) m_swapChainExtent.height;
+        viewport.width = (float) m_swapchain->GetSwapchainExtent().width;
+        viewport.height = (float) m_swapchain->GetSwapchainExtent().height;
         viewport.minDepth = 0.0f;
         viewport.maxDepth = 1.0f;
 
         VkRect2D scissor{};
         scissor.offset = {0, 0};
-        scissor.extent = m_swapChainExtent;;
+        scissor.extent = m_swapchain->GetSwapchainExtent();
 
         VkPipelineViewportStateCreateInfo viewportState{};
         viewportState.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
@@ -1087,7 +1102,7 @@ namespace kon
         pipelineInfo.pColorBlendState = &colorBlending;
         pipelineInfo.pDynamicState = &dynamicState;
         pipelineInfo.layout = m_pipelineLayout;
-        pipelineInfo.renderPass = m_renderPass;
+        pipelineInfo.renderPass = m_renderPass->Get();
         pipelineInfo.subpass = 0;
         pipelineInfo.basePipelineHandle = VK_NULL_HANDLE; // Optional
         pipelineInfo.basePipelineIndex = -1; // Optional
@@ -1100,6 +1115,7 @@ namespace kon
         vkDestroyShaderModule(m_device->Get(), vertShaderModule, nullptr);
     }
 
+	/*
     void VulkanGraphicsCommands::CreateFramebuffers()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1114,7 +1130,7 @@ namespace kon
 
             VkFramebufferCreateInfo framebufferInfo{};
             framebufferInfo.sType = VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO;
-            framebufferInfo.renderPass = m_renderPass;
+            framebufferInfo.renderPass = m_renderPass->Get();
             framebufferInfo.attachmentCount = static_cast<uint32_t>(attachments.size());
             framebufferInfo.pAttachments = attachments.data();
             framebufferInfo.width = m_swapChainExtent.width;
@@ -1126,6 +1142,7 @@ namespace kon
             }
         }
     }
+	*/
 
     void VulkanGraphicsCommands::CreateVertexBuffer()
     {
@@ -1239,6 +1256,7 @@ namespace kon
         }
     }
 
+	/*
     void VulkanGraphicsCommands::CreateCommandPool()
     {
         QueueFamilyIndices queueFamilyIndices = findQueueFamilies(m_device->GetPhysicalDevice());
@@ -1248,18 +1266,21 @@ namespace kon
         poolInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
         poolInfo.queueFamilyIndex = queueFamilyIndices.graphicsFamily.value();
 
-        if (vkCreateCommandPool(m_device->Get(), &poolInfo, nullptr, &m_commandPool) != VK_SUCCESS) {
+		vk
+        if (vkCreateCommandPool(m_device->Get(), &poolInfo, nullptr, &m_commandPool->Get()) != VK_SUCCESS) {
             assert("failed to create command pool!");
         }
     }
+	*/
 
+	/*
     void VulkanGraphicsCommands::CreateCommandBuffer()
     {
         m_commandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
 
         VkCommandBufferAllocateInfo allocInfo{};
         allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
-        allocInfo.commandPool = m_commandPool;
+        allocInfo.commandPool = m_commandPool->Get();
         allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
         allocInfo.commandBufferCount = (uint32_t) m_commandBuffers.size();
 
@@ -1267,6 +1288,7 @@ namespace kon
             assert("failed to allocate command buffers!");
         }
     }
+	*/
 
     void VulkanGraphicsCommands::RecordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex)
     {
@@ -1281,10 +1303,10 @@ namespace kon
 
         VkRenderPassBeginInfo renderPassInfo{};
         renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
-        renderPassInfo.renderPass = m_renderPass;
-        renderPassInfo.framebuffer = m_swapChainFramebuffers[imageIndex];
+        renderPassInfo.renderPass = m_renderPass->Get();
+        renderPassInfo.framebuffer = m_swapchain->GetFramebuffer(imageIndex)->Get(); // m_swapChainFramebuffers[imageIndex];
         renderPassInfo.renderArea.offset = {0, 0};
-        renderPassInfo.renderArea.extent = m_swapChainExtent;
+        renderPassInfo.renderArea.extent = m_swapchain->GetSwapchainExtent();
 
         std::array<VkClearValue, 2> clearValues{};
         clearValues[0].color = {{0.0f, 0.0f, 0.0f, 1.0f}};
@@ -1303,15 +1325,15 @@ namespace kon
         VkViewport viewport{};
         viewport.x = 0.0f;
         viewport.y = 0.0f;
-        viewport.width = static_cast<float>(m_swapChainExtent.width);
-        viewport.height = static_cast<float>(m_swapChainExtent.height);
+        viewport.width = static_cast<float>(m_swapchain->GetSwapchainExtent().width);
+        viewport.height = static_cast<float>(m_swapchain->GetSwapchainExtent().height);
         viewport.minDepth = 0.0f;
         viewport.maxDepth = 1.0f;
         vkCmdSetViewport(commandBuffer, 0, 1, &viewport);
 
         VkRect2D scissor{};
         scissor.offset = {0, 0};
-        scissor.extent = m_swapChainExtent;
+        scissor.extent = m_swapchain->GetSwapchainExtent();
         vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
         // vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0); // DRAW THE DAMN TRIANGLE
@@ -1348,6 +1370,7 @@ namespace kon
         }
     }
 
+	/*
     void VulkanGraphicsCommands::CleanupSwapChain()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1373,6 +1396,7 @@ namespace kon
 
         vkDestroySwapchainKHR(m_device->Get(), m_swapChain, nullptr);
     }
+	*/
 
     void VulkanGraphicsCommands::CreateImage(uint32_t width, uint32_t height, uint32_t mipLevels, VkSampleCountFlagBits numSamples,
          VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory)
@@ -1510,7 +1534,7 @@ namespace kon
         m_mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(texWidth, texHeight)))) + 1;
 
         if (!pixels) {
-            throw std::runtime_error("failed to load texture image!");
+            KN_ERROR("failed to load texture image!");
         }
 
         VkBuffer stagingBuffer;
@@ -1538,6 +1562,7 @@ namespace kon
         vkFreeMemory(m_device->Get(), stagingBufferMemory, nullptr);
     }
 
+	/*
     void VulkanGraphicsCommands::CreateColorResources()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1550,6 +1575,7 @@ namespace kon
             VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, m_colorImage, m_colorImageMemory);
         m_colorImageView = createImageView(m_colorImage, colorFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
     }
+	*/
 
     VkImageView VulkanGraphicsCommands::createImageView(VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels)
     {
@@ -1607,6 +1633,7 @@ namespace kon
         m_textureImageView = createImageView(m_textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT, m_mipLevels);
     }
 
+	/*
     void VulkanGraphicsCommands::CreateDepthResources()
     {
         VkFormat depthFormat = findDepthFormat();
@@ -1614,6 +1641,7 @@ namespace kon
         m_depthImageView = createImageView(m_depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
         transitionImageLayout(m_depthImage, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, 1);
     }
+	*/
 
     void VulkanGraphicsCommands::LoadModel()
     {
@@ -1676,20 +1704,28 @@ namespace kon
         // CreateLogicalDevice();
 
         m_device = new Device(m_instance);
-        QueueFamilyIndices indices = m_device->FindQueueFamilies();
-        vkGetDeviceQueue(m_device->Get(), indices.graphicsFamily.value(), 0, &m_graphicsQueue);
-        vkGetDeviceQueue(m_device->Get(), indices.presentFamily.value(), 0, &m_presentQueue);
+		m_commandPool = new CommandPool(m_device, MAX_FRAMES_IN_FLIGHT);
+		
 
-        CreateSwapchain();
-        CreateImageViews();
+        // QueueFamilyIndices indices = m_device->FindQueueFamilies();
+        // vkGetDeviceQueue(m_device->Get(), indices.graphicsFamily.value(), 0, &m_graphicsQueue);
+        // vkGetDeviceQueue(m_device->Get(), indices.presentFamily.value(), 0, &m_presentQueue);
+		m_swapchain = new Swapchain(m_instance, m_device, m_commandPool, m_window);
 
-        CreateRenderPass();
+        // CreateSwapchain();
+
+		m_renderPass = new RenderPass(m_device, AttachmentArray(m_device, m_swapchain->GetSwapchainFormat()));
+		m_swapchain->BindRenderPass(m_renderPass);
+		m_swapchain->CreateFramebuffers();
+
+        // CreateImageViews();
+		
         CreateDescriptorSetLayout();
         CreateGraphicsPipeline();
-        CreateCommandPool();
-        CreateColorResources();
-        CreateDepthResources();
-        CreateFramebuffers();
+        // CreateCommandPool();
+        // CreateColorResources();
+        // CreateDepthResources();
+        // CreateFramebuffers();
         
         CreateTextureImage();
         CreateTextureImageView();
@@ -1701,7 +1737,7 @@ namespace kon
         CreateUniformBuffers();
         CreateDescriptorPool();
         CreateDescriptorSets();
-        CreateCommandBuffer();
+        // CreateCommandBuffer();
         CreateSyncObjects();
 
         // vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
@@ -1717,7 +1753,7 @@ namespace kon
         UniformBufferObject ubo{};
         ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
         ubo.view = glm::lookAt(glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-        ubo.proj = glm::perspective(glm::radians(45.0f), m_swapChainExtent.width / (float) m_swapChainExtent.height, 0.1f, 10.0f);
+        ubo.proj = glm::perspective(glm::radians(45.0f), m_swapchain->GetSwapchainExtent().width / (float) m_swapchain->GetSwapchainExtent().height, 0.1f, 10.0f);
         ubo.proj[1][1] *= -1;
         memcpy(m_uniformBuffersMapped[currentImage], &ubo, sizeof(ubo));
     }
@@ -1735,10 +1771,10 @@ namespace kon
         
         {
             KN_INSTRUMENT_SCOPE("vkAcquireNextImageKHR", 0)
-            VkResult result = vkAcquireNextImageKHR(m_device->Get(), m_swapChain, UINT64_MAX, m_imageAvailableSemaphores[m_currentFrame], VK_NULL_HANDLE, &imageIndex);
+            VkResult result = vkAcquireNextImageKHR(m_device->Get(), m_swapchain->Get(), UINT64_MAX, m_imageAvailableSemaphores[m_currentFrame], VK_NULL_HANDLE, &imageIndex);
 
             if (result == VK_ERROR_OUT_OF_DATE_KHR) {
-                RecreateSwapchain();
+                m_swapchain->RecreateSwapchain();
                 return;
             } else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) {
                 throw std::runtime_error("failed to acquire swap chain image!");
@@ -1749,8 +1785,12 @@ namespace kon
 
         {
             KN_INSTRUMENT_SCOPE("vkResetCommandBuffer", 0)
-            vkResetCommandBuffer(m_commandBuffers[m_currentFrame], 0);
-            RecordCommandBuffer(m_commandBuffers[m_currentFrame], imageIndex);
+			// KN_TRACE("reset");
+            vkResetCommandBuffer(m_commandPool->GetBuffer(m_currentFrame), 0);
+			// KN_TRACE("record");
+            RecordCommandBuffer(m_commandPool->GetBuffer(m_currentFrame), imageIndex);
+			// KN_TRACE("record");
+
         }
 
         UpdateUniformBuffer(m_currentFrame);
@@ -1763,7 +1803,8 @@ namespace kon
         submitInfo.pWaitSemaphores = waitSemaphores;
         submitInfo.pWaitDstStageMask = waitStages;
         submitInfo.commandBufferCount = 1;
-        submitInfo.pCommandBuffers = &m_commandBuffers[m_currentFrame];
+		VkCommandBuffer b = m_commandPool->GetBuffer(m_currentFrame);
+		submitInfo.pCommandBuffers = &b;
 
         VkSemaphore signalSemaphores[] = {m_renderFinishedSemaphores[m_currentFrame]};
         submitInfo.signalSemaphoreCount = 1;
@@ -1771,7 +1812,7 @@ namespace kon
 
         {
             KN_INSTRUMENT_SCOPE("vkQueueSubmit", 0)
-            if (vkQueueSubmit(m_graphicsQueue, 1, &submitInfo, m_inFlightFences[m_currentFrame]) != VK_SUCCESS) {
+            if (vkQueueSubmit(m_device->GetGraphicsQueue(), 1, &submitInfo, m_inFlightFences[m_currentFrame]) != VK_SUCCESS) {
                 assert("failed to submit draw command buffer!");
             }
         }
@@ -1781,7 +1822,7 @@ namespace kon
         presentInfo.waitSemaphoreCount = 1;
         presentInfo.pWaitSemaphores = signalSemaphores;
 
-        VkSwapchainKHR swapChains[] = {m_swapChain};
+        VkSwapchainKHR swapChains[] = {m_swapchain->Get()};
         presentInfo.swapchainCount = 1;
         presentInfo.pSwapchains = swapChains;
         presentInfo.pImageIndices = &imageIndex;
@@ -1790,10 +1831,10 @@ namespace kon
         // vkQueuePresentKHR(m_presentQueue, &presentInfo);
         {
             KN_INSTRUMENT_SCOPE("Present Result", 0)
-            VkResult presentResult = vkQueuePresentKHR(m_presentQueue, &presentInfo);
+            VkResult presentResult = vkQueuePresentKHR(m_device->GetPresentQueue(), &presentInfo);
             if (presentResult == VK_ERROR_OUT_OF_DATE_KHR || presentResult == VK_SUBOPTIMAL_KHR) {
                 
-                RecreateSwapchain();
+                m_swapchain->RecreateSwapchain();
             } else if (presentResult != VK_SUCCESS) {
                 throw std::runtime_error("failed to present swap chain image!");
             }
@@ -1804,29 +1845,17 @@ namespace kon
 
     void VulkanGraphicsCommands::Viewport(int x, int y, int w, int h)
     {
-        RecreateSwapchain();
-    }
-
-    void VulkanGraphicsCommands::RecreateSwapchain()
-    {
-        KN_INSTRUMENT_FUNCTION()
-        vkDeviceWaitIdle(m_device->Get());
-
-        CleanupSwapChain();
-
-        CreateSwapchain();
-        CreateImageViews();
-        CreateColorResources();
-        CreateDepthResources();
-        CreateFramebuffers();
+        m_swapchain->RecreateSwapchain();
     }
 
     void VulkanGraphicsCommands::Clean()
     {
         KN_INSTRUMENT_FUNCTION()
-        CleanupSwapChain();
+        // CleanupSwapChain();
 
         vkDeviceWaitIdle(m_device->Get());
+
+		delete m_swapchain;
 
         vkDestroySampler(m_device->Get(), m_textureSampler, nullptr);
         vkDestroyImageView(m_device->Get(), m_textureImageView, nullptr);
@@ -1848,11 +1877,13 @@ namespace kon
         vkDestroyBuffer(m_device->Get(), m_vertexBuffer, nullptr);
         vkFreeMemory(m_device->Get(), m_vertexBufferMemory, nullptr);
 
-        vkDestroyCommandPool(m_device->Get(), m_commandPool, nullptr);
+        // vkDestroyCommandPool(m_device->Get(), m_commandPool, nullptr);
+		delete m_commandPool;
 
         vkDestroyPipeline(m_device->Get(), m_graphicsPipeline, nullptr);
         vkDestroyPipelineLayout(m_device->Get(), m_pipelineLayout, nullptr);
-        vkDestroyRenderPass(m_device->Get(), m_renderPass, nullptr);
+        // vkDestroyRenderPass(m_device->Get(), m_renderPass, nullptr);
+		delete m_renderPass;
         
         for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
             vkDestroySemaphore(m_device->Get(), m_renderFinishedSemaphores[i], nullptr);

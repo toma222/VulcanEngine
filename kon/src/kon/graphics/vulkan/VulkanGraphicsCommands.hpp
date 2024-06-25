@@ -2,6 +2,10 @@
 #pragma once
 
 #include "../Graphics.hpp"
+#include "kon/graphics/vulkan/Swapchain.hpp"
+#include "kon/graphics/vulkan/commands/CommandBuffer.hpp"
+#include "kon/graphics/vulkan/commands/CommandPool.hpp"
+#include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -161,7 +165,7 @@ namespace kon
         void CleanupSwapChain();
 
         void UpdateUniformBuffer(uint32_t currentImage);
-        void RecreateSwapchain();
+        // void RecreateSwapchain();
 
         QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
         bool isDeviceSuitable(VkPhysicalDevice device);
@@ -198,25 +202,41 @@ namespace kon
 
         Device *m_device;
 
-        VkQueue m_graphicsQueue;
-        VkQueue m_presentQueue;
+        // VkQueue m_graphicsQueue;
+        // VkQueue m_presentQueue;
 
+		/*
         VkSwapchainKHR m_swapChain;
         std::vector<VkImage> m_swapChainImages;
         std::vector<VkImageView> m_swapChainImageViews;
         VkFormat m_swapChainImageFormat;
         VkExtent2D m_swapChainExtent;
 
+        VkImage m_colorImage;
+        VkDeviceMemory m_colorImageMemory;
+        VkImageView m_colorImageView;
+
+        VkImage m_depthImage;
+        VkDeviceMemory m_depthImageMemory;
+        VkImageView m_depthImageView;
+		*/
+		
+
+		Swapchain *m_swapchain;
+		
+
         VkPipeline m_graphicsPipeline;
-        VkRenderPass m_renderPass;
+		RenderPass *m_renderPass;
+        // VkRenderPass m_renderPass;
         VkDescriptorSetLayout m_descriptorSetLayout;
         VkPipelineLayout m_pipelineLayout;
 
-        std::vector<VkFramebuffer> m_swapChainFramebuffers;
+        // std::vector<VkFramebuffer> m_swapChainFramebuffers;
 
-        VkCommandPool m_commandPool;
+		CommandPool *m_commandPool;
+        // VkCommandPool m_commandPool;
+        // std::vector<CommandBuffer*> m_commandBuffers;
 
-        std::vector<VkCommandBuffer> m_commandBuffers;
         std::vector<VkSemaphore> m_imageAvailableSemaphores;
         std::vector<VkSemaphore> m_renderFinishedSemaphores;
         std::vector<VkFence> m_inFlightFences;
@@ -229,9 +249,6 @@ namespace kon
         VkBuffer m_indexBuffer;
         VkDeviceMemory m_indexBufferMemory;
 
-        VkImage m_colorImage;
-        VkDeviceMemory m_colorImageMemory;
-        VkImageView m_colorImageView;
 
         std::vector<VkBuffer> m_uniformBuffers;
         std::vector<VkDeviceMemory> m_uniformBuffersMemory;
@@ -246,9 +263,6 @@ namespace kon
         VkImageView m_textureImageView;
         VkDeviceMemory m_textureImageMemory;
 
-        VkImage m_depthImage;
-        VkDeviceMemory m_depthImageMemory;
-        VkImageView m_depthImageView;
 
         VkSampleCountFlagBits m_msaaSamples = VK_SAMPLE_COUNT_1_BIT;
 

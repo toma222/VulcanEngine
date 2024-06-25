@@ -21,6 +21,10 @@ namespace kon
         uint32_t GetWidth() { return m_width; }
         uint32_t GetHeight() { return m_height; }
 
+		VkFramebuffer Get() { return m_framebuffer; }
+
+		void Destroy();
+
     private:
         VkFramebuffer m_framebuffer { VK_NULL_HANDLE };
         uint32_t m_width;

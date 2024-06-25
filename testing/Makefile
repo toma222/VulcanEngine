@@ -12,9 +12,9 @@ endif
 
 ifeq ($(config),debug)
   RESCOMP = windres
-  TARGETDIR = ../bin/Debug-windows-x86_64/testing
-  TARGET = $(TARGETDIR)/testing.exe
-  OBJDIR = ../bin-int/Debug-windows-x86_64/testing
+  TARGETDIR = ../bin/Debug-linux-x86_64/testing
+  TARGET = $(TARGETDIR)/testing
+  OBJDIR = ../bin-int/Debug-linux-x86_64/testing
   DEFINES += -DDEBUG -DKN_DEBUG
   INCLUDES += -I../kon/src
   FORCE_INCLUDE +=
@@ -22,8 +22,8 @@ ifeq ($(config),debug)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
   ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS += ../bin/Debug-windows-x86_64/kon/kon.lib
-  LDDEPS += ../bin/Debug-windows-x86_64/kon/kon.lib
+  LIBS += ../bin/Debug-linux-x86_64/kon/libkon.a
+  LDDEPS += ../bin/Debug-linux-x86_64/kon/libkon.a
   ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -39,9 +39,9 @@ endif
 
 ifeq ($(config),release)
   RESCOMP = windres
-  TARGETDIR = ../bin/Release-windows-x86_64/testing
-  TARGET = $(TARGETDIR)/testing.exe
-  OBJDIR = ../bin-int/Release-windows-x86_64/testing
+  TARGETDIR = ../bin/Release-linux-x86_64/testing
+  TARGET = $(TARGETDIR)/testing
+  OBJDIR = ../bin-int/Release-linux-x86_64/testing
   DEFINES += -DNDEBUG -DKN_RELEASE
   INCLUDES += -I../kon/src
   FORCE_INCLUDE +=
@@ -49,8 +49,8 @@ ifeq ($(config),release)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
   ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS += ../bin/Release-windows-x86_64/kon/kon.lib
-  LDDEPS += ../bin/Release-windows-x86_64/kon/kon.lib
+  LIBS += ../bin/Release-linux-x86_64/kon/libkon.a
+  LDDEPS += ../bin/Release-linux-x86_64/kon/libkon.a
   ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -s
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS

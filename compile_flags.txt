@@ -1,0 +1,7 @@
+
+-Iexternal
+-Iexternal/glfw/include
+-Iexternal/
+-Iexternal/vulkan
+-Iexternal/glm
+-Ikon/src

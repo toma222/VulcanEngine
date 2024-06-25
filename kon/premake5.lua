@@ -23,7 +23,7 @@ project "kon"
 	links
 	{
         "glfw",
-        "vulkan-1"
+        "%{Library.Vulkan}"
 	}
 
     targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")

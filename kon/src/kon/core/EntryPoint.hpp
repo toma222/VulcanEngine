@@ -2,7 +2,7 @@
 #include "Context.hpp"
 #include "kon/engine/Application.hpp"
 #include "kon/core/Context.hpp"
-#include <kon/Debug/Debug.hpp>
+#include <kon/debug/Debug.hpp>
 
 extern kon::Application *GetApplication(kon::Context *context);
 

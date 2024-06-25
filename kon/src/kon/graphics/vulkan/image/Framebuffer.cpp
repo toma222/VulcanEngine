@@ -21,8 +21,14 @@ namespace kon
         }
     }
 
+	void Framebuffer::Destroy()
+	{
+		vkDestroyFramebuffer(m_device->Get(), m_framebuffer, nullptr);
+	}
+
     Framebuffer::~Framebuffer()
     {
-
+		if(m_framebuffer == VK_NULL_HANDLE) return;
+		Destroy();
     }
 }

@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "kon/graphics/vulkan/commands/CommandPool.hpp"
+#include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -18,19 +20,25 @@ namespace kon
     class Swapchain
     {
     public:
-        Swapchain(Instance *instance, Device *device, const Window *window);
+        Swapchain(Instance *instance, Device *device, CommandPool *commandPool, GLFWwindow *window);
         ~Swapchain();
 
         // void RecreateSwapchain(Instance *instance, Device *device, const Window *windows);
-    
+		void BindRenderPass(RenderPass *renderPass);
+   		void CreateFramebuffers();
+		void RecreateSwapchain();
+		VkSwapchainKHR Get() { return m_swapChain; }
+
+		VkExtent2D GetSwapchainExtent() { return m_swapChainExtent; }
+		VkFormat GetSwapchainFormat() { return m_swapChainImageFormat; }
+		Framebuffer *GetFramebuffer(int i) { return m_swapChainFramebuffers[i]; }
+
     private:
         void DestroySwapchain();
-        void RecreateSwapchain();
-
+        
         void CreateSwapchain();
         void GetSwapchainImages();
         void CreateImageViews();
-        void CreateFramebuffers();
 
         void CreateColorResources();
         void CreateDepthResources();
@@ -38,18 +46,20 @@ namespace kon
     private:
         VkSwapchainKHR m_swapChain;
         std::vector<VkImage> m_swapChainImages;
-        std::vector<ImageView> m_swapChainImageViews;
-        std::vector<Framebuffer> m_swapChainFramebuffers;
+        std::vector<ImageView*> m_swapChainImageViews;
+        std::vector<Framebuffer*> m_swapChainFramebuffers;
         VkFormat m_swapChainImageFormat;
         VkExtent2D m_swapChainExtent;
 
-        Image m_colorImage {};
-        ImageView m_colorImageView {};
-        Image m_depthImage {};
-        ImageView m_depthImageView {};
+        Image *m_colorImage;
+        ImageView *m_colorImageView;
+        Image *m_depthImage;
+        ImageView *m_depthImageView;
 
         Instance *m_instance;
         Device *m_device;
-        const Window *m_window;
+		CommandPool *m_commandPool;
+		RenderPass *m_renderPass {nullptr};
+        GLFWwindow *m_window;
     };
 }

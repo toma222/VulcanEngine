@@ -3,6 +3,10 @@
 
 #include <kon/debug/Debug.hpp>
 #include "Device.hpp"
+#include "kon/core/Logging.hpp"
+#include "kon/graphics/vulkan/commands/CommandPool.hpp"
+#include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
+#include "vulkan/vulkan_core.h"
 #include <algorithm>
 #include <kon/graphics/vulkan/image/ImageView.hpp>
 #include <array>
@@ -37,7 +41,7 @@ namespace kon
         return VK_PRESENT_MODE_FIFO_KHR;
     }
 
-    VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR &capabilities, const Window *window)
+    VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR &capabilities, GLFWwindow *window)
     {
         if(capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max())
         {
@@ -45,7 +49,7 @@ namespace kon
         } else {
             int width, height;
 
-            glfwGetFramebufferSize(window->GetHandle(), &width, &height);
+            glfwGetFramebufferSize(window, &width, &height);
 
             VkExtent2D actualExtent = {
                 static_cast<uint32_t>(width),
@@ -59,16 +63,17 @@ namespace kon
         }
     }
 
-    Swapchain::Swapchain(Instance *instance, Device *device, const Window *window)
-        : m_instance(instance), m_device(device), m_window(window)
+    Swapchain::Swapchain(Instance *instance, Device *device, CommandPool *commandPool, GLFWwindow *window)
+        : m_instance(instance), m_device(device), m_commandPool(commandPool), m_window(window)
     {
         KN_INSTRUMENT_FUNCTION()
         CreateSwapchain();
 
         GetSwapchainImages();
-        CreateImageViews();
-        CreateFramebuffers();
-
+        CreateImageViews();		
+		CreateColorResources();
+		CreateDepthResources();
+		// CreateFramebuffers();
 
         /*
         CreateColorResources();
@@ -79,8 +84,27 @@ namespace kon
 
     Swapchain::~Swapchain()
     {
-
+		DestroySwapchain();
+		
+		for (auto image : m_swapChainImages) 
+		{
+			// vkDestroyImage(m_device->Get(), image, nullptr);
+		}
     }
+
+	void Swapchain::RecreateSwapchain()
+	{
+		KN_INSTRUMENT_FUNCTION()
+
+		DestroySwapchain();
+
+		CreateSwapchain();
+        GetSwapchainImages();
+        CreateImageViews();
+		CreateColorResources();
+		CreateDepthResources();
+		CreateFramebuffers();
+	}
 
     void Swapchain::CreateSwapchain()
     {
@@ -158,7 +182,7 @@ namespace kon
         m_swapChainImageViews.resize(m_swapChainImages.size());
 
         for (uint32_t i = 0; i < m_swapChainImages.size(); i++) {
-            m_swapChainImageViews[i] = ImageView(m_device, m_swapChainImages[i], m_swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1); 
+            m_swapChainImageViews[i] = new ImageView(m_device, m_swapChainImages[i], m_swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1); 
         }
     }
 
@@ -167,13 +191,13 @@ namespace kon
         KN_INSTRUMENT_FUNCTION()
         VkFormat colorFormat = m_swapChainImageFormat;
         
-        m_colorImage = Image(m_device, m_swapChainExtent.width, m_swapChainExtent.height, 1, m_device->GetPhysicalDeviceProperties().mssaSamples,
+        m_colorImage = new Image(m_device, m_swapChainExtent.width, m_swapChainExtent.height, 1, m_device->GetPhysicalDeviceProperties().mssaSamples,
           colorFormat,
            VK_IMAGE_TILING_OPTIMAL,
             VK_IMAGE_USAGE_TRANSIENT_ATTACHMENT_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT,
              VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
 
-        m_colorImageView = ImageView(m_device, m_colorImage.Get(), colorFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
+        m_colorImageView = new ImageView(m_device, m_colorImage->Get(), colorFormat, VK_IMAGE_ASPECT_COLOR_BIT, 1);
     }
 
     void Swapchain::CreateDepthResources()
@@ -184,11 +208,14 @@ namespace kon
             VK_FORMAT_FEATURE_DEPTH_STENCIL_ATTACHMENT_BIT
         );
 
-        m_depthImage = Image(m_device, m_swapChainExtent.width, m_swapChainExtent.height, 1,
+        m_depthImage = new Image(m_device, m_swapChainExtent.width, m_swapChainExtent.height, 1,
                              m_device->GetPhysicalDeviceProperties().mssaSamples, depthFormat,
                              VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
 
-        m_depthImageView = ImageView(m_device, m_depthImage.Get(), depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
+        m_depthImageView = new ImageView(m_device, m_depthImage->Get(), depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
+		// m_depthImageView.transitionImageLayout();
+		m_depthImage->TransitionImageLayout(m_commandPool, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, 1);
+		
 
         // CreateImage(m_swapChainExtent.width, m_swapChainExtent.height, 1, m_device->GetPhysicalDeviceProperties().mssaSamples, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, m_depthImage, m_depthImageMemory);
         // m_depthImageView = createImageView(m_depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
@@ -198,24 +225,51 @@ namespace kon
     void Swapchain::CreateFramebuffers()
     {
         KN_INSTRUMENT_FUNCTION()
+		KN_TRACE("Create framebuffers");
+		if(m_renderPass == nullptr) KN_WARN("renderpass is nullptr");
         m_swapChainFramebuffers.resize(m_swapChainImageViews.size());
 
-        for (size_t i = 0; i < m_swapChainImageViews.size(); i++) {
+        for (size_t i = 0; i < m_swapChainImageViews.size(); i++)
+		{
+			KN_TRACE("Create framebuffers");
 
             std::array<VkImageView, 3> attachments = {
-                m_colorImageView.Get(),
-                m_depthImageView.Get(),
-                m_swapChainImageViews[i].Get()
+                m_colorImageView->Get(),
+                m_depthImageView->Get(),
+                m_swapChainImageViews[i]->Get()
             };
             
-            m_swapChainFramebuffers[i] = Framebuffer(m_device, m_swapChainExtent.width, m_swapChainExtent.height,
-                                                     VK_NULL_HANDLE, attachments.data(), 3);
+            m_swapChainFramebuffers[i] = new Framebuffer(m_device, m_swapChainExtent.width, m_swapChainExtent.height,
+                                                     m_renderPass->Get(), attachments.data(), 3);
         }
     }
 
     void Swapchain::DestroySwapchain()
     {
-        
+        KN_INSTRUMENT_FUNCTION()
+        vkDeviceWaitIdle(m_device->Get());
+
+		delete m_colorImage;
+		delete m_colorImageView;
+		delete m_depthImage;
+		delete m_depthImageView;
+
+		for (auto imageView : m_swapChainImageViews)
+		{
+			delete imageView;
+		}
+
+        for (auto framebuffer : m_swapChainFramebuffers)
+		{
+			delete framebuffer;
+        }
+
+        vkDestroySwapchainKHR(m_device->Get(), m_swapChain, nullptr);
     }
+
+	void Swapchain::BindRenderPass(RenderPass *renderPass)
+	{
+		m_renderPass = renderPass;
+	}
 }
 

@@ -1,13 +1,13 @@
 
 #pragma once
 
-#include "kon/core/Object.hpp"
-#include "kon/types/Vector2.hpp"
+#include <kon/core/Object.hpp>
+#include <kon/types/Vector2.hpp>
 
 #include <kon/core/Context.hpp>
 
 #define GLFW_INCLUDE_VULKAN
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 namespace kon
 {

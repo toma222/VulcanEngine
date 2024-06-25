@@ -1,5 +1,6 @@
 
 #include "RenderPass.hpp"
+#include "vulkan/vulkan_core.h"
 
 #include <array>
 
@@ -10,6 +11,8 @@ namespace kon
     RenderPass::RenderPass(Device *device, AttachmentArray attachments)
         : m_device(device)
     {
+		KN_TRACE("here");
+
         VkSubpassDependency dependency{};
         dependency.srcSubpass = VK_SUBPASS_EXTERNAL;
         dependency.dstSubpass = 0;
@@ -24,7 +27,7 @@ namespace kon
         subpass.colorAttachmentCount = 1;
         subpass.pColorAttachments = &attachments.m_colorRef;
         subpass.pResolveAttachments = &attachments.m_colorResolveRef;
-        subpass.pDepthStencilAttachment = &attachments.m_depthAttachmentRef;
+        subpass.pDepthStencilAttachment = &attachments.m_depthRef;
 
         // std::array<VkAttachmentDescription, 3> attachments = {colorAttachment, depthAttachment, colorAttachmentResolve};
 
@@ -41,4 +44,9 @@ namespace kon
             KN_WARN("failed to create render pass!");
         }
     }
+
+	RenderPass::~RenderPass()
+	{
+		vkDestroyRenderPass(m_device->Get(), m_renderPass, nullptr);
+	}
 }

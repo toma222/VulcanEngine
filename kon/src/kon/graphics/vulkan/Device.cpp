@@ -142,6 +142,7 @@ namespace kon
         CreatePhysicalDevice();
         PopulatePhysicalDeviceProperties();
         CreateLogicalDevice();
+		CreateDeviceQueue();
 
         KN_INFO("Device selected (%s)\n api version %u\n driver version %u",
             m_deviceProperties.deviceName,
@@ -177,7 +178,7 @@ namespace kon
         VkPhysicalDeviceProperties physicalDeviceProperties;
         vkGetPhysicalDeviceProperties(m_physicalDevice, &physicalDeviceProperties);
 
-        m_deviceProperties.mssaSamples = VK_SAMPLE_COUNT_16_BIT;
+        m_deviceProperties.mssaSamples = VK_SAMPLE_COUNT_8_BIT;
         m_deviceProperties.apiVersion = physicalDeviceProperties.apiVersion;
         m_deviceProperties.driverVersion = physicalDeviceProperties.driverVersion;
         m_deviceProperties.deviceName = &physicalDeviceProperties.deviceName[0];
@@ -239,4 +240,10 @@ namespace kon
             KN_ERROR("failed to create logical device");
         }
     }
+
+	void Device::CreateDeviceQueue()
+	{
+		vkGetDeviceQueue(m_device, m_queueFamilyIndices.graphicsFamily.value(), 0, &m_graphicsQueue);
+		vkGetDeviceQueue(m_device, m_queueFamilyIndices.presentFamily.value(), 0, &m_presentQueue);
+	}
 }
