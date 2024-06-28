@@ -37,7 +37,7 @@ namespace kon
     private:
         VkImage m_image { VK_NULL_HANDLE };
         VkDeviceMemory m_imageMemory { VK_NULL_HANDLE };
-        VkDevice m_device { VK_NULL_HANDLE };
+        Device *m_device;
 		VkImageLayout m_layout;
 
         uint32_t m_width;

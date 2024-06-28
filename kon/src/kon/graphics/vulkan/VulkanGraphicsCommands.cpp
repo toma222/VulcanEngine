@@ -3,10 +3,16 @@
 
 #include "kon/core/Logging.hpp"
 #include "kon/graphics/vulkan/Swapchain.hpp"
+#include "kon/graphics/vulkan/buffer/IndexBuffer.hpp"
+#include "kon/graphics/vulkan/buffer/UniformBuffer.hpp"
+#include "kon/graphics/vulkan/buffer/VertexBuffer.hpp"
 #include "kon/graphics/vulkan/commands/CommandPool.hpp"
+#include "kon/graphics/vulkan/descriptor/DescriptorPool.hpp"
+#include "kon/graphics/vulkan/image/TextureImage.hpp"
 #include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
 #include "vulkan/vulkan_core.h"
 
+#include <cstddef>
 #include <cstdio>
 #include <cassert>
 #include <vector>
@@ -855,7 +861,8 @@ namespace kon
             assert("failed to create descriptor set layout!");
         }
     }
-
+	
+	/*
     void VulkanGraphicsCommands::CreateUniformBuffers()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -873,6 +880,7 @@ namespace kon
             vkMapMemory(m_device->Get(), m_uniformBuffersMemory[i], 0, bufferSize, 0, &m_uniformBuffersMapped[i]);
         }
     }
+	*/
 
 	/*
     void VulkanGraphicsCommands::CreateRenderPass()
@@ -986,8 +994,8 @@ namespace kon
         dynamicState.dynamicStateCount = static_cast<uint32_t>(dynamicStates.size());
         dynamicState.pDynamicStates = dynamicStates.data();
 
-        auto bindingDescription = Vertex::getBindingDescription();
-        auto attributeDescriptions = Vertex::getAttributeDescriptions();
+        auto bindingDescription = m_vertexBuffer->GetDescription().GetBinding();
+        auto attributeDescriptions = m_vertexBuffer->GetDescription().GetDescription();
         VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
         vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
         vertexInputInfo.vertexBindingDescriptionCount = 1;
@@ -1144,6 +1152,7 @@ namespace kon
     }
 	*/
 
+	/*
     void VulkanGraphicsCommands::CreateVertexBuffer()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1165,7 +1174,9 @@ namespace kon
         vkDestroyBuffer(m_device->Get(), stagingBuffer, nullptr);
         vkFreeMemory(m_device->Get(), stagingBufferMemory, nullptr);
     }
+	*/
 
+	/*
     void VulkanGraphicsCommands::CreateIndexBuffer()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1187,7 +1198,9 @@ namespace kon
         vkDestroyBuffer(m_device->Get(), stagingBuffer, nullptr);
         vkFreeMemory(m_device->Get(), stagingBufferMemory, nullptr);
     }
+	*/
 
+	/*
     void VulkanGraphicsCommands::CreateDescriptorPool()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1207,14 +1220,16 @@ namespace kon
             assert("failed to create descriptor pool!");
         }
     }
+	*/
 
     void VulkanGraphicsCommands::CreateDescriptorSets()
     {
+
         KN_INSTRUMENT_FUNCTION()
         std::vector<VkDescriptorSetLayout> layouts(MAX_FRAMES_IN_FLIGHT, m_descriptorSetLayout);
         VkDescriptorSetAllocateInfo allocInfo{};
         allocInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO;
-        allocInfo.descriptorPool = m_descriptorPool;
+        allocInfo.descriptorPool = m_descriptorPool->Get();
         allocInfo.descriptorSetCount = static_cast<uint32_t>(MAX_FRAMES_IN_FLIGHT);
         allocInfo.pSetLayouts = layouts.data();
 
@@ -1225,13 +1240,13 @@ namespace kon
 
         for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
             VkDescriptorBufferInfo bufferInfo{};
-            bufferInfo.buffer = m_uniformBuffers[i];
+            bufferInfo.buffer = m_uniformBuffers[i]->Get()->Get();
             bufferInfo.offset = 0;
             bufferInfo.range = sizeof(UniformBufferObject);
 
             VkDescriptorImageInfo imageInfo{};
             imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-            imageInfo.imageView = m_textureImageView;
+            imageInfo.imageView = m_textureImage->GetImageView()->Get();
             imageInfo.sampler = m_textureSampler;
             
             std::array<VkWriteDescriptorSet, 2> descriptorWrites{};
@@ -1316,10 +1331,10 @@ namespace kon
         renderPassInfo.pClearValues = clearValues.data();
 
         vkCmdBeginRenderPass(commandBuffer, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
-        VkBuffer vertexBuffers[] = {m_vertexBuffer};
+        VkBuffer vertexBuffers[] = {m_vertexBuffer->Get()->Get()};
         VkDeviceSize offsets[] = {0};
         vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
-        vkCmdBindIndexBuffer(commandBuffer, m_indexBuffer, 0, VK_INDEX_TYPE_UINT32);
+        vkCmdBindIndexBuffer(commandBuffer, m_indexBuffer->Get()->Get(), 0, VK_INDEX_TYPE_UINT32);
 
         vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_graphicsPipeline);
         VkViewport viewport{};
@@ -1342,7 +1357,8 @@ namespace kon
 
         vkCmdEndRenderPass(commandBuffer);
 
-        if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) {
+        if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS)
+		{
             assert("failed to record command buffer!");
         }
     }
@@ -1525,6 +1541,7 @@ namespace kon
         endSingleTimeCommands(commandBuffer);
     }
 
+	/*
     void VulkanGraphicsCommands::CreateTextureImage()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1561,6 +1578,7 @@ namespace kon
         vkDestroyBuffer(m_device->Get(), stagingBuffer, nullptr);
         vkFreeMemory(m_device->Get(), stagingBufferMemory, nullptr);
     }
+	*/
 
 	/*
     void VulkanGraphicsCommands::CreateColorResources()
@@ -1577,6 +1595,7 @@ namespace kon
     }
 	*/
 
+	/*
     VkImageView VulkanGraphicsCommands::createImageView(VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels)
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1599,6 +1618,7 @@ namespace kon
 
         return imageView;
     }
+	*/
 
     void VulkanGraphicsCommands::CreateTextureSampler()
     {
@@ -1628,10 +1648,12 @@ namespace kon
         }
     }
 
+	/*
     void VulkanGraphicsCommands::CreateTextureImageView()
     {
         m_textureImageView = createImageView(m_textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT, m_mipLevels);
     }
+	*/
 
 	/*
     void VulkanGraphicsCommands::CreateDepthResources()
@@ -1695,47 +1717,62 @@ namespace kon
         KN_TRACE("VulkanGraphicsCommands::Init()");
 
         m_instance = new Instance(m_window);
-
-        // CreateInstance();
-        // SetupDebugMessanger();
-        // CreateSurface();
-
-        // PickPhysicalDevice();
-        // CreateLogicalDevice();
-
         m_device = new Device(m_instance);
 		m_commandPool = new CommandPool(m_device, MAX_FRAMES_IN_FLIGHT);
-		
-
-        // QueueFamilyIndices indices = m_device->FindQueueFamilies();
-        // vkGetDeviceQueue(m_device->Get(), indices.graphicsFamily.value(), 0, &m_graphicsQueue);
-        // vkGetDeviceQueue(m_device->Get(), indices.presentFamily.value(), 0, &m_presentQueue);
 		m_swapchain = new Swapchain(m_instance, m_device, m_commandPool, m_window);
-
-        // CreateSwapchain();
-
 		m_renderPass = new RenderPass(m_device, AttachmentArray(m_device, m_swapchain->GetSwapchainFormat()));
 		m_swapchain->BindRenderPass(m_renderPass);
 		m_swapchain->CreateFramebuffers();
 
-        // CreateImageViews();
 		
-        CreateDescriptorSetLayout();
-        CreateGraphicsPipeline();
+
         // CreateCommandPool();
         // CreateColorResources();
         // CreateDepthResources();
         // CreateFramebuffers();
         
-        CreateTextureImage();
-        CreateTextureImageView();
-        CreateTextureSampler();
+        // CreateTextureImage();
+        // CreateTextureImageView();
+        int texWidth, texHeight, texChannels;
+        stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
+        if (!pixels) {
+            KN_ERROR("failed to load texture image!");
+        }
+		m_textureImage = new TextureImage(m_device, m_commandPool, pixels,
+				TextureData{texWidth, texHeight,
+				static_cast<VkDeviceSize>(texWidth*texHeight*4)});
+        stbi_image_free(pixels);
+
+		CreateTextureSampler();
 
         LoadModel();
-        CreateIndexBuffer();
-        CreateVertexBuffer();
-        CreateUniformBuffers();
-        CreateDescriptorPool();
+
+		m_vertexBuffer = new VertexBuffer(m_device, m_commandPool, vertices.data(), vertices.size() * sizeof(vertices[0]));
+		VertexDescription description(sizeof(Vertex), 3);
+			description.Add(ShaderType::Float3, offsetof(Vertex, pos));
+			description.Add(ShaderType::Float2, offsetof(Vertex, color));
+			description.Add(ShaderType::Float2, offsetof(Vertex, texCoord));
+		m_vertexBuffer->SetDescription(description);
+		
+
+
+		m_indexBuffer = new IndexBuffer(m_device, m_commandPool, indices.data(), indices.size() * sizeof(indices[0]));
+		m_uniformBuffers.resize(MAX_FRAMES_IN_FLIGHT);
+		for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++)
+		{
+			m_uniformBuffers[i] = new UniformBuffer(m_device, m_commandPool, sizeof(UniformBufferObject));
+        }
+
+        CreateDescriptorSetLayout();
+        CreateGraphicsPipeline();
+
+        // CreateDescriptorPool();
+		DescriptonSizeFactory poolFactory;
+			poolFactory.Add(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 3);
+			poolFactory.Add(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 3);
+		m_descriptorPool = new DescriptorPool(m_device, poolFactory);
+
+
         CreateDescriptorSets();
         // CreateCommandBuffer();
         CreateSyncObjects();
@@ -1755,7 +1792,8 @@ namespace kon
         ubo.view = glm::lookAt(glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
         ubo.proj = glm::perspective(glm::radians(45.0f), m_swapchain->GetSwapchainExtent().width / (float) m_swapchain->GetSwapchainExtent().height, 0.1f, 10.0f);
         ubo.proj[1][1] *= -1;
-        memcpy(m_uniformBuffersMapped[currentImage], &ubo, sizeof(ubo));
+
+    	m_uniformBuffers[currentImage]->CopyDataToBuffer(&ubo, sizeof(ubo));
     }
 
     void VulkanGraphicsCommands::DrawFrame()
@@ -1851,31 +1889,37 @@ namespace kon
     void VulkanGraphicsCommands::Clean()
     {
         KN_INSTRUMENT_FUNCTION()
-        // CleanupSwapChain();
 
         vkDeviceWaitIdle(m_device->Get());
 
 		delete m_swapchain;
 
         vkDestroySampler(m_device->Get(), m_textureSampler, nullptr);
-        vkDestroyImageView(m_device->Get(), m_textureImageView, nullptr);
-        vkDestroyImage(m_device->Get(), m_textureImage, nullptr);
-        vkFreeMemory(m_device->Get(), m_textureImageMemory, nullptr);
+        // vkDestroyImageView(m_device->Get(), m_textureImageView, nullptr);
+        //vkDestroyImage(m_device->Get(), m_textureImage, nullptr);
+        //vkFreeMemory(m_device->Get(), m_textureImageMemory, nullptr);
 
-        vkDestroyDescriptorPool(m_device->Get(), m_descriptorPool, nullptr);
+		delete m_textureImage;
+
+        // vkDestroyDescriptorPool(m_device->Get(), m_descriptorPool, nullptr);
+		delete m_descriptorPool;
 
         for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
-            vkDestroyBuffer(m_device->Get(), m_uniformBuffers[i], nullptr);
-            vkFreeMemory(m_device->Get(), m_uniformBuffersMemory[i], nullptr);
+			delete m_uniformBuffers[i];
+            //vkDestroyBuffer(m_device->Get(), m_uniformBuffers[i], nullptr);
+            //vkFreeMemory(m_device->Get(), m_uniformBuffersMemory[i], nullptr);
         }
 
         vkDestroyDescriptorSetLayout(m_device->Get(), m_descriptorSetLayout, nullptr);
 
-        vkDestroyBuffer(m_device->Get(), m_indexBuffer, nullptr);
-        vkFreeMemory(m_device->Get(), m_indexBufferMemory, nullptr);
+        // vkDestroyBuffer(m_device->Get(), m_indexBuffer, nullptr);
+        // vkFreeMemory(m_device->Get(), m_indexBufferMemory, nullptr);
 
-        vkDestroyBuffer(m_device->Get(), m_vertexBuffer, nullptr);
-        vkFreeMemory(m_device->Get(), m_vertexBufferMemory, nullptr);
+        // vkDestroyBuffer(m_device->Get(), m_vertexBuffer, nullptr);
+        // vkFreeMemory(m_device->Get(), m_vertexBufferMemory, nullptr);
+		
+		delete m_indexBuffer;
+		delete m_vertexBuffer;
 
         // vkDestroyCommandPool(m_device->Get(), m_commandPool, nullptr);
 		delete m_commandPool;

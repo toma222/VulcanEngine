@@ -77,11 +77,18 @@ OBJECTS := \
 	$(OBJDIR)/Instance.o \
 	$(OBJDIR)/Swapchain.o \
 	$(OBJDIR)/VulkanGraphicsCommands.o \
+	$(OBJDIR)/Buffer.o \
+	$(OBJDIR)/IndexBuffer.o \
+	$(OBJDIR)/UniformBuffer.o \
+	$(OBJDIR)/VertexBuffer.o \
 	$(OBJDIR)/CommandBuffer.o \
 	$(OBJDIR)/CommandPool.o \
+	$(OBJDIR)/DescriptorPool.o \
+	$(OBJDIR)/DescriptorSets.o \
 	$(OBJDIR)/Framebuffer.o \
 	$(OBJDIR)/Image.o \
 	$(OBJDIR)/ImageView.o \
+	$(OBJDIR)/TextureImage.o \
 	$(OBJDIR)/Attachment.o \
 	$(OBJDIR)/RenderPass.o \
 	$(OBJDIR)/Subpass.o \
@@ -181,10 +188,28 @@ $(OBJDIR)/Swapchain.o: src/kon/graphics/vulkan/Swapchain.cpp
 $(OBJDIR)/VulkanGraphicsCommands.o: src/kon/graphics/vulkan/VulkanGraphicsCommands.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/Buffer.o: src/kon/graphics/vulkan/buffer/Buffer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/IndexBuffer.o: src/kon/graphics/vulkan/buffer/IndexBuffer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/UniformBuffer.o: src/kon/graphics/vulkan/buffer/UniformBuffer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/VertexBuffer.o: src/kon/graphics/vulkan/buffer/VertexBuffer.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/CommandBuffer.o: src/kon/graphics/vulkan/commands/CommandBuffer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/CommandPool.o: src/kon/graphics/vulkan/commands/CommandPool.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/DescriptorPool.o: src/kon/graphics/vulkan/descriptor/DescriptorPool.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/DescriptorSets.o: src/kon/graphics/vulkan/descriptor/DescriptorSets.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Framebuffer.o: src/kon/graphics/vulkan/image/Framebuffer.cpp
@@ -194,6 +219,9 @@ $(OBJDIR)/Image.o: src/kon/graphics/vulkan/image/Image.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/ImageView.o: src/kon/graphics/vulkan/image/ImageView.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/TextureImage.o: src/kon/graphics/vulkan/image/TextureImage.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Attachment.o: src/kon/graphics/vulkan/pipeline/Attachment.cpp

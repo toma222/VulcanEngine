@@ -80,6 +80,7 @@ namespace kon
 
         VkPhysicalDevice PickDeviceFunctionFirstCompatible(std::vector<VkPhysicalDevice> devices);
         VkPhysicalDevice PickDeviceFunctionScored(std::vector<VkPhysicalDevice> devices);
+		VkSampleCountFlagBits GetMaxUsableSampleCount();
 
     private:
         VkPhysicalDevice m_physicalDevice {VK_NULL_HANDLE};

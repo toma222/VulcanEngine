@@ -3,8 +3,13 @@
 
 #include "../Graphics.hpp"
 #include "kon/graphics/vulkan/Swapchain.hpp"
+#include "kon/graphics/vulkan/buffer/IndexBuffer.hpp"
+#include "kon/graphics/vulkan/buffer/UniformBuffer.hpp"
+#include "kon/graphics/vulkan/buffer/VertexBuffer.hpp"
 #include "kon/graphics/vulkan/commands/CommandBuffer.hpp"
 #include "kon/graphics/vulkan/commands/CommandPool.hpp"
+#include "kon/graphics/vulkan/descriptor/DescriptorPool.hpp"
+#include "kon/graphics/vulkan/image/TextureImage.hpp"
 #include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
 
 #define GLFW_INCLUDE_VULKAN
@@ -85,7 +90,8 @@ namespace kon
         bool operator==(const Vertex& other) const {
             return pos == other.pos && color == other.color && texCoord == other.texCoord;
         }
-
+		
+		/*
         static VkVertexInputBindingDescription getBindingDescription()
         {
             VkVertexInputBindingDescription bindingDescription{};
@@ -115,6 +121,7 @@ namespace kon
 
             return attributeDescriptions;
         }
+		*/
     };
 
     struct UniformBufferObject
@@ -244,24 +251,32 @@ namespace kon
 
         std::vector<Vertex> vertices;
         std::vector<uint32_t> indices;
-        VkBuffer m_vertexBuffer;
-        VkDeviceMemory m_vertexBufferMemory;
-        VkBuffer m_indexBuffer;
-        VkDeviceMemory m_indexBufferMemory;
 
+        // VkBuffer m_vertexBuffer;
+        // VkDeviceMemory m_vertexBufferMemory;
 
-        std::vector<VkBuffer> m_uniformBuffers;
-        std::vector<VkDeviceMemory> m_uniformBuffersMemory;
-        std::vector<void*> m_uniformBuffersMapped;
+		VertexBuffer *m_vertexBuffer;
 
-        VkDescriptorPool m_descriptorPool;
+        // VkBuffer m_indexBuffer;
+        // VkDeviceMemory m_indexBufferMemory;
+
+		IndexBuffer *m_indexBuffer;
+
+		std::vector<UniformBuffer*> m_uniformBuffers;
+        // std::vector<VkBuffer> m_uniformBuffers;
+        // std::vector<VkDeviceMemory> m_uniformBuffersMemory;
+        // std::vector<void*> m_uniformBuffersMapped;
+
+        // VkDescriptorPool m_descriptorPool;
+		DescriptorPool *m_descriptorPool;
         std::vector<VkDescriptorSet> m_descriptorSets;
 
-        uint32_t m_mipLevels;
-        VkImage m_textureImage;
+        // uint32_t m_mipLevels;
+        // VkImage m_textureImage;
+		TextureImage *m_textureImage;
         VkSampler m_textureSampler;
-        VkImageView m_textureImageView;
-        VkDeviceMemory m_textureImageMemory;
+        // VkImageView m_textureImageView;
+        // VkDeviceMemory m_textureImageMemory;
 
 
         VkSampleCountFlagBits m_msaaSamples = VK_SAMPLE_COUNT_1_BIT;

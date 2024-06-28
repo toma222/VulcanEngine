@@ -1,6 +1,8 @@
 
 #include "Device.hpp"
+#include "vulkan/vulkan_core.h"
 
+#include <algorithm>
 #include <vector>
 #include <map>
 #include <set>
@@ -11,6 +13,25 @@
 
 namespace kon
 {
+	VkSampleCountFlagBits Device::GetMaxUsableSampleCount()
+	{
+    	VkPhysicalDeviceProperties physicalDeviceProperties;
+    	vkGetPhysicalDeviceProperties(m_physicalDevice, &physicalDeviceProperties);
+
+    	VkSampleCountFlags counts = physicalDeviceProperties.limits.framebufferColorSampleCounts & physicalDeviceProperties.limits.framebufferDepthSampleCounts;
+
+    	if (counts & VK_SAMPLE_COUNT_64_BIT) { return VK_SAMPLE_COUNT_64_BIT; }
+    	if (counts & VK_SAMPLE_COUNT_32_BIT) { return VK_SAMPLE_COUNT_32_BIT; }
+    	if (counts & VK_SAMPLE_COUNT_16_BIT) { return VK_SAMPLE_COUNT_16_BIT; }
+    	if (counts & VK_SAMPLE_COUNT_8_BIT) { return VK_SAMPLE_COUNT_8_BIT; }
+   		if (counts & VK_SAMPLE_COUNT_4_BIT) { return VK_SAMPLE_COUNT_4_BIT; }
+    	if (counts & VK_SAMPLE_COUNT_2_BIT) { return VK_SAMPLE_COUNT_2_BIT; }
+
+		KN_WARN("Max usable sample count is 1; :|");
+    	return VK_SAMPLE_COUNT_1_BIT;
+	}
+
+
     QueueFamilyIndices Device::FindQueueFamilies(VkPhysicalDevice device)
     {
         KN_INSTRUMENT_FUNCTION()
@@ -112,6 +133,11 @@ namespace kon
         VkPhysicalDeviceFeatures supportedFeatures;
         vkGetPhysicalDeviceFeatures(device, &supportedFeatures);
 
+		VkPhysicalDeviceProperties physicalDeviceProperties;
+        vkGetPhysicalDeviceProperties(device, &physicalDeviceProperties);
+
+		KN_TRACE("%s", physicalDeviceProperties.deviceName);
+
         return m_queueFamilyIndices.isComplete() && extensionsSupported && swapChainAdequate && supportedFeatures.samplerAnisotropy;
     }
 
@@ -121,17 +147,23 @@ namespace kon
 
         for(const auto &device : devices)
         {
-            if(IsDeviceSuitable(device));
+            if(IsDeviceSuitable(device))
             {
                 m_queueFamilyIndices = FindQueueFamilies(device);
                 return device;
             }
         }
+
+		KN_WARN("function did not find a suitible device.\n we are going to use the first device in the list and roll with it :3");
+		m_queueFamilyIndices = FindQueueFamilies(devices[0]);
+		return devices[0];
     }
 
     VkPhysicalDevice PickDeviceFunctionFirstCompatible(std::vector<VkPhysicalDevice> devices)
     {
         KN_WARN("PickDeviceFunctionFirstCompatible not implemented yet");
+
+		return VK_NULL_HANDLE;
     }
 
     Device::Device(Instance *instance)
@@ -144,10 +176,11 @@ namespace kon
         CreateLogicalDevice();
 		CreateDeviceQueue();
 
-        KN_INFO("Device selected (%s)\n api version %u\n driver version %u",
+        KN_INFO("Device selected (%s)\n api version %u\n driver version %u\n msaa %u",
             m_deviceProperties.deviceName,
             m_deviceProperties.apiVersion,
-            m_deviceProperties.driverVersion);
+            m_deviceProperties.driverVersion,
+			m_deviceProperties.mssaSamples);
     }
 
     Device::~Device()
@@ -181,7 +214,9 @@ namespace kon
         m_deviceProperties.mssaSamples = VK_SAMPLE_COUNT_8_BIT;
         m_deviceProperties.apiVersion = physicalDeviceProperties.apiVersion;
         m_deviceProperties.driverVersion = physicalDeviceProperties.driverVersion;
-        m_deviceProperties.deviceName = &physicalDeviceProperties.deviceName[0];
+
+		// KN_TRACE("%s", physicalDeviceProperties.deviceName);
+        m_deviceProperties.deviceName = &(physicalDeviceProperties.deviceName)[0];
     }
 
     void Device::CreateLogicalDevice()
@@ -243,6 +278,8 @@ namespace kon
 
 	void Device::CreateDeviceQueue()
 	{
+		KN_INSTRUMENT_FUNCTION()
+
 		vkGetDeviceQueue(m_device, m_queueFamilyIndices.graphicsFamily.value(), 0, &m_graphicsQueue);
 		vkGetDeviceQueue(m_device, m_queueFamilyIndices.presentFamily.value(), 0, &m_presentQueue);
 	}

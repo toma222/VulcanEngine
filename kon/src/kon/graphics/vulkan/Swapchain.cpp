@@ -35,9 +35,15 @@ namespace kon
             {
                 return availablePresentMode; // prefer mailbox (cuz it fast and no tearing)
             }
+
+			if(availablePresentMode == VK_PRESENT_MODE_FIFO_RELAXED_KHR)
+			{
+				return availablePresentMode;
+			}
         }
 
         // :3
+		KN_WARN("using present mode FIFO_KHR");
         return VK_PRESENT_MODE_FIFO_KHR;
     }
 
@@ -73,23 +79,11 @@ namespace kon
         CreateImageViews();		
 		CreateColorResources();
 		CreateDepthResources();
-		// CreateFramebuffers();
-
-        /*
-        CreateColorResources();
-        CreateDepthResources();
-        CreateFramebuffers();
-        */
     }
 
     Swapchain::~Swapchain()
     {
 		DestroySwapchain();
-		
-		for (auto image : m_swapChainImages) 
-		{
-			// vkDestroyImage(m_device->Get(), image, nullptr);
-		}
     }
 
 	void Swapchain::RecreateSwapchain()
@@ -225,14 +219,11 @@ namespace kon
     void Swapchain::CreateFramebuffers()
     {
         KN_INSTRUMENT_FUNCTION()
-		KN_TRACE("Create framebuffers");
 		if(m_renderPass == nullptr) KN_WARN("renderpass is nullptr");
         m_swapChainFramebuffers.resize(m_swapChainImageViews.size());
 
         for (size_t i = 0; i < m_swapChainImageViews.size(); i++)
 		{
-			KN_TRACE("Create framebuffers");
-
             std::array<VkImageView, 3> attachments = {
                 m_colorImageView->Get(),
                 m_depthImageView->Get(),
@@ -248,11 +239,13 @@ namespace kon
     {
         KN_INSTRUMENT_FUNCTION()
         vkDeviceWaitIdle(m_device->Get());
+		
+
+		delete m_depthImage;
+		delete m_depthImageView;
 
 		delete m_colorImage;
 		delete m_colorImageView;
-		delete m_depthImage;
-		delete m_depthImageView;
 
 		for (auto imageView : m_swapChainImageViews)
 		{

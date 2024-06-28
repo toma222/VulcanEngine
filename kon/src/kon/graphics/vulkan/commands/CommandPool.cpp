@@ -1,5 +1,6 @@
 
 #include "CommandPool.hpp"
+#include "kon/debug/Debug.hpp"
 #include "kon/graphics/vulkan/commands/CommandBuffer.hpp"
 
 namespace kon
@@ -34,6 +35,8 @@ namespace kon
 
 	CommandBuffer CommandPool::StartSingleTimeCommands()
 	{
+		KN_INSTRUMENT_FUNCTION()
+
 		VkCommandBufferAllocateInfo allocInfo{};
         allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
         allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;

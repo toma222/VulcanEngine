@@ -112,6 +112,12 @@
  src/kon/types/Pair.hpp src/kon/graphics/vulkan/image/ImageView.hpp \
  src/kon/graphics/vulkan/image/Image.hpp \
  src/kon/graphics/vulkan/image/Framebuffer.hpp \
+ src/kon/graphics/vulkan/buffer/IndexBuffer.hpp \
+ src/kon/graphics/vulkan/buffer/Buffer.hpp \
+ src/kon/graphics/vulkan/buffer/UniformBuffer.hpp \
+ src/kon/graphics/vulkan/buffer/VertexBuffer.hpp \
+ src/kon/graphics/vulkan/descriptor/DescriptorPool.hpp \
+ src/kon/graphics/vulkan/image/TextureImage.hpp \
  ../external/glm/glm/gtx/hash.hpp ../external/glm/glm/gtx/../vec2.hpp \
  ../external/glm/glm/gtx/.././ext/vector_bool2.hpp \
  ../external/glm/glm/gtx/.././ext/../detail/type_vec2.hpp \
@@ -592,6 +598,12 @@ src/kon/types/Pair.hpp:
 src/kon/graphics/vulkan/image/ImageView.hpp:
 src/kon/graphics/vulkan/image/Image.hpp:
 src/kon/graphics/vulkan/image/Framebuffer.hpp:
+src/kon/graphics/vulkan/buffer/IndexBuffer.hpp:
+src/kon/graphics/vulkan/buffer/Buffer.hpp:
+src/kon/graphics/vulkan/buffer/UniformBuffer.hpp:
+src/kon/graphics/vulkan/buffer/VertexBuffer.hpp:
+src/kon/graphics/vulkan/descriptor/DescriptorPool.hpp:
+src/kon/graphics/vulkan/image/TextureImage.hpp:
 ../external/glm/glm/gtx/hash.hpp:
 ../external/glm/glm/gtx/../vec2.hpp:
 ../external/glm/glm/gtx/.././ext/vector_bool2.hpp:

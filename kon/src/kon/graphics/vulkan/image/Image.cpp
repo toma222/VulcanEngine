@@ -111,7 +111,8 @@ namespace kon
 
     Image::Image(Device *device, uint32_t width, uint32_t height, uint32_t mipLevels, VkSampleCountFlagBits numSamples,
                VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkMemoryPropertyFlags properties)
-    {
+    	: m_device(device)
+	{
         KN_INSTRUMENT_FUNCTION()
 
         VkImageCreateInfo imageInfo{};
@@ -153,8 +154,8 @@ namespace kon
 		KN_INSTRUMENT_FUNCTION()
         
 		if(m_image == VK_NULL_HANDLE) return;
-        vkDestroyImage(m_device, m_image, nullptr);
-        vkFreeMemory(m_device, m_imageMemory, nullptr);
+        vkDestroyImage(m_device->Get(), m_image, nullptr);
+        vkFreeMemory(m_device->Get(), m_imageMemory, nullptr);
 	}
 
     Image::~Image()
