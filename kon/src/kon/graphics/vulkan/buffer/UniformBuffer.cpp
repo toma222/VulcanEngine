@@ -7,7 +7,7 @@
 namespace kon
 {
 	UniformBuffer::UniformBuffer(Device *device, CommandPool *pool, size_t size)
-		: m_device(device)
+		: m_device(device), m_size(size)
 	{
 		m_buffer = new Buffer(device, pool, size, 
 						 VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,

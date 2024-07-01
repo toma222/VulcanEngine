@@ -2,6 +2,7 @@
 #pragma once
 
 #include "kon/graphics/vulkan/Device.hpp"
+#include "kon/graphics/vulkan/descriptor/Descriptor.hpp"
 #include "vulkan/vulkan_core.h"
 #include <vector>
 
@@ -9,7 +10,7 @@ namespace kon
 {
 	struct DescriptonSizeFactory
 	{
-		void Add(VkDescriptorType type, uint32_t amount);
+		void Add(DescriptorType type, uint32_t amount);
 
 		std::vector<VkDescriptorPoolSize> m_poolSizes {};
 		int m_size {0};

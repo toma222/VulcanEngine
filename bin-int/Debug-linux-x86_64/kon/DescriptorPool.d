@@ -98,7 +98,16 @@
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h /usr/include/vulkan/vulkan_core.h
+ /usr/include/bits/floatn-common.h \
+ src/kon/graphics/vulkan/descriptor/Descriptor.hpp \
+ src/kon/graphics/vulkan/buffer/UniformBuffer.hpp \
+ src/kon/graphics/vulkan/buffer/Buffer.hpp \
+ src/kon/graphics/vulkan/commands/CommandPool.hpp \
+ /usr/include/vulkan/vulkan_core.h \
+ src/kon/graphics/vulkan/commands/CommandBuffer.hpp \
+ src/kon/graphics/vulkan/image/Image.hpp \
+ src/kon/graphics/vulkan/image/ImageView.hpp \
+ src/kon/graphics/vulkan/image/TextureSampler.hpp
 /usr/include/stdc-predef.h:
 src/kon/graphics/vulkan/descriptor/DescriptorPool.hpp:
 src/kon/graphics/vulkan/Device.hpp:
@@ -228,4 +237,12 @@ src/kon/types/String.hpp:
 /usr/include/bits/stdio_lim.h:
 /usr/include/bits/floatn.h:
 /usr/include/bits/floatn-common.h:
+src/kon/graphics/vulkan/descriptor/Descriptor.hpp:
+src/kon/graphics/vulkan/buffer/UniformBuffer.hpp:
+src/kon/graphics/vulkan/buffer/Buffer.hpp:
+src/kon/graphics/vulkan/commands/CommandPool.hpp:
 /usr/include/vulkan/vulkan_core.h:
+src/kon/graphics/vulkan/commands/CommandBuffer.hpp:
+src/kon/graphics/vulkan/image/Image.hpp:
+src/kon/graphics/vulkan/image/ImageView.hpp:
+src/kon/graphics/vulkan/image/TextureSampler.hpp:

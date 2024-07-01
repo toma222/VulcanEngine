@@ -12,6 +12,7 @@ namespace kon
     using i64 = long long int;
 
 	using u8 = unsigned char;
+	using u32 = unsigned long int;
 }
 
 #define KN_STRINGIFY(x) #x

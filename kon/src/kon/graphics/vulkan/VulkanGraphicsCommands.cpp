@@ -7,9 +7,14 @@
 #include "kon/graphics/vulkan/buffer/UniformBuffer.hpp"
 #include "kon/graphics/vulkan/buffer/VertexBuffer.hpp"
 #include "kon/graphics/vulkan/commands/CommandPool.hpp"
+#include "kon/graphics/vulkan/descriptor/Descriptor.hpp"
 #include "kon/graphics/vulkan/descriptor/DescriptorPool.hpp"
+#include "kon/graphics/vulkan/descriptor/DescriptorSets.hpp"
 #include "kon/graphics/vulkan/image/TextureImage.hpp"
+#include "kon/graphics/vulkan/image/TextureSampler.hpp"
 #include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
+#include "kon/graphics/vulkan/pipeline/RenderPipeline.hpp"
+#include "kon/graphics/vulkan/pipeline/ShaderModule.hpp"
 #include "vulkan/vulkan_core.h"
 
 #include <cstddef>
@@ -32,7 +37,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include<stb_image.h>
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include <tiny_obj_loader.h>
@@ -45,7 +50,7 @@ namespace std {
     template<> struct hash<kon::Vertex> {
         size_t operator()(kon::Vertex const& vertex) const {
             return ((hash<glm::vec3>()(vertex.pos) ^
-                   (hash<glm::vec3>()(vertex.color) << 1)) >> 1) ^
+  (hash<glm::vec3>()(vertex.color) << 1)) >> 1) ^
                    (hash<glm::vec2>()(vertex.texCoord) << 1);
         }
     };
@@ -834,6 +839,7 @@ namespace kon
     }
 	*/
 
+	/*
     void VulkanGraphicsCommands::CreateDescriptorSetLayout()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -861,6 +867,7 @@ namespace kon
             assert("failed to create descriptor set layout!");
         }
     }
+	*/
 	
 	/*
     void VulkanGraphicsCommands::CreateUniformBuffers()
@@ -961,6 +968,7 @@ namespace kon
     }
 	*/
 
+		/*
     void VulkanGraphicsCommands::CreateGraphicsPipeline()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1083,19 +1091,29 @@ namespace kon
         depthStencil.stencilTestEnable = VK_FALSE;
         depthStencil.front = {}; // Optional
         depthStencil.back = {}; // Optional
-        
-        VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
-        pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-        pipelineLayoutInfo.setLayoutCount = 1; // Optional
-        pipelineLayoutInfo.pSetLayouts = &m_descriptorSetLayout; // Optional
-        pipelineLayoutInfo.pushConstantRangeCount = 0; // Optional
-        pipelineLayoutInfo.pPushConstantRanges = nullptr; // Optional
+		
+		VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
+		VkDescriptorSetLayout pLayouts = m_descriptorLayout->Get();
+		pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
+		pipelineLayoutInfo.setLayoutCount = 1; // Optional
+		pipelineLayoutInfo.pSetLayouts = &pLayouts; // Optional
+		pipelineLayoutInfo.pushConstantRangeCount = 0; // Optional
+		pipelineLayoutInfo.pPushConstantRanges = nullptr; // Optional
+		
+		VkPushConstantRange push_constant;
+		push_constant.offset = 0;
+		push_constant.size = sizeof(PushConstant);
+		push_constant.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
 
-        if (vkCreatePipelineLayout(m_device->Get(), &pipelineLayoutInfo, nullptr, &m_pipelineLayout) != VK_SUCCESS) {
-            throw std::runtime_error("failed to create pipeline layout!");
-        }
+		pipelineLayoutInfo.pPushConstantRanges = &push_constant;
+		pipelineLayoutInfo.pushConstantRangeCount = 1;
 
-        VkGraphicsPipelineCreateInfo pipelineInfo{};
+		if (vkCreatePipelineLayout(m_device->Get(), &pipelineLayoutInfo, nullptr, &m_pipelineLayout) != VK_SUCCESS)
+		{
+		    throw std::runtime_error("failed to create pipeline layout!");
+		}
+ 
+		VkGraphicsPipelineCreateInfo pipelineInfo{};
         pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
         pipelineInfo.stageCount = 2;
         pipelineInfo.pStages = shaderStages;
@@ -1122,6 +1140,7 @@ namespace kon
         vkDestroyShaderModule(m_device->Get(), fragShaderModule, nullptr);
         vkDestroyShaderModule(m_device->Get(), vertShaderModule, nullptr);
     }
+	*/
 
 	/*
     void VulkanGraphicsCommands::CreateFramebuffers()
@@ -1222,11 +1241,20 @@ namespace kon
     }
 	*/
 
+	/*
     void VulkanGraphicsCommands::CreateDescriptorSets()
     {
+		std::vector<DescriptorVector*> descriptors {};
+		for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++)
+		{
+			DescriptorVector *d = new DescriptorVector();
+			d->Add<DescriptorUniform>(m_uniformBuffers[i]);
+			d->Add<DescriptorTextureSampler>(m_textureSampler, m_textureImage->GetImageView());
+			descriptors.push_back(d);
+		}
 
         KN_INSTRUMENT_FUNCTION()
-        std::vector<VkDescriptorSetLayout> layouts(MAX_FRAMES_IN_FLIGHT, m_descriptorSetLayout);
+        std::vector<VkDescriptorSetLayout> layouts(MAX_FRAMES_IN_FLIGHT, m_descriptorLayout->Get());
         VkDescriptorSetAllocateInfo allocInfo{};
         allocInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO;
         allocInfo.descriptorPool = m_descriptorPool->Get();
@@ -1239,6 +1267,7 @@ namespace kon
         }
 
         for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+			
             VkDescriptorBufferInfo bufferInfo{};
             bufferInfo.buffer = m_uniformBuffers[i]->Get()->Get();
             bufferInfo.offset = 0;
@@ -1247,7 +1276,7 @@ namespace kon
             VkDescriptorImageInfo imageInfo{};
             imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
             imageInfo.imageView = m_textureImage->GetImageView()->Get();
-            imageInfo.sampler = m_textureSampler;
+            imageInfo.sampler = m_textureSampler->Get();
             
             std::array<VkWriteDescriptorSet, 2> descriptorWrites{};
 
@@ -1266,10 +1295,22 @@ namespace kon
             descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
             descriptorWrites[1].descriptorCount = 1;
             descriptorWrites[1].pImageInfo = &imageInfo;
+			
+
+			std::vector<VkWriteDescriptorSet> ds{};
+			int binding = 0;
+			for(Descriptor *d : descriptors[i]->m_descriptors)
+			{
+				VkWriteDescriptorSet write = d->GetWriteSet(m_descriptorSets[i], binding);
+				// KN_TRACE("%i", write.pBufferInfo->offset);
+				ds.push_back(write);
+				binding++;
+			}
             
-            vkUpdateDescriptorSets(m_device->Get(), static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
+            vkUpdateDescriptorSets(m_device->Get(), static_cast<uint32_t>(ds.size()), ds.data(), 0, nullptr);
         }
     }
+	*/
 
 	/*
     void VulkanGraphicsCommands::CreateCommandPool()
@@ -1336,7 +1377,7 @@ namespace kon
         vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
         vkCmdBindIndexBuffer(commandBuffer, m_indexBuffer->Get()->Get(), 0, VK_INDEX_TYPE_UINT32);
 
-        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_graphicsPipeline);
+        vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_renderPipeline->Get());
         VkViewport viewport{};
         viewport.x = 0.0f;
         viewport.y = 0.0f;
@@ -1351,8 +1392,17 @@ namespace kon
         scissor.extent = m_swapchain->GetSwapchainExtent();
         vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
+		PushConstant c;
+        static auto startTime = std::chrono::high_resolution_clock::now();
+        auto currentTime = std::chrono::high_resolution_clock::now();
+        float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
+		c.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+
+
+		vkCmdPushConstants(commandBuffer, m_renderPipeline->GetLayout(), VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(PushConstant), &c);
+			
         // vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0); // DRAW THE DAMN TRIANGLE
-        vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_pipelineLayout, 0, 1, &m_descriptorSets[m_currentFrame], 0, nullptr);
+        vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_renderPipeline->GetLayout(), 0, 1, &m_descriptorSets->Get()[m_currentFrame], 0, nullptr);
         vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(indices.size()), 1, 0, 0, 0);
 
         vkCmdEndRenderPass(commandBuffer);
@@ -1619,7 +1669,8 @@ namespace kon
         return imageView;
     }
 	*/
-
+	
+	/*
     void VulkanGraphicsCommands::CreateTextureSampler()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1647,6 +1698,7 @@ namespace kon
             assert("failed to create texture sampler!");
         }
     }
+	*/
 
 	/*
     void VulkanGraphicsCommands::CreateTextureImageView()
@@ -1699,6 +1751,12 @@ namespace kon
 
                 vertex.color = {1.0f, 1.0f, 1.0f};
 
+				vertex.normal = {
+					attrib.normals[3 * index.normal_index + 0],
+					attrib.normals[3 * index.normal_index + 1],
+					attrib.normals[3 * index.normal_index + 2],
+				};
+
                 if (uniqueVertices.count(vertex) == 0) {
                     uniqueVertices[vertex] = static_cast<uint32_t>(vertices.size());
                     vertices.push_back(vertex);
@@ -1743,41 +1801,75 @@ namespace kon
 				static_cast<VkDeviceSize>(texWidth*texHeight*4)});
         stbi_image_free(pixels);
 
-		CreateTextureSampler();
+		// CreateTextureSampler();
 
         LoadModel();
 
 		m_vertexBuffer = new VertexBuffer(m_device, m_commandPool, vertices.data(), vertices.size() * sizeof(vertices[0]));
-		VertexDescription description(sizeof(Vertex), 3);
+		VertexDescription description(sizeof(Vertex), 4);
 			description.Add(ShaderType::Float3, offsetof(Vertex, pos));
-			description.Add(ShaderType::Float2, offsetof(Vertex, color));
+			description.Add(ShaderType::Float3, offsetof(Vertex, color));
 			description.Add(ShaderType::Float2, offsetof(Vertex, texCoord));
+			description.Add(ShaderType::Float3, offsetof(Vertex, normal));
+
 		m_vertexBuffer->SetDescription(description);
-		
-
-
 		m_indexBuffer = new IndexBuffer(m_device, m_commandPool, indices.data(), indices.size() * sizeof(indices[0]));
+		
 		m_uniformBuffers.resize(MAX_FRAMES_IN_FLIGHT);
 		for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++)
 		{
 			m_uniformBuffers[i] = new UniformBuffer(m_device, m_commandPool, sizeof(UniformBufferObject));
         }
 
-        CreateDescriptorSetLayout();
-        CreateGraphicsPipeline();
+		m_textureSampler = new TextureSampler(m_device);
+		
+		DescriptonSizeFactory poolFactory;
+			poolFactory.Add(DescriptorType::Uniform, 3);
+			poolFactory.Add(DescriptorType::TextureSampler, 3);
+		m_descriptorPool = new DescriptorPool(m_device, poolFactory);
+		
+		//DescriptorVector *descriptors = new DescriptorVector();
+		//	descriptors->Add<DescriptorUniform>(m_uniformBuffers[0]);
+		// 	descriptors->Add<DescriptorTextureSampler>(m_textureSampler, m_textureImageView);
+
+		std::vector<DescriptorVector*> descriptors {};
+		for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++)
+		{
+			DescriptorVector *d = new DescriptorVector();
+			d->Add<DescriptorUniform>(m_uniformBuffers[i]);
+			d->Add<DescriptorTextureSampler>(m_textureSampler, m_textureImage->GetImageView());
+			descriptors.push_back(d);
+		}
+
+		m_descriptorLayout = new DescriptorLayout(m_device, descriptors);
+		m_descriptorSets = new DescriptorSets(m_device, m_descriptorPool, m_descriptorLayout, MAX_FRAMES_IN_FLIGHT);
+
+		// CreateDescriptorSets();
+        // CreateDescriptorSetLayout();
+
+        // CreateGraphicsPipeline();
+
+		auto v = readFile("shaders/vert.spv");
+		m_vertexShader = new ShaderModule(m_device, v);
+		auto f = readFile("shaders/frag.spv");
+		m_fragmentShader = new ShaderModule(m_device, f);
+
+		RenderPipelineLayoutDef def{};
+		def.pushConstants.push_back(PushConstantDef{VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(PushConstant)});
+		def.descriptorSets = m_descriptorSets;
+		def.descriptorLayout = m_descriptorLayout;
+		def.vertexShader = m_vertexShader;
+		def.fragmentShader = m_fragmentShader;
+		def.indexBuffer = m_indexBuffer;
+		def.vertexBuffer = m_vertexBuffer;
+		def.renderPass = m_renderPass;
+
+		m_renderPipeline = new RenderPipeline(m_device, m_swapchain, m_commandPool, def);
 
         // CreateDescriptorPool();
-		DescriptonSizeFactory poolFactory;
-			poolFactory.Add(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 3);
-			poolFactory.Add(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 3);
-		m_descriptorPool = new DescriptorPool(m_device, poolFactory);
 
-
-        CreateDescriptorSets();
         // CreateCommandBuffer();
         CreateSyncObjects();
-
-        // vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
     }
 
     void VulkanGraphicsCommands::UpdateUniformBuffer(uint32_t currentImage)
@@ -1894,23 +1986,21 @@ namespace kon
 
 		delete m_swapchain;
 
-        vkDestroySampler(m_device->Get(), m_textureSampler, nullptr);
+        // vkDestroySampler(m_device->Get(), m_textureSampler, nullptr);
         // vkDestroyImageView(m_device->Get(), m_textureImageView, nullptr);
         //vkDestroyImage(m_device->Get(), m_textureImage, nullptr);
         //vkFreeMemory(m_device->Get(), m_textureImageMemory, nullptr);
 
 		delete m_textureImage;
 
-        // vkDestroyDescriptorPool(m_device->Get(), m_descriptorPool, nullptr);
-		delete m_descriptorPool;
-
         for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
 			delete m_uniformBuffers[i];
             //vkDestroyBuffer(m_device->Get(), m_uniformBuffers[i], nullptr);
             //vkFreeMemory(m_device->Get(), m_uniformBuffersMemory[i], nullptr);
         }
+		delete m_textureSampler;
 
-        vkDestroyDescriptorSetLayout(m_device->Get(), m_descriptorSetLayout, nullptr);
+        // vkDestroyDescriptorSetLayout(m_device->Get(), m_descriptorSetLayout, nullptr);
 
         // vkDestroyBuffer(m_device->Get(), m_indexBuffer, nullptr);
         // vkFreeMemory(m_device->Get(), m_indexBufferMemory, nullptr);
@@ -1918,16 +2008,22 @@ namespace kon
         // vkDestroyBuffer(m_device->Get(), m_vertexBuffer, nullptr);
         // vkFreeMemory(m_device->Get(), m_vertexBufferMemory, nullptr);
 		
+		delete m_descriptorPool;
+		delete m_descriptorLayout;
+		delete m_descriptorSets;
+
 		delete m_indexBuffer;
 		delete m_vertexBuffer;
 
         // vkDestroyCommandPool(m_device->Get(), m_commandPool, nullptr);
 		delete m_commandPool;
 
-        vkDestroyPipeline(m_device->Get(), m_graphicsPipeline, nullptr);
-        vkDestroyPipelineLayout(m_device->Get(), m_pipelineLayout, nullptr);
+		delete m_vertexShader;
+		delete m_fragmentShader;
+
         // vkDestroyRenderPass(m_device->Get(), m_renderPass, nullptr);
 		delete m_renderPass;
+		delete m_renderPipeline;
         
         for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
             vkDestroySemaphore(m_device->Get(), m_renderFinishedSemaphores[i], nullptr);

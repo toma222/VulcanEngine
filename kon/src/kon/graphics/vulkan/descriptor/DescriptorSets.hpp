@@ -5,41 +5,52 @@
 #include "kon/graphics/vulkan/descriptor/DescriptorPool.hpp"
 #include "vulkan/vulkan_core.h"
 #include <initializer_list>
+#include <utility>
 
 namespace kon
 {
-	enum class DescriptorType
-	{
-		UniformBuffer,
-		CombinedImageSampler
-	};
+	class DescriptorSets;
 
-	struct DescriptorWrite
+	struct DescriptorVector
 	{
 	public:
-		union DescriptorData
+		DescriptorVector();
+		~DescriptorVector();
+
+		template<typename T, typename ...Args>
+		void Add(Args&& ...args)
 		{
-			VkDescriptorImageInfo m_imageInfo;
-			VkDescriptorBufferInfo m_bufferInfo;
-		};
+			//m_descriptors.push_back(
+			Descriptor *t = new T(std::forward<Args>(args)...);
+			m_descriptors.push_back(t);
+			m_bindings.push_back(t->GetDescriptorBinding(m_bindings.size()));
+		}
 
 	public:
-		DescriptorWrite(DescriptorType type, DescriptorData data);
-		~DescriptorWrite();
-
+		std::vector<Descriptor*> m_descriptors {};
+		std::vector<VkDescriptorSetLayoutBinding> m_bindings {};
 	};
 
-	struct DescriptorSet
+	struct DescriptorLayout
 	{
-		DescriptorSet(std::initializer_list<DescriptorWrite> writes);			
+	public:
+		DescriptorLayout(Device *device, std::vector<DescriptorVector*> descriptors);
+		~DescriptorLayout();
 
-		std::vector<DescriptorWrite> m_writes;
+		VkDescriptorSetLayout Get() { return m_layout; }
+
+	private:
+		Device *m_device;
+		std::vector<DescriptorVector*> m_descriptionVector;
+		VkDescriptorSetLayout m_layout;
+
+		friend DescriptorSets;
 	};
 
 	class DescriptorSets
 	{
 	public:
-		DescriptorSets(Device *device, DescriptorPool *descriptorPool, std::vector<DescriptorSet> &sets, int amount);
+		DescriptorSets(Device *device, DescriptorPool *descriptorPool, DescriptorLayout *layout, int count);
 		~DescriptorSets();
 
 		std::vector<VkDescriptorSet> &Get() { return m_descriptorSets; }

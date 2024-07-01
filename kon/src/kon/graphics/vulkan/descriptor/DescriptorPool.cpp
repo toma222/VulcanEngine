@@ -1,13 +1,14 @@
 
 #include "DescriptorPool.hpp"
+#include "kon/graphics/vulkan/descriptor/Descriptor.hpp"
 #include "vulkan/vulkan_core.h"
 
 namespace kon
 {
-	void DescriptonSizeFactory::Add(VkDescriptorType type, uint32_t amount)
+	void DescriptonSizeFactory::Add(DescriptorType type, uint32_t amount)
 	{
 		m_poolSizes.push_back(VkDescriptorPoolSize{});
-		m_poolSizes[m_size].type = type;
+		m_poolSizes[m_size].type = DescriptorTypeToVulkanType(type);
         m_poolSizes[m_size].descriptorCount = amount;
 		m_size++;
 		if(amount > m_maxAmount) m_maxAmount = amount;

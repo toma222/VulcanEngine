@@ -115,7 +115,12 @@
  src/kon/graphics/vulkan/buffer/UniformBuffer.hpp \
  src/kon/graphics/vulkan/buffer/VertexBuffer.hpp \
  src/kon/graphics/vulkan/descriptor/DescriptorPool.hpp \
+ src/kon/graphics/vulkan/descriptor/Descriptor.hpp \
+ src/kon/graphics/vulkan/image/TextureSampler.hpp \
+ src/kon/graphics/vulkan/descriptor/DescriptorSets.hpp \
  src/kon/graphics/vulkan/image/TextureImage.hpp \
+ src/kon/graphics/vulkan/pipeline/RenderPipeline.hpp \
+ src/kon/graphics/vulkan/pipeline/ShaderModule.hpp \
  ../external/glm/glm/gtx/hash.hpp ../external/glm/glm/gtx/../vec2.hpp \
  ../external/glm/glm/gtx/.././ext/vector_bool2.hpp \
  ../external/glm/glm/gtx/.././ext/../detail/type_vec2.hpp \
@@ -542,7 +547,12 @@ src/kon/graphics/vulkan/buffer/Buffer.hpp:
 src/kon/graphics/vulkan/buffer/UniformBuffer.hpp:
 src/kon/graphics/vulkan/buffer/VertexBuffer.hpp:
 src/kon/graphics/vulkan/descriptor/DescriptorPool.hpp:
+src/kon/graphics/vulkan/descriptor/Descriptor.hpp:
+src/kon/graphics/vulkan/image/TextureSampler.hpp:
+src/kon/graphics/vulkan/descriptor/DescriptorSets.hpp:
 src/kon/graphics/vulkan/image/TextureImage.hpp:
+src/kon/graphics/vulkan/pipeline/RenderPipeline.hpp:
+src/kon/graphics/vulkan/pipeline/ShaderModule.hpp:
 ../external/glm/glm/gtx/hash.hpp:
 ../external/glm/glm/gtx/../vec2.hpp:
 ../external/glm/glm/gtx/.././ext/vector_bool2.hpp:

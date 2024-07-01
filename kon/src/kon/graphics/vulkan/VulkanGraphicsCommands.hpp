@@ -9,8 +9,12 @@
 #include "kon/graphics/vulkan/commands/CommandBuffer.hpp"
 #include "kon/graphics/vulkan/commands/CommandPool.hpp"
 #include "kon/graphics/vulkan/descriptor/DescriptorPool.hpp"
+#include "kon/graphics/vulkan/descriptor/DescriptorSets.hpp"
 #include "kon/graphics/vulkan/image/TextureImage.hpp"
+#include "kon/graphics/vulkan/image/TextureSampler.hpp"
 #include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
+#include "kon/graphics/vulkan/pipeline/RenderPipeline.hpp"
+#include "kon/graphics/vulkan/pipeline/ShaderModule.hpp"
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -86,42 +90,11 @@ namespace kon
         glm::vec3 pos;
         glm::vec3 color;
         glm::vec2 texCoord;
+		glm::vec3 normal;
 
         bool operator==(const Vertex& other) const {
             return pos == other.pos && color == other.color && texCoord == other.texCoord;
         }
-		
-		/*
-        static VkVertexInputBindingDescription getBindingDescription()
-        {
-            VkVertexInputBindingDescription bindingDescription{};
-            bindingDescription.binding = 0;
-            bindingDescription.stride = sizeof(Vertex);
-            bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
-
-            return bindingDescription;
-        }
-
-        static std::array<VkVertexInputAttributeDescription, 3> getAttributeDescriptions() {
-            std::array<VkVertexInputAttributeDescription, 3> attributeDescriptions{};
-            attributeDescriptions[0].binding = 0;
-            attributeDescriptions[0].location = 0;
-            attributeDescriptions[0].format = VK_FORMAT_R32G32B32_SFLOAT;
-            attributeDescriptions[0].offset = offsetof(Vertex, pos);
-
-            attributeDescriptions[1].binding = 0;
-            attributeDescriptions[1].location = 1;
-            attributeDescriptions[1].format = VK_FORMAT_R32G32B32_SFLOAT;
-            attributeDescriptions[1].offset = offsetof(Vertex, color);
-
-            attributeDescriptions[2].binding = 0;
-            attributeDescriptions[2].location = 2;
-            attributeDescriptions[2].format = VK_FORMAT_R32G32_SFLOAT;
-            attributeDescriptions[2].offset = offsetof(Vertex, texCoord);
-
-            return attributeDescriptions;
-        }
-		*/
     };
 
     struct UniformBufferObject
@@ -130,6 +103,11 @@ namespace kon
         glm::mat4 view;
         glm::mat4 proj;
     };
+
+	struct PushConstant
+	{
+		glm::mat4 model;
+	};
 
     class VulkanGraphicsCommands : public GraphicsCommands
     {
@@ -198,51 +176,16 @@ namespace kon
     private:
         Instance *m_instance;
 
-
-        // VkInstance m_instance;
-        // VkDebugUtilsMessengerEXT m_debugMessenger;
-
-        // VkSurfaceKHR m_surface;
-
-        // VkPhysicalDevice m_physicalDevice {VK_NULL_HANDLE};
-        // VkDevice m_device;
-
-        Device *m_device;
-
-        // VkQueue m_graphicsQueue;
-        // VkQueue m_presentQueue;
-
-		/*
-        VkSwapchainKHR m_swapChain;
-        std::vector<VkImage> m_swapChainImages;
-        std::vector<VkImageView> m_swapChainImageViews;
-        VkFormat m_swapChainImageFormat;
-        VkExtent2D m_swapChainExtent;
-
-        VkImage m_colorImage;
-        VkDeviceMemory m_colorImageMemory;
-        VkImageView m_colorImageView;
-
-        VkImage m_depthImage;
-        VkDeviceMemory m_depthImageMemory;
-        VkImageView m_depthImageView;
-		*/
-		
+		Device *m_device;
 
 		Swapchain *m_swapchain;
 		
-
-        VkPipeline m_graphicsPipeline;
+        // VkPipeline m_graphicsPipeline;
 		RenderPass *m_renderPass;
-        // VkRenderPass m_renderPass;
-        VkDescriptorSetLayout m_descriptorSetLayout;
-        VkPipelineLayout m_pipelineLayout;
-
-        // std::vector<VkFramebuffer> m_swapChainFramebuffers;
+		RenderPipeline *m_renderPipeline;
+        // VkPipelineLayout m_pipelineLayout;
 
 		CommandPool *m_commandPool;
-        // VkCommandPool m_commandPool;
-        // std::vector<CommandBuffer*> m_commandBuffers;
 
         std::vector<VkSemaphore> m_imageAvailableSemaphores;
         std::vector<VkSemaphore> m_renderFinishedSemaphores;
@@ -252,32 +195,21 @@ namespace kon
         std::vector<Vertex> vertices;
         std::vector<uint32_t> indices;
 
-        // VkBuffer m_vertexBuffer;
-        // VkDeviceMemory m_vertexBufferMemory;
-
 		VertexBuffer *m_vertexBuffer;
-
-        // VkBuffer m_indexBuffer;
-        // VkDeviceMemory m_indexBufferMemory;
 
 		IndexBuffer *m_indexBuffer;
 
 		std::vector<UniformBuffer*> m_uniformBuffers;
-        // std::vector<VkBuffer> m_uniformBuffers;
-        // std::vector<VkDeviceMemory> m_uniformBuffersMemory;
-        // std::vector<void*> m_uniformBuffersMapped;
 
-        // VkDescriptorPool m_descriptorPool;
 		DescriptorPool *m_descriptorPool;
-        std::vector<VkDescriptorSet> m_descriptorSets;
+		DescriptorLayout *m_descriptorLayout;
+		DescriptorSets *m_descriptorSets;
 
-        // uint32_t m_mipLevels;
-        // VkImage m_textureImage;
 		TextureImage *m_textureImage;
-        VkSampler m_textureSampler;
-        // VkImageView m_textureImageView;
-        // VkDeviceMemory m_textureImageMemory;
+		TextureSampler *m_textureSampler;
 
+		ShaderModule *m_vertexShader;
+		ShaderModule *m_fragmentShader;
 
         VkSampleCountFlagBits m_msaaSamples = VK_SAMPLE_COUNT_1_BIT;
 

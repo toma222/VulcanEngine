@@ -89,8 +89,11 @@ OBJECTS := \
 	$(OBJDIR)/Image.o \
 	$(OBJDIR)/ImageView.o \
 	$(OBJDIR)/TextureImage.o \
+	$(OBJDIR)/TextureSampler.o \
 	$(OBJDIR)/Attachment.o \
 	$(OBJDIR)/RenderPass.o \
+	$(OBJDIR)/RenderPipeline.o \
+	$(OBJDIR)/ShaderModule.o \
 	$(OBJDIR)/Subpass.o \
 	$(OBJDIR)/ArrayList.o \
 	$(OBJDIR)/String.o \
@@ -224,10 +227,19 @@ $(OBJDIR)/ImageView.o: src/kon/graphics/vulkan/image/ImageView.cpp
 $(OBJDIR)/TextureImage.o: src/kon/graphics/vulkan/image/TextureImage.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/TextureSampler.o: src/kon/graphics/vulkan/image/TextureSampler.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Attachment.o: src/kon/graphics/vulkan/pipeline/Attachment.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/RenderPass.o: src/kon/graphics/vulkan/pipeline/RenderPass.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/RenderPipeline.o: src/kon/graphics/vulkan/pipeline/RenderPipeline.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/ShaderModule.o: src/kon/graphics/vulkan/pipeline/ShaderModule.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Subpass.o: src/kon/graphics/vulkan/pipeline/Subpass.cpp
