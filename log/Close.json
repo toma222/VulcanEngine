@@ -1,16 +1,16 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":110.7,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":10573}
-,{"cat":"function","dur":735.8,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":10904}
-,{"cat":"function","dur":39403,"name":"DestroySwapchain","ph":"X","pid":0,"tid":0,"ts":10535}
-,{"cat":"function","dur":95.9,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":50072}
-,{"cat":"function","dur":15579.8,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":54033}
-,{"cat":"function","dur":94.3,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":69759}
-,{"cat":"function","dur":12856.1,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":69913}
-,{"cat":"function","dur":72588.1,"name":"Clean","ph":"X","pid":0,"tid":0,"ts":10326}
-,{"cat":"function","dur":40852.7,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":82979}
-,{"cat":"function","dur":16789.6,"name":"ClearModules","ph":"X","pid":0,"tid":0,"ts":125709}
-,{"cat":"function","dur":18676.8,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":123882}
-,{"cat":"function","dur":142563,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":7}
-,{"cat":"function","dur":2496.2,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":142582}
+{"cat":"function","dur":125.5,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":8758}
+,{"cat":"function","dur":758.1,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":9116}
+,{"cat":"function","dur":33981.7,"name":"DestroySwapchain","ph":"X","pid":0,"tid":0,"ts":8731}
+,{"cat":"function","dur":111.4,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":42884}
+,{"cat":"function","dur":11437.6,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":46532}
+,{"cat":"function","dur":95.6,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":58134}
+,{"cat":"function","dur":10974,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":58309}
+,{"cat":"function","dur":60895.4,"name":"Clean","ph":"X","pid":0,"tid":0,"ts":8521}
+,{"cat":"function","dur":35705.6,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":69474}
+,{"cat":"function","dur":74857.4,"name":"ClearModules","ph":"X","pid":0,"tid":0,"ts":107747}
+,{"cat":"function","dur":77388.5,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":105269}
+,{"cat":"function","dur":182660,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":9}
+,{"cat":"function","dur":2802.5,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":182682}
 
 ]}

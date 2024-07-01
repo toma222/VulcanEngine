@@ -4,4 +4,6 @@
 -Iexternal/
 -Iexternal/vulkan
 -Iexternal/glm
+-Iexternal/stb
+-Iexternal/tiny_obj_loader.h
 -Ikon/src

@@ -6,9 +6,19 @@
 
 namespace kon
 {
+    String::String()
+    {
+        *this = "kn_null";
+    }
+
     String::String(const char *str)
     {
         *this = str;
+    }
+
+    String::String(const String &string)
+    {
+        *this = string.m_buffer;
     }
 
     String::~String()
@@ -22,7 +32,7 @@ namespace kon
         m_buffer = new char[size+1];
     }
 
-    i32 String::Hash()
+    i32 String::Hash() const
     {
         constexpr int prime = 31;
         i32 h = 0;

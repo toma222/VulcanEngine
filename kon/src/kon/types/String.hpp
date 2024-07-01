@@ -10,7 +10,9 @@ namespace kon
     struct knAPI String
     {
     public:
+        String();
         String(const char *str);
+        String(const String &string);
         ~String();
 
         const char *c_str() const {return m_buffer; }
@@ -32,9 +34,10 @@ namespace kon
 
         i32 GetSize() { return m_size; }
 
-        i32 Hash();
+        i32 Hash() const;
         static i32 Hash(const char *string);
 
+        // size+1 for the null terminating byte
         void ResizeBuffer(i32 size);
 
     private:

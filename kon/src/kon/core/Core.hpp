@@ -13,9 +13,6 @@ namespace kon
 
 	using u8 = unsigned char;
 	using u32 = unsigned long int;
-
-    using memptr = void*;
-    using memsize = size_t;
 }
 
 #define KN_STRINGIFY(x) #x
