@@ -1,7 +1,9 @@
 ../bin-int/Debug-windows-x86_64/kon/Image.o: \
  src/kon/graphics/vulkan/image/Image.cpp \
  src/kon/graphics/vulkan/image/Image.hpp \
- ../external/glfw/include/GLFW/glfw3.h \
+ src/kon/graphics/vulkan/commands/CommandPool.hpp \
+ C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h \
+ C:/VulkanSDK/1.3.283.0/Include/vulkan/vk_platform.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stddef.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -13,9 +15,6 @@
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdint.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stdint.h \
- C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan.h \
- C:/VulkanSDK/1.3.283.0/Include/vulkan/vk_platform.h \
- C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h \
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_h264std.h \
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codecs_common.h \
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_h264std_encode.h \
@@ -28,8 +27,11 @@
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h \
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std_decode.h \
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h \
+ src/kon/graphics/vulkan/commands/CommandBuffer.hpp \
+ src/kon/graphics/vulkan/Device.hpp ../external/glfw/include/GLFW/glfw3.h \
+ C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan.h \
+ C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/GL/gl.h \
- src/kon/graphics/vulkan/Device.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/optional \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/type_traits \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -190,7 +192,9 @@
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_mutex.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unique_lock.h
 src/kon/graphics/vulkan/image/Image.hpp:
-../external/glfw/include/GLFW/glfw3.h:
+src/kon/graphics/vulkan/commands/CommandPool.hpp:
+C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h:
+C:/VulkanSDK/1.3.283.0/Include/vulkan/vk_platform.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stddef.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/crtdefs.h:
@@ -202,9 +206,6 @@ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/inc
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdint.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stdint.h:
-C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan.h:
-C:/VulkanSDK/1.3.283.0/Include/vulkan/vk_platform.h:
-C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_h264std.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codecs_common.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_h264std_encode.h:
@@ -217,8 +218,12 @@ C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_h265std_decode.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std_decode.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h:
-C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/GL/gl.h:
+src/kon/graphics/vulkan/commands/CommandBuffer.hpp:
 src/kon/graphics/vulkan/Device.hpp:
+../external/glfw/include/GLFW/glfw3.h:
+C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan.h:
+C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h:
+C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/GL/gl.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/optional:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/type_traits:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h:

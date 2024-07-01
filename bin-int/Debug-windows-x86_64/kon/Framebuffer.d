@@ -96,8 +96,7 @@
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- src/kon/graphics/vulkan/image/ImageView.hpp \
- ../external/glfw/include/glfw/glfw3.h
+ src/kon/graphics/vulkan/image/ImageView.hpp
 src/kon/graphics/vulkan/image/Framebuffer.hpp:
 ../external/glfw/include/GLFW/glfw3.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h:
@@ -199,4 +198,3 @@ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/inc
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/swprintf.inl:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 src/kon/graphics/vulkan/image/ImageView.hpp:
-../external/glfw/include/glfw/glfw3.h:

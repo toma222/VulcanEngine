@@ -33,7 +33,7 @@
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  src/kon/types/Pair.hpp src/kon/graphics/Window.hpp \
- src/kon/types/Vector2.hpp ../external/glfw/include/glfw/glfw3.h \
+ src/kon/types/Vector2.hpp ../external/glfw/include/GLFW/glfw3.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stddef.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdint.h \
@@ -54,8 +54,7 @@
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std_decode.h \
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/GL/gl.h \
- src/kon/graphics/Graphics.hpp ../external/glfw/include/GLFW/glfw3.h \
- src/kon/debug/Debug.hpp \
+ src/kon/graphics/Graphics.hpp src/kon/debug/Debug.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstddef \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream \
@@ -225,7 +224,7 @@ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/inc
 src/kon/types/Pair.hpp:
 src/kon/graphics/Window.hpp:
 src/kon/types/Vector2.hpp:
-../external/glfw/include/glfw/glfw3.h:
+../external/glfw/include/GLFW/glfw3.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stddef.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stdint.h:
@@ -247,7 +246,6 @@ C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std_decode.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/GL/gl.h:
 src/kon/graphics/Graphics.hpp:
-../external/glfw/include/GLFW/glfw3.h:
 src/kon/debug/Debug.hpp:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstddef:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream:

@@ -1,7 +1,7 @@
 ../bin-int/Debug-windows-x86_64/kon/ImageView.o: \
  src/kon/graphics/vulkan/image/ImageView.cpp \
  src/kon/graphics/vulkan/image/ImageView.hpp \
- ../external/glfw/include/glfw/glfw3.h \
+ ../external/glfw/include/GLFW/glfw3.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stddef.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -29,7 +29,7 @@
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std_decode.h \
  C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/GL/gl.h \
- src/kon/graphics/vulkan/Device.hpp ../external/glfw/include/GLFW/glfw3.h \
+ src/kon/graphics/vulkan/Device.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/optional \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/type_traits \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -96,6 +96,7 @@
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h \
  src/kon/debug/Debug.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstddef \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream \
@@ -190,7 +191,7 @@
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_mutex.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unique_lock.h
 src/kon/graphics/vulkan/image/ImageView.hpp:
-../external/glfw/include/glfw/glfw3.h:
+../external/glfw/include/GLFW/glfw3.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/stddef.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/stddef.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/crtdefs.h:
@@ -219,7 +220,6 @@ C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std_decode.h:
 C:/VulkanSDK/1.3.283.0/Include/vk_video/vulkan_video_codec_av1std.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/GL/gl.h:
 src/kon/graphics/vulkan/Device.hpp:
-../external/glfw/include/GLFW/glfw3.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/optional:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/type_traits:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h:
@@ -290,6 +290,7 @@ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/inc
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/swprintf.inl:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
+C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h:
 src/kon/debug/Debug.hpp:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstddef:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream:

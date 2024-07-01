@@ -12,19 +12,19 @@ endif
 
 ifeq ($(config),debug)
   RESCOMP = windres
-  TARGETDIR = ../bin/Debug-linux-x86_64/kon
-  TARGET = $(TARGETDIR)/libkon.a
-  OBJDIR = ../bin-int/Debug-linux-x86_64/kon
+  TARGETDIR = ../bin/Debug-windows-x86_64/kon
+  TARGET = $(TARGETDIR)/kon.lib
+  OBJDIR = ../bin-int/Debug-windows-x86_64/kon
   DEFINES += -DDEBUG -DKN_DEBUG
-  INCLUDES += -Isrc -I../external/glfw/include -I../external/glm -I../external/stb -I../../../vulkan/1.3.283.0/x86_64/Include
+  INCLUDES += -Isrc -I../external/glfw/include -I../external/glm -I../external/stb -IC:/VulkanSDK/1.3.283.0/Include
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
   ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS += ../bin/Debug-linux-x86_64/GLFW/libGLFW.so -lvulkan.lib
-  LDDEPS += ../bin/Debug-linux-x86_64/GLFW/libGLFW.so
-  ALL_LDFLAGS += $(LDFLAGS) -L../../../vulkan/1.3.283.0/x86_64/lib -L/usr/lib64 -Wl,-rpath,'$$ORIGIN/../GLFW' -m64
+  LIBS += ../bin/Debug-windows-x86_64/GLFW/GLFW.lib -lvulkan-1
+  LDDEPS += ../bin/Debug-windows-x86_64/GLFW/GLFW.lib
+  ALL_LDFLAGS += $(LDFLAGS) -LC:/VulkanSDK/1.3.283.0/lib -L/usr/lib64 -m64
   LINKCMD = $(AR) -rcs "$@" $(OBJECTS)
   define PREBUILDCMDS
   endef
@@ -39,19 +39,19 @@ endif
 
 ifeq ($(config),release)
   RESCOMP = windres
-  TARGETDIR = ../bin/Release-linux-x86_64/kon
-  TARGET = $(TARGETDIR)/libkon.a
-  OBJDIR = ../bin-int/Release-linux-x86_64/kon
+  TARGETDIR = ../bin/Release-windows-x86_64/kon
+  TARGET = $(TARGETDIR)/kon.lib
+  OBJDIR = ../bin-int/Release-windows-x86_64/kon
   DEFINES += -DNDEBUG -DKN_RELEASE
-  INCLUDES += -Isrc -I../external/glfw/include -I../external/glm -I../external/stb -I../../../vulkan/1.3.283.0/x86_64/Include
+  INCLUDES += -Isrc -I../external/glfw/include -I../external/glm -I../external/stb -IC:/VulkanSDK/1.3.283.0/Include
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
   ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS += ../bin/Release-linux-x86_64/GLFW/libGLFW.so -lvulkan.lib
-  LDDEPS += ../bin/Release-linux-x86_64/GLFW/libGLFW.so
-  ALL_LDFLAGS += $(LDFLAGS) -L../../../vulkan/1.3.283.0/x86_64/lib -L/usr/lib64 -Wl,-rpath,'$$ORIGIN/../GLFW' -m64 -s
+  LIBS += ../bin/Release-windows-x86_64/GLFW/GLFW.lib -lvulkan-1
+  LDDEPS += ../bin/Release-windows-x86_64/GLFW/GLFW.lib
+  ALL_LDFLAGS += $(LDFLAGS) -LC:/VulkanSDK/1.3.283.0/lib -L/usr/lib64 -m64 -s
   LINKCMD = $(AR) -rcs "$@" $(OBJECTS)
   define PREBUILDCMDS
   endef
@@ -72,6 +72,7 @@ OBJECTS := \
 	$(OBJDIR)/Application.o \
 	$(OBJDIR)/Engine.o \
 	$(OBJDIR)/Graphics.o \
+	$(OBJDIR)/Mesh.o \
 	$(OBJDIR)/Window.o \
 	$(OBJDIR)/Device.o \
 	$(OBJDIR)/Instance.o \
@@ -85,6 +86,7 @@ OBJECTS := \
 	$(OBJDIR)/CommandPool.o \
 	$(OBJDIR)/DescriptorPool.o \
 	$(OBJDIR)/DescriptorSets.o \
+	$(OBJDIR)/Descriptors.o \
 	$(OBJDIR)/Framebuffer.o \
 	$(OBJDIR)/Image.o \
 	$(OBJDIR)/ImageView.o \
@@ -176,6 +178,9 @@ $(OBJDIR)/Engine.o: src/kon/engine/Engine.cpp
 $(OBJDIR)/Graphics.o: src/kon/graphics/Graphics.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/Mesh.o: src/kon/graphics/Mesh.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Window.o: src/kon/graphics/Window.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
@@ -213,6 +218,9 @@ $(OBJDIR)/DescriptorPool.o: src/kon/graphics/vulkan/descriptor/DescriptorPool.cp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/DescriptorSets.o: src/kon/graphics/vulkan/descriptor/DescriptorSets.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/Descriptors.o: src/kon/graphics/vulkan/descriptor/Descriptors.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Framebuffer.o: src/kon/graphics/vulkan/image/Framebuffer.cpp

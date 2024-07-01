@@ -97,6 +97,7 @@
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  src/kon/graphics/vulkan/pipeline/Attachment.hpp \
+ C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare
 src/kon/graphics/vulkan/pipeline/RenderPass.hpp:
@@ -200,5 +201,6 @@ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/inc
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/swprintf.inl:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 src/kon/graphics/vulkan/pipeline/Attachment.hpp:
+C:/VulkanSDK/1.3.283.0/Include/vulkan/vulkan_core.h:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array:
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare:
