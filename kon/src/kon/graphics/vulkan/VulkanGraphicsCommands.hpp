@@ -192,8 +192,8 @@ namespace kon
         std::vector<VkFence> m_inFlightFences;
         uint32_t m_currentFrame;
 
-        std::vector<Vertex> vertices;
-        std::vector<uint32_t> indices;
+        // std::vector<Vertex> vertices;
+        // std::vector<uint32_t> indices;
 
 		VertexBuffer *m_vertexBuffer;
 		IndexBuffer *m_indexBuffer;
@@ -213,6 +213,8 @@ namespace kon
         VkSampleCountFlagBits m_msaaSamples = VK_SAMPLE_COUNT_1_BIT;
 
         bool m_framebufferResized = false;
+
+        u32 m_indicies {0};
 
         int m_frameCount {0};
     };

@@ -1,16 +1,16 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":125.5,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":8758}
-,{"cat":"function","dur":758.1,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":9116}
-,{"cat":"function","dur":33981.7,"name":"DestroySwapchain","ph":"X","pid":0,"tid":0,"ts":8731}
-,{"cat":"function","dur":111.4,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":42884}
-,{"cat":"function","dur":11437.6,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":46532}
-,{"cat":"function","dur":95.6,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":58134}
-,{"cat":"function","dur":10974,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":58309}
-,{"cat":"function","dur":60895.4,"name":"Clean","ph":"X","pid":0,"tid":0,"ts":8521}
-,{"cat":"function","dur":35705.6,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":69474}
-,{"cat":"function","dur":74857.4,"name":"ClearModules","ph":"X","pid":0,"tid":0,"ts":107747}
-,{"cat":"function","dur":77388.5,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":105269}
-,{"cat":"function","dur":182660,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":9}
-,{"cat":"function","dur":2802.5,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":182682}
+{"cat":"function","dur":99.7,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":2117}
+,{"cat":"function","dur":384.1,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":2303}
+,{"cat":"function","dur":30855.8,"name":"DestroySwapchain","ph":"X","pid":0,"tid":0,"ts":2101}
+,{"cat":"function","dur":75.3,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":33022}
+,{"cat":"function","dur":6917.9,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":35819}
+,{"cat":"function","dur":59.9,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":42817}
+,{"cat":"function","dur":6005.9,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":42922}
+,{"cat":"function","dur":47014.4,"name":"Clean","ph":"X","pid":0,"tid":0,"ts":1958}
+,{"cat":"function","dur":15383.8,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":48986}
+,{"cat":"function","dur":3631.4,"name":"ClearModules","ph":"X","pid":0,"tid":0,"ts":95887}
+,{"cat":"function","dur":35137.1,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":64447}
+,{"cat":"function","dur":99609.4,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":3}
+,{"cat":"function","dur":921.6,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":99629}
 
 ]}

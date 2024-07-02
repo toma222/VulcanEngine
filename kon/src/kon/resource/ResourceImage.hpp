@@ -28,9 +28,10 @@ namespace kon
         void LoadResource(const String &path) override;
 
     public:
-        int GetWidth() { return m_width; }
-        int GetHeight() { return m_height; }
-        ImageChannels GetChannels() { return m_channels; }
+        u8 *GetData() const { return m_imageData; }
+        int GetWidth() const { return m_width; }
+        int GetHeight() const { return m_height; }
+        ImageChannels GetChannels() const { return m_channels; }
 
     private:
         bool m_valid {false};

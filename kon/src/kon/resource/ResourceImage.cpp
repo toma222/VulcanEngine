@@ -10,7 +10,7 @@ namespace kon
     
     ResourceImage::~ResourceImage()
     {
-        // stbi_free(m_imageData);
+        stbi_image_free(m_imageData);
     }
 
     bool ResourceImage::Valid()
@@ -30,6 +30,8 @@ namespace kon
             KN_ERROR("Image resource failed to load image: path -> \n%s", path.c_str());
             return; // dont let it set valid to true
         }
+
+        m_channels = ImageChannels_RGBA;
 
         m_valid = true;
     }
