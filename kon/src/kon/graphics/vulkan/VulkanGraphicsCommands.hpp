@@ -196,7 +196,6 @@ namespace kon
         std::vector<uint32_t> indices;
 
 		VertexBuffer *m_vertexBuffer;
-
 		IndexBuffer *m_indexBuffer;
 
 		std::vector<UniformBuffer*> m_uniformBuffers;

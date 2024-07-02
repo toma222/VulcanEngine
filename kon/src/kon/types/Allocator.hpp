@@ -5,26 +5,43 @@
 
 namespace kon
 {
-    struct Page
-    {
-        u32 size;
-        u8 *memory;
-
-        Page *nextPage;
-        Page *firstPage;
-    };
+    // this class is not fully implemented yet
 
     template<typename T>
     class Allocator
     {
-    public: 
-        PageAllocator(u8 minPageSize);
-        virtual ~PageAllocator();
+    public:
+        struct Page
+        {
+        public:
+            T *pageStart;
+            T *pageIndex;
+            
+            const u32 pageSize;
 
-        u8 *allocate(u8 size) override;
-        virtual void free(u8 *memory, u8 size) override;
+            Page *next {nullptr};
+
+        public:
+            ~Page()
+            {
+                delete[] pageStart;
+                delete next;
+            }
+        };
+
+    public: 
+        Allocator(u32 minPageSize);
+        ~Allocator();
+
+        T *Allocate() override;
+        void Free(u8 *memory, u8 size) override;
 
     private:
+        void AllocateNewPage(u8 *pageSize);
+
+    private:
+        Page *m_firstPage;
         Page *m_page;
+        const u32 m_minPageSize;
     };
 }

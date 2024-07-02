@@ -21,6 +21,13 @@ namespace kon
             m_array = new T[1];
         }
 
+        ArrayList(u32 elements)
+        {
+            m_index = 0;
+            m_capacity = elements;
+            m_array = new T[elements];
+        }
+
         ArrayList(const ArrayList<T> &list)
         {
             KN_TRACE("ArrayList copy constructor");
@@ -31,10 +38,15 @@ namespace kon
             delete[] m_array;
         }
 
+        // copies the element
         void Add(T element)
         {
             // Adds to the top of the array
-            if(m_index >= m_capacity) Resize();
+            if(m_index >= m_capacity)
+            {
+                Reserve(++m_capacity);
+            }
+
             m_array[m_index] = element;
             m_index++;
         }
@@ -50,12 +62,12 @@ namespace kon
         }
         */
 
-        T &Get(int index) const
+        T &Get(u32 index) const
         {
             return m_array[index];
         }
 
-        void Set(int index, T element)
+        void Set(u32 index, T element)
         {
             if(m_capacity >= index && index < 0) return; // outside bounds
             m_array[index] = element;
@@ -68,25 +80,21 @@ namespace kon
         
         int Index() const { return m_index; };
         int Capacity() const { return m_capacity; }
+        T *GetData() const { return m_array; }
 
-        // std::string ToString();
-
-    private:
-        void Resize()
+        void Reserve(u32 elements)
         {
-            // copy the array into an array twice it's size
-            KN_TRACE("Resize");
-            m_capacity *= 2;
+            m_capacity = elements;
             T *swap = new T[m_capacity];
-            for(int i = 0; i < m_index; i++)
+            for(u32 i = 0; i < m_index; i++)
                 swap[i] = m_array[i];
             delete[] m_array;
             m_array = swap;
         }
-    
+
     private:
         T *m_array;
-        int m_index;
-        int m_capacity;
+        u32 m_index;
+        u32 m_capacity;
     };
 }

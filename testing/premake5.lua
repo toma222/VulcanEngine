@@ -12,12 +12,20 @@ project "testing"
 
     links
     {
-        "kon"
+        "kon",
+        "%{Library.Vulkan}",
+        "glfw"
     }
+
+    libdirs { "%{LibraryDir.VulkanSDK}" }
 
     includedirs
     {
-        "%{wks.location}/kon/src/"
+        "%{wks.location}/kon/src/",
+        "%{wks.location}/external/glfw/include",
+        "%{wks.location}/external/glm",
+        "%{wks.location}/external/stb",
+        "%{IncludeDir.VulkanSDK}"
     }
 
     targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")

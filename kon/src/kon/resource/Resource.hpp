@@ -13,8 +13,8 @@ namespace kon
     KN_OBJECT(Resource, Object)
 
     public:
-        Resource();
-        virtual ~Resource() = 0;
+        Resource() = default;
+        virtual ~Resource() = default;
 
         virtual bool Valid() = 0;
         virtual void LoadResource(const String &path) = 0;

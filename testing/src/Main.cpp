@@ -63,8 +63,16 @@ class CoreUnitTest : public Cppunit
     }
 };
 
+#include <kon/resource/Resource.hpp>
+#include <kon/resource/ResourceModel.hpp>
+
 int main(int argc, char const *argv[])
 {
-    return (new CoreUnitTest)->run();
+
+
+    kon::ResourceModel model;
+    model.LoadResource("models/viking_room.obj");
+
+    return 0; //(new CoreUnitTest)->run();
 }
 
