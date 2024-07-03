@@ -23,7 +23,7 @@ namespace kon
             m_size = strlen(str);
             ResizeBuffer(m_size);
             strcpy(m_buffer, str);
-            m_buffer[m_size+1] = '\0';
+            // m_buffer[m_size+1] = '\0';
             return *this;
         }
 

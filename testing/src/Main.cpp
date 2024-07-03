@@ -68,7 +68,10 @@ class CoreUnitTest : public Cppunit
 
 int main(int argc, char const *argv[])
 {
+	kon::String asdfasd;
+	asdfasd = "what is up";
 
+	asdfasd = kon::String("hello").c_str();
 
     kon::ResourceModel model;
     model.LoadResource("models/viking_room.obj");

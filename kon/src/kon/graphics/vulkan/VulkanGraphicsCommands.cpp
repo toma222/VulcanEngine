@@ -15,6 +15,7 @@
 #include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
 #include "kon/graphics/vulkan/pipeline/RenderPipeline.hpp"
 #include "kon/graphics/vulkan/pipeline/ShaderModule.hpp"
+#include "kon/resource/ResourceImage.hpp"
 #include "vulkan/vulkan_core.h"
 
 #include <cstddef>
@@ -36,8 +37,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#define STB_IMAGE_IMPLEMENTATION
-#include<stb_image.h>
+// #define STB_IMAGE_IMPLEMENTATION
+// #include<stb_image.h>
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include <tiny_obj_loader.h>
@@ -1791,17 +1792,28 @@ namespace kon
         
         // CreateTextureImage();
         // CreateTextureImageView();
+		/*
         int texWidth, texHeight, texChannels;
         stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
         if (!pixels) {
-            KN_ERROR("failed to load texture image!");
+             KN_ERROR("failed to load texture image!");
         }
+	
 		m_textureImage = new TextureImage(m_device, m_commandPool, pixels,
 				TextureData{texWidth, texHeight,
-				static_cast<VkDeviceSize>(texWidth*texHeight*4)});
-        stbi_image_free(pixels);
-
-		// CreateTextureSampler();
+							static_cast<VkDeviceSize>(texWidth * texHeight * 4)});
+		*/
+		
+		ResourceImage *image = new ResourceImage();
+		image->LoadResource(TEXTURE_PATH.c_str());
+		int width = image->GetWidth();
+		int height = image->GetHeight();
+		// u8 *imageData = image->GetImageData();
+		m_textureImage = new TextureImage(m_device, m_commandPool, image->GetImageData(),
+				TextureData{width, height,
+				static_cast<VkDeviceSize>(width * height * 4)});
+		// stbi_image_free(image->GetImageData());
+		delete image;
 
         LoadModel();
 
@@ -1998,6 +2010,7 @@ namespace kon
             //vkDestroyBuffer(m_device->Get(), m_uniformBuffers[i], nullptr);
             //vkFreeMemory(m_device->Get(), m_uniformBuffersMemory[i], nullptr);
         }
+
 		delete m_textureSampler;
 
         // vkDestroyDescriptorSetLayout(m_device->Get(), m_descriptorSetLayout, nullptr);
