@@ -216,6 +216,8 @@ namespace kon
 
         bool m_framebufferResized = false;
 
+        u32 m_indicies {0};
+
         int m_frameCount {0};
     };
 }

@@ -30,8 +30,9 @@ namespace kon
     public:
         int GetWidth() { return m_width; }
         int GetHeight() { return m_height; }
-		u8 *GetImageData() { return m_imageData; }
+		    u8 *GetImageData() { return m_imageData; }
         ImageChannels GetChannels() { return m_channels; }
+
 
     private:
         bool m_valid {false};
