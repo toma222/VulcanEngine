@@ -41,12 +41,12 @@
 // #define STB_IMAGE_IMPLEMENTATION
 // #include<stb_image.h>
 
-#define TINYOBJLOADER_IMPLEMENTATION
-#include <tiny_obj_loader.h>
-
 #include <chrono>
 
 #include <kon/debug/Debug.hpp>
+
+#include <kon/resource/ResourceModel.hpp>
+#include <kon/resource/ResourceImage.hpp>
 
 namespace std {
     template<> struct hash<kon::Vertex> {
@@ -1405,6 +1405,7 @@ namespace kon
 			
         // vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0); // DRAW THE DAMN TRIANGLE
         vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_renderPipeline->GetLayout(), 0, 1, &m_descriptorSets->Get()[m_currentFrame], 0, nullptr);
+
         vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(m_indicesCount), 1, 0, 0, 0);
 
         vkCmdEndRenderPass(commandBuffer);
@@ -1795,6 +1796,7 @@ namespace kon
         
         // CreateTextureImage();
         // CreateTextureImageView();
+
 		/*
         int texWidth, texHeight, texChannels;
         stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
@@ -1834,6 +1836,7 @@ namespace kon
 			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, normal));
 
 		m_vertexBuffer->SetDescription(description);
+
 		m_indexBuffer = new IndexBuffer(m_device, m_commandPool, indices.GetData(), indices.Index() * sizeof(indices.Get(0)));
 		
 		m_uniformBuffers.resize(MAX_FRAMES_IN_FLIGHT);
@@ -1848,10 +1851,6 @@ namespace kon
 			poolFactory.Add(DescriptorType::Uniform, 3);
 			poolFactory.Add(DescriptorType::TextureSampler, 3);
 		m_descriptorPool = new DescriptorPool(m_device, poolFactory);
-		
-		//DescriptorVector *descriptors = new DescriptorVector();
-		//	descriptors->Add<DescriptorUniform>(m_uniformBuffers[0]);
-		// 	descriptors->Add<DescriptorTextureSampler>(m_textureSampler, m_textureImageView);
 
 		std::vector<DescriptorVector*> descriptors {};
 		for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++)
