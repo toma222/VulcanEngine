@@ -1824,6 +1824,7 @@ namespace kon
 		m_indicesCount = model.GetShape()->indicies.Index();
 		auto &vertices = model.GetShape()->verticies;
 		auto &indices = model.GetShape()->indicies;
+		KN_TRACE("%u", m_indicesCount);
 
 		m_vertexBuffer = new VertexBuffer(m_device, m_commandPool, vertices.GetData(), vertices.Index() * sizeof(vertices.Get(0)));
 		VertexDescription description(sizeof(ResourceModel::ModelVertex), 4);

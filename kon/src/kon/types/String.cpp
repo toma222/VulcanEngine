@@ -24,9 +24,7 @@ namespace kon
 
     String::~String()
     {
-		KN_WARN("deleteing string");
 		if(m_buffer != nullptr) delete[] m_buffer;
-		KN_WARN("done");
     }
 
     void String::ResizeBuffer(i32 size)
