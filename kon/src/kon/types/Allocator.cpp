@@ -17,7 +17,7 @@ namespace kon
         u32 pageSize = pow(ceil(LOG2(sizeof(T))), 2);
         KN_TRACE("page allocator with page size %u", pageSize);
         m_minPageSize = pageSize;
-        m_page.pageSize = sizeof(T);
+        m_page->pageSize = sizeof(T);
     }
 
     template<typename T>

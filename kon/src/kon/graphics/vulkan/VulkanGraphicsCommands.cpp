@@ -15,6 +15,8 @@
 #include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
 #include "kon/graphics/vulkan/pipeline/RenderPipeline.hpp"
 #include "kon/graphics/vulkan/pipeline/ShaderModule.hpp"
+#include "kon/resource/ResourceImage.hpp"
+#include "kon/resource/ResourceModel.hpp"
 #include "vulkan/vulkan_core.h"
 
 #include <cstddef>
@@ -36,8 +38,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#define STB_IMAGE_IMPLEMENTATION
-#include<stb_image.h>
+// #define STB_IMAGE_IMPLEMENTATION
+// #include<stb_image.h>
 
 #include <chrono>
 
@@ -1403,7 +1405,8 @@ namespace kon
 			
         // vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0); // DRAW THE DAMN TRIANGLE
         vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_renderPipeline->GetLayout(), 0, 1, &m_descriptorSets->Get()[m_currentFrame], 0, nullptr);
-        vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(m_indicies), 1, 0, 0, 0);
+
+        vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(m_indicesCount), 1, 0, 0, 0);
 
         vkCmdEndRenderPass(commandBuffer);
 
@@ -1717,7 +1720,7 @@ namespace kon
     }
 	*/
 
-    /*
+	/*
     void VulkanGraphicsCommands::LoadModel()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1769,7 +1772,7 @@ namespace kon
 
         printf("verts: %i\nindecies: %i\n", vertices.size(), indices.size());
     }
-    */
+	*/
 
     void VulkanGraphicsCommands::Init()
     {
@@ -1793,19 +1796,39 @@ namespace kon
         
         // CreateTextureImage();
         // CreateTextureImageView();
-        ResourceImage image;
-        image.LoadResource("textures/viking_room.png");
-		m_textureImage = new TextureImage(m_device, m_commandPool, image.GetData(),
-				TextureData{image.GetWidth(), image.GetHeight(),
-				static_cast<VkDeviceSize>(image.GetWidth()*image.GetHeight()*(image.GetChannels()))});
 
-        ResourceModel model;
-        model.LoadResource("models/viking_room.obj");
-        m_indicies = model.GetShape()->verticies.Index();
+		/*
+        int texWidth, texHeight, texChannels;
+        stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
+        if (!pixels) {
+             KN_ERROR("failed to load texture image!");
+        }
+	
+		m_textureImage = new TextureImage(m_device, m_commandPool, pixels,
+				TextureData{texWidth, texHeight,
+							static_cast<VkDeviceSize>(texWidth * texHeight * 4)});
+		*/
+		
+		ResourceImage image;
+		image.LoadResource(TEXTURE_PATH.c_str());
+		int width = image.GetWidth();
+		int height = image.GetHeight();
+		// u8 *imageData = image->GetImageData();
+		m_textureImage = new TextureImage(m_device, m_commandPool, image.GetImageData(),
+				TextureData{width, height,
+				static_cast<VkDeviceSize>(width * height * 4)});
+		// stbi_image_free(image->GetImageData());
+		// delete image;
 
-		m_vertexBuffer = new VertexBuffer(m_device, m_commandPool, model.GetShape()->verticies.GetData(),
-                                          model.GetShape()->verticies.Index() * sizeof(ResourceModel::ModelVertex));
+        // LoadModel();
+		ResourceModel model;
+		model.LoadResource(MODEL_PATH.c_str());
+		m_indicesCount = model.GetShape()->indicies.Index();
+		auto &vertices = model.GetShape()->verticies;
+		auto &indices = model.GetShape()->indicies;
+		KN_TRACE("%u", m_indicesCount);
 
+		m_vertexBuffer = new VertexBuffer(m_device, m_commandPool, vertices.GetData(), vertices.Index() * sizeof(vertices.Get(0)));
 		VertexDescription description(sizeof(ResourceModel::ModelVertex), 4);
 			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, position));
 			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, color));
@@ -1813,8 +1836,8 @@ namespace kon
 			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, normal));
 
 		m_vertexBuffer->SetDescription(description);
-		m_indexBuffer = new IndexBuffer(m_device, m_commandPool, model.GetShape()->indicies.GetData(),
-                                        model.GetShape()->indicies.Index() * sizeof(u32));
+
+		m_indexBuffer = new IndexBuffer(m_device, m_commandPool, indices.GetData(), indices.Index() * sizeof(indices.Get(0)));
 		
 		m_uniformBuffers.resize(MAX_FRAMES_IN_FLIGHT);
 		for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++)
@@ -1995,6 +2018,7 @@ namespace kon
             //vkDestroyBuffer(m_device->Get(), m_uniformBuffers[i], nullptr);
             //vkFreeMemory(m_device->Get(), m_uniformBuffersMemory[i], nullptr);
         }
+
 		delete m_textureSampler;
 
         // vkDestroyDescriptorSetLayout(m_device->Get(), m_descriptorSetLayout, nullptr);

@@ -1,5 +1,6 @@
 
 #include "String.hpp"
+#include "kon/core/Logging.hpp"
 
 #include <math.h>
 #include <stdlib.h>
@@ -18,12 +19,12 @@ namespace kon
 
     String::String(const String &string)
     {
-        *this = string.m_buffer;
+        *this = string.c_str();
     }
 
     String::~String()
     {
-        delete[] m_buffer;
+		if(m_buffer != nullptr) delete[] m_buffer;
     }
 
     void String::ResizeBuffer(i32 size)

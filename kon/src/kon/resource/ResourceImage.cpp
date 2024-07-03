@@ -1,7 +1,9 @@
 
 #include "ResourceImage.hpp"
 
-#include <stb_image.h>
+#define STB_IMAGE_IMPLEMENTATION
+#include<stb_image.h>
+
 #include <kon/core/Logging.hpp>
 
 namespace kon
@@ -20,11 +22,11 @@ namespace kon
 
     void ResourceImage::LoadResource(const String &path)
     {
-        m_loadPath = path;
+        m_loadPath = path.c_str();
         m_stringHash = path.Hash();
 
         int requestedChannels = STBI_rgb_alpha;
-        m_imageData = stbi_load(path.c_str(), &m_width, &m_height, (int*)(&m_channels), requestedChannels);
+        m_imageData = stbi_load(path.c_str(), &m_width, &m_height, (int*)(&m_channels), STBI_rgb_alpha);
         if (!m_imageData)
         {
             KN_ERROR("Image resource failed to load image: path -> \n%s", path.c_str());

@@ -19,6 +19,8 @@ namespace kon
 
     void ResourceModel::LoadResource(const String &path)
     {
+		m_loadPath = path.c_str();
+
         tinyobj::attrib_t attrib;
         std::vector<tinyobj::shape_t> shapes;
         std::vector<tinyobj::material_t> materials;
@@ -26,7 +28,7 @@ namespace kon
 
         if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, path.c_str()))
         {
-            KN_WARN("tinyobj loader error: %s\n warn %s\n", warn, err);
+            KN_WARN("tinyobj loader error: %s\n warn %s\n", warn.c_str(), err.c_str());
         }
 
         KN_TRACE("setting shape");

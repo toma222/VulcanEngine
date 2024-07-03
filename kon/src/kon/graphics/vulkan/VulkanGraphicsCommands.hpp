@@ -15,6 +15,7 @@
 #include "kon/graphics/vulkan/pipeline/RenderPass.hpp"
 #include "kon/graphics/vulkan/pipeline/RenderPipeline.hpp"
 #include "kon/graphics/vulkan/pipeline/ShaderModule.hpp"
+#include <cstdint>
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -194,6 +195,7 @@ namespace kon
 
         // std::vector<Vertex> vertices;
         // std::vector<uint32_t> indices;
+		uint32_t m_indicesCount;
 
 		VertexBuffer *m_vertexBuffer;
 		IndexBuffer *m_indexBuffer;

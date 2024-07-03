@@ -19,7 +19,7 @@ namespace kon
 
     public:
         ResourceImage();
-        ~ResourceImage();
+        ~ResourceImage() override;
 
     public:
         bool Valid() override;
@@ -28,10 +28,11 @@ namespace kon
         void LoadResource(const String &path) override;
 
     public:
-        u8 *GetData() const { return m_imageData; }
-        int GetWidth() const { return m_width; }
-        int GetHeight() const { return m_height; }
-        ImageChannels GetChannels() const { return m_channels; }
+        int GetWidth() { return m_width; }
+        int GetHeight() { return m_height; }
+		    u8 *GetImageData() { return m_imageData; }
+        ImageChannels GetChannels() { return m_channels; }
+
 
     private:
         bool m_valid {false};
