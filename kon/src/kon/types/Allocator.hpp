@@ -17,7 +17,7 @@ namespace kon
             T *pageStart;
             T *pageIndex;
             
-            const u32 pageSize;
+            u32 pageSize;
 
             Page *next {nullptr};
 
@@ -34,7 +34,7 @@ namespace kon
         ~Allocator();
 
         T *Allocate() override;
-        void Free(u8 *memory, u8 size) override;
+        void Free(u8 *memory, u8 size);
 
     private:
         void AllocateNewPage(u8 *pageSize);
@@ -42,6 +42,6 @@ namespace kon
     private:
         Page *m_firstPage;
         Page *m_page;
-        const u32 m_minPageSize;
+        u32 m_minPageSize;
     };
 }

@@ -1,16 +1,16 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":125.5,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":8758}
-,{"cat":"function","dur":758.1,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":9116}
-,{"cat":"function","dur":33981.7,"name":"DestroySwapchain","ph":"X","pid":0,"tid":0,"ts":8731}
-,{"cat":"function","dur":111.4,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":42884}
-,{"cat":"function","dur":11437.6,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":46532}
-,{"cat":"function","dur":95.6,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":58134}
-,{"cat":"function","dur":10974,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":58309}
-,{"cat":"function","dur":60895.4,"name":"Clean","ph":"X","pid":0,"tid":0,"ts":8521}
-,{"cat":"function","dur":35705.6,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":69474}
-,{"cat":"function","dur":74857.4,"name":"ClearModules","ph":"X","pid":0,"tid":0,"ts":107747}
-,{"cat":"function","dur":77388.5,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":105269}
-,{"cat":"function","dur":182660,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":9}
-,{"cat":"function","dur":2802.5,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":182682}
+{"cat":"function","dur":4376.41,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":5845}
+,{"cat":"function","dur":4880.17,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":10306}
+,{"cat":"function","dur":20765.6,"name":"DestroySwapchain","ph":"X","pid":0,"tid":0,"ts":5506}
+,{"cat":"function","dur":3109.14,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":26333}
+,{"cat":"function","dur":17938.7,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":32065}
+,{"cat":"function","dur":18.577,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":50039}
+,{"cat":"function","dur":9224.94,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":50064}
+,{"cat":"function","dur":59291.5,"name":"Clean","ph":"X","pid":0,"tid":0,"ts":20}
+,{"cat":"function","dur":865.936,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":59315}
+,{"cat":"function","dur":3.08,"name":"ClearModules","ph":"X","pid":0,"tid":0,"ts":60204}
+,{"cat":"function","dur":16.468,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":60195}
+,{"cat":"function","dur":60213,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":2}
+,{"cat":"function","dur":2.542,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":60218}
 
 ]}
