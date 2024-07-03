@@ -16,6 +16,7 @@
 #include "kon/graphics/vulkan/pipeline/RenderPipeline.hpp"
 #include "kon/graphics/vulkan/pipeline/ShaderModule.hpp"
 #include "kon/resource/ResourceImage.hpp"
+#include "kon/resource/ResourceModel.hpp"
 #include "vulkan/vulkan_core.h"
 
 #include <cstddef>
@@ -1404,7 +1405,7 @@ namespace kon
 			
         // vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0); // DRAW THE DAMN TRIANGLE
         vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_renderPipeline->GetLayout(), 0, 1, &m_descriptorSets->Get()[m_currentFrame], 0, nullptr);
-        vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(indices.size()), 1, 0, 0, 0);
+        vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(m_indicesCount), 1, 0, 0, 0);
 
         vkCmdEndRenderPass(commandBuffer);
 
@@ -1718,6 +1719,7 @@ namespace kon
     }
 	*/
 
+	/*
     void VulkanGraphicsCommands::LoadModel()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -1769,6 +1771,7 @@ namespace kon
 
         printf("verts: %i\nindecies: %i\n", vertices.size(), indices.size());
     }
+	*/
 
     void VulkanGraphicsCommands::Init()
     {
@@ -1804,28 +1807,33 @@ namespace kon
 							static_cast<VkDeviceSize>(texWidth * texHeight * 4)});
 		*/
 		
-		ResourceImage *image = new ResourceImage();
-		image->LoadResource(TEXTURE_PATH.c_str());
-		int width = image->GetWidth();
-		int height = image->GetHeight();
+		ResourceImage image;
+		image.LoadResource(TEXTURE_PATH.c_str());
+		int width = image.GetWidth();
+		int height = image.GetHeight();
 		// u8 *imageData = image->GetImageData();
-		m_textureImage = new TextureImage(m_device, m_commandPool, image->GetImageData(),
+		m_textureImage = new TextureImage(m_device, m_commandPool, image.GetImageData(),
 				TextureData{width, height,
 				static_cast<VkDeviceSize>(width * height * 4)});
 		// stbi_image_free(image->GetImageData());
-		delete image;
+		// delete image;
 
-        LoadModel();
+        // LoadModel();
+		ResourceModel model;
+		model.LoadResource(MODEL_PATH.c_str());
+		m_indicesCount = model.GetShape()->indicies.Index();
+		auto &vertices = model.GetShape()->verticies;
+		auto &indices = model.GetShape()->indicies;
 
-		m_vertexBuffer = new VertexBuffer(m_device, m_commandPool, vertices.data(), vertices.size() * sizeof(vertices[0]));
-		VertexDescription description(sizeof(Vertex), 4);
-			description.Add(ShaderType::Float3, offsetof(Vertex, pos));
-			description.Add(ShaderType::Float3, offsetof(Vertex, color));
-			description.Add(ShaderType::Float2, offsetof(Vertex, texCoord));
-			description.Add(ShaderType::Float3, offsetof(Vertex, normal));
+		m_vertexBuffer = new VertexBuffer(m_device, m_commandPool, vertices.GetData(), vertices.Index() * sizeof(vertices.Get(0)));
+		VertexDescription description(sizeof(ResourceModel::ModelVertex), 4);
+			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, position));
+			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, color));
+			description.Add(ShaderType::Float2, offsetof(ResourceModel::ModelVertex, texCoord));
+			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, normal));
 
 		m_vertexBuffer->SetDescription(description);
-		m_indexBuffer = new IndexBuffer(m_device, m_commandPool, indices.data(), indices.size() * sizeof(indices[0]));
+		m_indexBuffer = new IndexBuffer(m_device, m_commandPool, indices.GetData(), indices.Index() * sizeof(indices.Get(0)));
 		
 		m_uniformBuffers.resize(MAX_FRAMES_IN_FLIGHT);
 		for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++)
