@@ -1,0 +1,895 @@
+{"otherData": {},"traceEvents":[
+{"cat":"function","dur":1139.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":4801}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":6013}
+,{"cat":"function","dur":14.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":6042}
+,{"cat":"function","dur":27.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":6083}
+,{"cat":"function","dur":1248.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":6178}
+,{"cat":"function","dur":14.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":7507}
+,{"cat":"function","dur":110,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":7562}
+,{"cat":"function","dur":181.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":7702}
+,{"cat":"function","dur":1876.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":6042}
+,{"cat":"function","dur":3143.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":4800}
+,{"cat":"function","dur":1503.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":7963}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":9581}
+,{"cat":"function","dur":22.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":9620}
+,{"cat":"function","dur":23.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":9675}
+,{"cat":"function","dur":806.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":9796}
+,{"cat":"function","dur":7.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":10685}
+,{"cat":"function","dur":262.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":10733}
+,{"cat":"function","dur":98.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":11052}
+,{"cat":"function","dur":1595.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":9619}
+,{"cat":"function","dur":3279.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":7963}
+,{"cat":"function","dur":158.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":11265}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":11479}
+,{"cat":"function","dur":19.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":11506}
+,{"cat":"function","dur":23.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":11556}
+,{"cat":"function","dur":788.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":11653}
+,{"cat":"function","dur":12.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":12579}
+,{"cat":"function","dur":435.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":12736}
+,{"cat":"function","dur":98,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":13294}
+,{"cat":"function","dur":1939,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":11506}
+,{"cat":"function","dur":2248.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":11265}
+,{"cat":"function","dur":31.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":13547}
+,{"cat":"function","dur":0.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":13611}
+,{"cat":"function","dur":130.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":13647}
+,{"cat":"function","dur":33.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":13853}
+,{"cat":"function","dur":365.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":13946}
+,{"cat":"function","dur":11.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":14449}
+,{"cat":"function","dur":184.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":14513}
+,{"cat":"function","dur":103.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":14808}
+,{"cat":"function","dur":1320.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":13647}
+,{"cat":"function","dur":1452,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":13547}
+,{"cat":"function","dur":24.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":15023}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":15076}
+,{"cat":"function","dur":45.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":15099}
+,{"cat":"function","dur":9249.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":15179}
+,{"cat":"function","dur":216,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":24578}
+,{"cat":"function","dur":9.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":24947}
+,{"cat":"function","dur":100.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":25006}
+,{"cat":"function","dur":44,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":25140}
+,{"cat":"function","dur":10113.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":15099}
+,{"cat":"function","dur":10216.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":15023}
+,{"cat":"function","dur":175.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":25263}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":25474}
+,{"cat":"function","dur":36.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":25499}
+,{"cat":"function","dur":15564,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":25585}
+,{"cat":"function","dur":463.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":41285}
+,{"cat":"function","dur":18.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":41859}
+,{"cat":"function","dur":109.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":41919}
+,{"cat":"function","dur":40.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":42064}
+,{"cat":"function","dur":16656.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":25499}
+,{"cat":"function","dur":16967,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":25263}
+,{"cat":"function","dur":27.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":42252}
+,{"cat":"function","dur":0.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":42324}
+,{"cat":"function","dur":48.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":42350}
+,{"cat":"function","dur":14912.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":42452}
+,{"cat":"function","dur":235.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":57448}
+,{"cat":"function","dur":6.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":57783}
+,{"cat":"function","dur":157.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":57813}
+,{"cat":"function","dur":59.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":58029}
+,{"cat":"function","dur":15765.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":42349}
+,{"cat":"function","dur":15880.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":42252}
+,{"cat":"function","dur":21.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":58148}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":58186}
+,{"cat":"function","dur":41.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":58203}
+,{"cat":"function","dur":17558,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":58308}
+,{"cat":"function","dur":360.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":76066}
+,{"cat":"function","dur":20,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":76572}
+,{"cat":"function","dur":212.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":76663}
+,{"cat":"function","dur":95.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":76981}
+,{"cat":"function","dur":18930.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":58202}
+,{"cat":"function","dur":19040.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":58148}
+,{"cat":"function","dur":38.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":77235}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":77794}
+,{"cat":"function","dur":96.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":77847}
+,{"cat":"function","dur":14807.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":78024}
+,{"cat":"function","dur":502.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":93107}
+,{"cat":"function","dur":30.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":93801}
+,{"cat":"function","dur":290.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":93960}
+,{"cat":"function","dur":116.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":94365}
+,{"cat":"function","dur":16722.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":77846}
+,{"cat":"function","dur":17426.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":77234}
+,{"cat":"function","dur":49.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":94771}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":94912}
+,{"cat":"function","dur":153.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":95015}
+,{"cat":"function","dur":13565.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":95342}
+,{"cat":"function","dur":564,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":109174}
+,{"cat":"function","dur":31.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":109921}
+,{"cat":"function","dur":268.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":110085}
+,{"cat":"function","dur":111.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":110466}
+,{"cat":"function","dur":15622.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":95013}
+,{"cat":"function","dur":15911.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":94770}
+,{"cat":"function","dur":37.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":110727}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":110811}
+,{"cat":"function","dur":97.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":110858}
+,{"cat":"function","dur":14821.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":111045}
+,{"cat":"function","dur":538.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":126164}
+,{"cat":"function","dur":29,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":126890}
+,{"cat":"function","dur":276.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":127039}
+,{"cat":"function","dur":111.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":127422}
+,{"cat":"function","dur":16756.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":110857}
+,{"cat":"function","dur":16960.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":110725}
+,{"cat":"function","dur":51.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":127765}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":127893}
+,{"cat":"function","dur":95.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":127971}
+,{"cat":"function","dur":14213.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":128255}
+,{"cat":"function","dur":452.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":142729}
+,{"cat":"function","dur":26.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":143355}
+,{"cat":"function","dur":265.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":143496}
+,{"cat":"function","dur":106.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":143864}
+,{"cat":"function","dur":16080.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":127970}
+,{"cat":"function","dur":16354.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":127763}
+,{"cat":"function","dur":51.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":144184}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":144317}
+,{"cat":"function","dur":126.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":144401}
+,{"cat":"function","dur":15228.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":144670}
+,{"cat":"function","dur":401.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":160092}
+,{"cat":"function","dur":16.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":160598}
+,{"cat":"function","dur":268.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":160702}
+,{"cat":"function","dur":91.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":161139}
+,{"cat":"function","dur":16912,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":144399}
+,{"cat":"function","dur":17292.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":144183}
+,{"cat":"function","dur":45.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":161580}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":161723}
+,{"cat":"function","dur":81.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":161804}
+,{"cat":"function","dur":14018.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":162007}
+,{"cat":"function","dur":458,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":176275}
+,{"cat":"function","dur":36.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":176900}
+,{"cat":"function","dur":258.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":177057}
+,{"cat":"function","dur":138.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":177496}
+,{"cat":"function","dur":15986,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":161803}
+,{"cat":"function","dur":16293.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":161579}
+,{"cat":"function","dur":46.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":177958}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":178103}
+,{"cat":"function","dur":150.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":178194}
+,{"cat":"function","dur":13929.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":178503}
+,{"cat":"function","dur":368.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":192629}
+,{"cat":"function","dur":16.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":193095}
+,{"cat":"function","dur":184.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":193195}
+,{"cat":"function","dur":64.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":193829}
+,{"cat":"function","dur":15749.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":178193}
+,{"cat":"function","dur":16041.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":177957}
+,{"cat":"function","dur":38.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":194042}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":194132}
+,{"cat":"function","dur":93.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":194179}
+,{"cat":"function","dur":14449.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":194382}
+,{"cat":"function","dur":342.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":209040}
+,{"cat":"function","dur":18.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":209517}
+,{"cat":"function","dur":178.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":209601}
+,{"cat":"function","dur":91.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":209842}
+,{"cat":"function","dur":15805,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":194178}
+,{"cat":"function","dur":15982.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":194041}
+,{"cat":"function","dur":32.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":210064}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":210148}
+,{"cat":"function","dur":69.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":210191}
+,{"cat":"function","dur":15166.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":210347}
+,{"cat":"function","dur":470.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":225757}
+,{"cat":"function","dur":27.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":226401}
+,{"cat":"function","dur":222,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":226549}
+,{"cat":"function","dur":203.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":226865}
+,{"cat":"function","dur":16962.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":210191}
+,{"cat":"function","dur":17175.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":210063}
+,{"cat":"function","dur":252.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":227314}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":227790}
+,{"cat":"function","dur":91.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":227897}
+,{"cat":"function","dur":15776.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":228152}
+,{"cat":"function","dur":497.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":244190}
+,{"cat":"function","dur":35.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":244932}
+,{"cat":"function","dur":265,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":245317}
+,{"cat":"function","dur":100.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":245709}
+,{"cat":"function","dur":17995.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":227896}
+,{"cat":"function","dur":18647.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":227313}
+,{"cat":"function","dur":198.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":246040}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":246363}
+,{"cat":"function","dur":100,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":246447}
+,{"cat":"function","dur":13060.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":246780}
+,{"cat":"function","dur":601.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":260127}
+,{"cat":"function","dur":33.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":260960}
+,{"cat":"function","dur":242.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":261112}
+,{"cat":"function","dur":112,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":261458}
+,{"cat":"function","dur":15222.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":246446}
+,{"cat":"function","dur":15751.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":246039}
+,{"cat":"function","dur":42,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":261869}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":261990}
+,{"cat":"function","dur":112.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":262080}
+,{"cat":"function","dur":13685.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":262335}
+,{"cat":"function","dur":514.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":276286}
+,{"cat":"function","dur":24.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":276976}
+,{"cat":"function","dur":303,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":277155}
+,{"cat":"function","dur":104.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":277633}
+,{"cat":"function","dur":15744.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":262079}
+,{"cat":"function","dur":16058,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":261868}
+,{"cat":"function","dur":2300.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":278006}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":280500}
+,{"cat":"function","dur":91.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":280594}
+,{"cat":"function","dur":11983.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":280814}
+,{"cat":"function","dur":435.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":293063}
+,{"cat":"function","dur":26.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":293686}
+,{"cat":"function","dur":256.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":293826}
+,{"cat":"function","dur":120.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":294174}
+,{"cat":"function","dur":13780.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":280593}
+,{"cat":"function","dur":16432.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":278005}
+,{"cat":"function","dur":1093.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":294512}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":295747}
+,{"cat":"function","dur":129.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":295826}
+,{"cat":"function","dur":13107.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":296109}
+,{"cat":"function","dur":530,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":309567}
+,{"cat":"function","dur":27.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":310263}
+,{"cat":"function","dur":255.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":310407}
+,{"cat":"function","dur":101.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":311228}
+,{"cat":"function","dur":15608.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":295825}
+,{"cat":"function","dur":17252.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":294510}
+,{"cat":"function","dur":690.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":311890}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":312794}
+,{"cat":"function","dur":669.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":313156}
+,{"cat":"function","dur":12198.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":313974}
+,{"cat":"function","dur":531.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":326488}
+,{"cat":"function","dur":33.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":327184}
+,{"cat":"function","dur":301.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":327333}
+,{"cat":"function","dur":90.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":327762}
+,{"cat":"function","dur":14782.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":313154}
+,{"cat":"function","dur":16131.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":311888}
+,{"cat":"function","dur":536.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":328100}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":328754}
+,{"cat":"function","dur":87.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":328804}
+,{"cat":"function","dur":13565.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":329006}
+,{"cat":"function","dur":495.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":342816}
+,{"cat":"function","dur":25.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":343486}
+,{"cat":"function","dur":252,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":343626}
+,{"cat":"function","dur":99.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":343968}
+,{"cat":"function","dur":15338.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":328803}
+,{"cat":"function","dur":16119.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":328098}
+,{"cat":"function","dur":596.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":344280}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":345024}
+,{"cat":"function","dur":84.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":345072}
+,{"cat":"function","dur":14163.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":345270}
+,{"cat":"function","dur":462.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":359681}
+,{"cat":"function","dur":24.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":360309}
+,{"cat":"function","dur":243.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":360452}
+,{"cat":"function","dur":349.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":360799}
+,{"cat":"function","dur":16182.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":345071}
+,{"cat":"function","dur":17043.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":344279}
+,{"cat":"function","dur":596.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":361393}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":362108}
+,{"cat":"function","dur":85.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":362155}
+,{"cat":"function","dur":13836.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":362344}
+,{"cat":"function","dur":460.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":376424}
+,{"cat":"function","dur":25.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":377040}
+,{"cat":"function","dur":276.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":377176}
+,{"cat":"function","dur":135.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":377640}
+,{"cat":"function","dur":15737,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":362154}
+,{"cat":"function","dur":16578,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":361391}
+,{"cat":"function","dur":619.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":378032}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":378849}
+,{"cat":"function","dur":69.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":378951}
+,{"cat":"function","dur":14039.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":379140}
+,{"cat":"function","dur":438.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":393455}
+,{"cat":"function","dur":24.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":394076}
+,{"cat":"function","dur":246.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":394219}
+,{"cat":"function","dur":98.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":394569}
+,{"cat":"function","dur":15800.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":378950}
+,{"cat":"function","dur":16888,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":378031}
+,{"cat":"function","dur":42,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":394998}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":395115}
+,{"cat":"function","dur":71.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":395194}
+,{"cat":"function","dur":14045.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":395366}
+,{"cat":"function","dur":499,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":409733}
+,{"cat":"function","dur":24.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":410392}
+,{"cat":"function","dur":242.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":410529}
+,{"cat":"function","dur":163,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":410876}
+,{"cat":"function","dur":15948.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":395193}
+,{"cat":"function","dur":16233.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":394996}
+,{"cat":"function","dur":587.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":411297}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":412044}
+,{"cat":"function","dur":79.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":412127}
+,{"cat":"function","dur":14153.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":412323}
+,{"cat":"function","dur":683.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":426868}
+,{"cat":"function","dur":25.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":427746}
+,{"cat":"function","dur":632.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":427893}
+,{"cat":"function","dur":102.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":428636}
+,{"cat":"function","dur":16694.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":412126}
+,{"cat":"function","dur":17592.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":411296}
+,{"cat":"function","dur":43,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":428955}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":429096}
+,{"cat":"function","dur":72.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":429165}
+,{"cat":"function","dur":13385,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":429342}
+,{"cat":"function","dur":476.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":443046}
+,{"cat":"function","dur":24.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":443685}
+,{"cat":"function","dur":243.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":443821}
+,{"cat":"function","dur":100.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":444168}
+,{"cat":"function","dur":15180.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":429163}
+,{"cat":"function","dur":15449.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":428954}
+,{"cat":"function","dur":60.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":444467}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":444608}
+,{"cat":"function","dur":77.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":444678}
+,{"cat":"function","dur":14728,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":444878}
+,{"cat":"function","dur":430,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":459866}
+,{"cat":"function","dur":25.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":460470}
+,{"cat":"function","dur":238,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":460641}
+,{"cat":"function","dur":96.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":460978}
+,{"cat":"function","dur":16472.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":444677}
+,{"cat":"function","dur":16748.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":444466}
+,{"cat":"function","dur":43.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":461289}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":461406}
+,{"cat":"function","dur":82.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":461481}
+,{"cat":"function","dur":14294.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":461710}
+,{"cat":"function","dur":452.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":476245}
+,{"cat":"function","dur":23.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":476861}
+,{"cat":"function","dur":237,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":476992}
+,{"cat":"function","dur":98.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":477343}
+,{"cat":"function","dur":16038.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":461480}
+,{"cat":"function","dur":16293.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":461288}
+,{"cat":"function","dur":56.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":477654}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":477783}
+,{"cat":"function","dur":76.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":477851}
+,{"cat":"function","dur":14935.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":478047}
+,{"cat":"function","dur":438.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":493243}
+,{"cat":"function","dur":26.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":493867}
+,{"cat":"function","dur":242,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":494007}
+,{"cat":"function","dur":100.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":494344}
+,{"cat":"function","dur":16666.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":477850}
+,{"cat":"function","dur":16928.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":477653}
+,{"cat":"function","dur":44.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":494664}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":494778}
+,{"cat":"function","dur":74.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":494847}
+,{"cat":"function","dur":12996.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":495066}
+,{"cat":"function","dur":312.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":508307}
+,{"cat":"function","dur":12.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":508722}
+,{"cat":"function","dur":135.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":508812}
+,{"cat":"function","dur":66.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":508996}
+,{"cat":"function","dur":14257.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":494846}
+,{"cat":"function","dur":14472.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":494662}
+,{"cat":"function","dur":26.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":509169}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":509263}
+,{"cat":"function","dur":43.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":509299}
+,{"cat":"function","dur":14728.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":509431}
+,{"cat":"function","dur":368.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":524274}
+,{"cat":"function","dur":10.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":524734}
+,{"cat":"function","dur":104.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":524784}
+,{"cat":"function","dur":59.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":524927}
+,{"cat":"function","dur":15738.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":509299}
+,{"cat":"function","dur":15893.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":509168}
+,{"cat":"function","dur":42.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":525092}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":525173}
+,{"cat":"function","dur":42.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":525198}
+,{"cat":"function","dur":15445,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":525320}
+,{"cat":"function","dur":366,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":541082}
+,{"cat":"function","dur":8.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":541526}
+,{"cat":"function","dur":101.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":541579}
+,{"cat":"function","dur":36.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":541714}
+,{"cat":"function","dur":16637.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":525198}
+,{"cat":"function","dur":16766.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":525091}
+,{"cat":"function","dur":23.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":541879}
+,{"cat":"function","dur":0.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":541922}
+,{"cat":"function","dur":38.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":541938}
+,{"cat":"function","dur":15495.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":542012}
+,{"cat":"function","dur":369.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":557619}
+,{"cat":"function","dur":10,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":558089}
+,{"cat":"function","dur":108.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":558141}
+,{"cat":"function","dur":63.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":558294}
+,{"cat":"function","dur":16451.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":541938}
+,{"cat":"function","dur":16534.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":541879}
+,{"cat":"function","dur":43.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":558438}
+,{"cat":"function","dur":0.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":558516}
+,{"cat":"function","dur":38.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":558538}
+,{"cat":"function","dur":18136.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":558613}
+,{"cat":"function","dur":729,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":577144}
+,{"cat":"function","dur":28.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":578070}
+,{"cat":"function","dur":284,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":578235}
+,{"cat":"function","dur":113.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":578638}
+,{"cat":"function","dur":20314.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":558538}
+,{"cat":"function","dur":20510.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":558437}
+,{"cat":"function","dur":46.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":579031}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":579162}
+,{"cat":"function","dur":55.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":579240}
+,{"cat":"function","dur":13832.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":579399}
+,{"cat":"function","dur":568.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":593605}
+,{"cat":"function","dur":31.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":594395}
+,{"cat":"function","dur":279.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":594562}
+,{"cat":"function","dur":116.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":594956}
+,{"cat":"function","dur":15920.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":579239}
+,{"cat":"function","dur":16206.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":579030}
+,{"cat":"function","dur":60.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":595327}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":595477}
+,{"cat":"function","dur":106.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":595570}
+,{"cat":"function","dur":13719.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":595827}
+,{"cat":"function","dur":527.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":609861}
+,{"cat":"function","dur":31.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":610613}
+,{"cat":"function","dur":270.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":610784}
+,{"cat":"function","dur":114,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":611211}
+,{"cat":"function","dur":15874.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":595569}
+,{"cat":"function","dur":16204.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":595326}
+,{"cat":"function","dur":46.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":611625}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":611845}
+,{"cat":"function","dur":84.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":611932}
+,{"cat":"function","dur":14535.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":612122}
+,{"cat":"function","dur":499.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":626948}
+,{"cat":"function","dur":28.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":627643}
+,{"cat":"function","dur":339,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":627915}
+,{"cat":"function","dur":108.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":628383}
+,{"cat":"function","dur":16643.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":611931}
+,{"cat":"function","dur":17021.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":611623}
+,{"cat":"function","dur":48.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":628739}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":628872}
+,{"cat":"function","dur":57.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":628948}
+,{"cat":"function","dur":13771.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":629104}
+,{"cat":"function","dur":436.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":643114}
+,{"cat":"function","dur":25.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":643804}
+,{"cat":"function","dur":239.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":643942}
+,{"cat":"function","dur":86.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":644315}
+,{"cat":"function","dur":15527.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":628947}
+,{"cat":"function","dur":15800.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":628738}
+,{"cat":"function","dur":48.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":644613}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":644753}
+,{"cat":"function","dur":70.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":645258}
+,{"cat":"function","dur":14086.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":645438}
+,{"cat":"function","dur":485.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":659760}
+,{"cat":"function","dur":25.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":660413}
+,{"cat":"function","dur":194.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":660588}
+,{"cat":"function","dur":83.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":660854}
+,{"cat":"function","dur":15727,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":645257}
+,{"cat":"function","dur":16411.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":644612}
+,{"cat":"function","dur":35.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":661063}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":661140}
+,{"cat":"function","dur":101.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":661180}
+,{"cat":"function","dur":14677.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":661396}
+,{"cat":"function","dur":556.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":676376}
+,{"cat":"function","dur":28.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":677127}
+,{"cat":"function","dur":273.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":677296}
+,{"cat":"function","dur":118,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":677716}
+,{"cat":"function","dur":16754.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":661180}
+,{"cat":"function","dur":17023.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":661062}
+,{"cat":"function","dur":48.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":678175}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":678326}
+,{"cat":"function","dur":95.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":678406}
+,{"cat":"function","dur":14657.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":678634}
+,{"cat":"function","dur":508,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":693597}
+,{"cat":"function","dur":31,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":694298}
+,{"cat":"function","dur":296.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":694469}
+,{"cat":"function","dur":121.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":694882}
+,{"cat":"function","dur":16695.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":678405}
+,{"cat":"function","dur":17014.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":678173}
+,{"cat":"function","dur":547.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":695248}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":695925}
+,{"cat":"function","dur":93.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":696008}
+,{"cat":"function","dur":13409.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":696229}
+,{"cat":"function","dur":544.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":709940}
+,{"cat":"function","dur":30.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":710692}
+,{"cat":"function","dur":267,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":710856}
+,{"cat":"function","dur":106.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":711277}
+,{"cat":"function","dur":15508.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":696007}
+,{"cat":"function","dur":16348.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":695247}
+,{"cat":"function","dur":664.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":711686}
+,{"cat":"function","dur":0.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":712543}
+,{"cat":"function","dur":106.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":712694}
+,{"cat":"function","dur":13801.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":712935}
+,{"cat":"function","dur":522.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":727013}
+,{"cat":"function","dur":28.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":727742}
+,{"cat":"function","dur":278.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":727903}
+,{"cat":"function","dur":90.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":728333}
+,{"cat":"function","dur":15821.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":712692}
+,{"cat":"function","dur":16901.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":711685}
+,{"cat":"function","dur":780.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":728669}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":729658}
+,{"cat":"function","dur":113.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":729760}
+,{"cat":"function","dur":13027.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":730027}
+,{"cat":"function","dur":493.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":743314}
+,{"cat":"function","dur":29.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":743998}
+,{"cat":"function","dur":248.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":744175}
+,{"cat":"function","dur":108.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":744558}
+,{"cat":"function","dur":14995.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":729759}
+,{"cat":"function","dur":16157.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":728668}
+,{"cat":"function","dur":715.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":744908}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":745867}
+,{"cat":"function","dur":114.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":746013}
+,{"cat":"function","dur":13188.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":746308}
+,{"cat":"function","dur":494.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":759754}
+,{"cat":"function","dur":27,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":760423}
+,{"cat":"function","dur":261.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":760566}
+,{"cat":"function","dur":851.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":760930}
+,{"cat":"function","dur":15955.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":746011}
+,{"cat":"function","dur":17158.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":744907}
+,{"cat":"function","dur":543.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":762143}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":762827}
+,{"cat":"function","dur":97.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":762905}
+,{"cat":"function","dur":13099.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":763158}
+,{"cat":"function","dur":429.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":776528}
+,{"cat":"function","dur":25.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":777146}
+,{"cat":"function","dur":237.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":777291}
+,{"cat":"function","dur":101.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":777636}
+,{"cat":"function","dur":14905.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":762904}
+,{"cat":"function","dur":15750.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":762141}
+,{"cat":"function","dur":1301.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":777978}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":779536}
+,{"cat":"function","dur":77.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":779626}
+,{"cat":"function","dur":13288.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":779797}
+,{"cat":"function","dur":443.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":793303}
+,{"cat":"function","dur":25.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":793923}
+,{"cat":"function","dur":315,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":794062}
+,{"cat":"function","dur":88.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":794478}
+,{"cat":"function","dur":14995.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":779624}
+,{"cat":"function","dur":16684.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":777976}
+,{"cat":"function","dur":671.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":794701}
+,{"cat":"function","dur":0.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":795531}
+,{"cat":"function","dur":94.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":795627}
+,{"cat":"function","dur":14502.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":795842}
+,{"cat":"function","dur":502.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":810625}
+,{"cat":"function","dur":27.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":811300}
+,{"cat":"function","dur":276.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":811445}
+,{"cat":"function","dur":87,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":811867}
+,{"cat":"function","dur":16416.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":795626}
+,{"cat":"function","dur":17412.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":794700}
+,{"cat":"function","dur":574.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":812195}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":812945}
+,{"cat":"function","dur":117.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":813050}
+,{"cat":"function","dur":13123.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":813299}
+,{"cat":"function","dur":432.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":826692}
+,{"cat":"function","dur":24.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":827337}
+,{"cat":"function","dur":285.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":827476}
+,{"cat":"function","dur":104.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":827944}
+,{"cat":"function","dur":15098.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":813048}
+,{"cat":"function","dur":16023.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":812193}
+,{"cat":"function","dur":535.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":828297}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":828997}
+,{"cat":"function","dur":76.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":829089}
+,{"cat":"function","dur":14189.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":829266}
+,{"cat":"function","dur":460.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":843707}
+,{"cat":"function","dur":24,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":844351}
+,{"cat":"function","dur":237.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":844478}
+,{"cat":"function","dur":140.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":844817}
+,{"cat":"function","dur":15981.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":829088}
+,{"cat":"function","dur":16866,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":828296}
+,{"cat":"function","dur":48.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":845226}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":845345}
+,{"cat":"function","dur":80.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":845421}
+,{"cat":"function","dur":14151.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":845676}
+,{"cat":"function","dur":499,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":860101}
+,{"cat":"function","dur":26.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":860762}
+,{"cat":"function","dur":262.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":860928}
+,{"cat":"function","dur":124.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":861289}
+,{"cat":"function","dur":16074.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":845420}
+,{"cat":"function","dur":16342.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":845225}
+,{"cat":"function","dur":58.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":861632}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":861792}
+,{"cat":"function","dur":75.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":861874}
+,{"cat":"function","dur":13872,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":862058}
+,{"cat":"function","dur":468.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":876151}
+,{"cat":"function","dur":24.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":876812}
+,{"cat":"function","dur":656.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":876955}
+,{"cat":"function","dur":482.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":877831}
+,{"cat":"function","dur":16581.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":861873}
+,{"cat":"function","dur":16884,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":861630}
+,{"cat":"function","dur":759.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":878565}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":879569}
+,{"cat":"function","dur":73.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":879668}
+,{"cat":"function","dur":13033.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":879874}
+,{"cat":"function","dur":491.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":893233}
+,{"cat":"function","dur":25,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":893882}
+,{"cat":"function","dur":247.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":894009}
+,{"cat":"function","dur":87.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":894393}
+,{"cat":"function","dur":14907.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":879667}
+,{"cat":"function","dur":16088.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":878564}
+,{"cat":"function","dur":624.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":894723}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":895550}
+,{"cat":"function","dur":93.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":895673}
+,{"cat":"function","dur":14245.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":895903}
+,{"cat":"function","dur":430.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":910401}
+,{"cat":"function","dur":24,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":911023}
+,{"cat":"function","dur":643.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":911151}
+,{"cat":"function","dur":104.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":911907}
+,{"cat":"function","dur":16421,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":895672}
+,{"cat":"function","dur":17437.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":894722}
+,{"cat":"function","dur":52.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":912242}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":912372}
+,{"cat":"function","dur":82.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":912452}
+,{"cat":"function","dur":14189.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":912707}
+,{"cat":"function","dur":662.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":927141}
+,{"cat":"function","dur":24.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":928016}
+,{"cat":"function","dur":254,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":928161}
+,{"cat":"function","dur":107,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":928523}
+,{"cat":"function","dur":16259.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":912451}
+,{"cat":"function","dur":16539,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":912240}
+,{"cat":"function","dur":49.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":928851}
+,{"cat":"function","dur":0.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":928975}
+,{"cat":"function","dur":82.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":929059}
+,{"cat":"function","dur":13945.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":929310}
+,{"cat":"function","dur":427.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":943513}
+,{"cat":"function","dur":24.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":944128}
+,{"cat":"function","dur":241.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":944267}
+,{"cat":"function","dur":99.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":944611}
+,{"cat":"function","dur":15730.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":929058}
+,{"cat":"function","dur":16004.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":928850}
+,{"cat":"function","dur":52.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":944940}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":945065}
+,{"cat":"function","dur":77.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":945137}
+,{"cat":"function","dur":14497.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":945301}
+,{"cat":"function","dur":469.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":960052}
+,{"cat":"function","dur":25.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":960691}
+,{"cat":"function","dur":244.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":960846}
+,{"cat":"function","dur":73.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":961216}
+,{"cat":"function","dur":16479.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":945136}
+,{"cat":"function","dur":16748.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":944938}
+,{"cat":"function","dur":48.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":961756}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":961876}
+,{"cat":"function","dur":100.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":961959}
+,{"cat":"function","dur":14090.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":962211}
+,{"cat":"function","dur":499.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":976640}
+,{"cat":"function","dur":26.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":977308}
+,{"cat":"function","dur":394.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":977451}
+,{"cat":"function","dur":189.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":977944}
+,{"cat":"function","dur":16401.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":961958}
+,{"cat":"function","dur":16703.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":961754}
+,{"cat":"function","dur":43.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":978536}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":978668}
+,{"cat":"function","dur":87.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":978744}
+,{"cat":"function","dur":14545.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":978964}
+,{"cat":"function","dur":483.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":993836}
+,{"cat":"function","dur":25.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":994473}
+,{"cat":"function","dur":962.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":994601}
+,{"cat":"function","dur":95,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":995726}
+,{"cat":"function","dur":17174,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":978743}
+,{"cat":"function","dur":17475.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":978535}
+,{"cat":"function","dur":45.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":996090}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":996221}
+,{"cat":"function","dur":72.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":996306}
+,{"cat":"function","dur":13542.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":996486}
+,{"cat":"function","dur":468.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1010277}
+,{"cat":"function","dur":24.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1010915}
+,{"cat":"function","dur":222.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1011049}
+,{"cat":"function","dur":92.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1011362}
+,{"cat":"function","dur":15230.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":996305}
+,{"cat":"function","dur":15523.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":996089}
+,{"cat":"function","dur":42,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1011678}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1011791}
+,{"cat":"function","dur":69.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1011860}
+,{"cat":"function","dur":14117.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1012031}
+,{"cat":"function","dur":498.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1026481}
+,{"cat":"function","dur":25.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1027147}
+,{"cat":"function","dur":319.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1027306}
+,{"cat":"function","dur":164.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1027733}
+,{"cat":"function","dur":16232.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1011859}
+,{"cat":"function","dur":16499.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1011676}
+,{"cat":"function","dur":45.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1028246}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1028381}
+,{"cat":"function","dur":81.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1028436}
+,{"cat":"function","dur":14344.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1028623}
+,{"cat":"function","dur":480.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1043216}
+,{"cat":"function","dur":26.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1043883}
+,{"cat":"function","dur":240.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1044036}
+,{"cat":"function","dur":68.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1044386}
+,{"cat":"function","dur":16089.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1028435}
+,{"cat":"function","dur":16336,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1028244}
+,{"cat":"function","dur":55.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1044640}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1044778}
+,{"cat":"function","dur":75.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1044853}
+,{"cat":"function","dur":14375.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1045017}
+,{"cat":"function","dur":492.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1059732}
+,{"cat":"function","dur":23.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1060397}
+,{"cat":"function","dur":197.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1060558}
+,{"cat":"function","dur":87.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1060852}
+,{"cat":"function","dur":16188.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1044852}
+,{"cat":"function","dur":16470.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1044638}
+,{"cat":"function","dur":57.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1061174}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1061524}
+,{"cat":"function","dur":79.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1061620}
+,{"cat":"function","dur":13662.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1061815}
+,{"cat":"function","dur":582.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1075650}
+,{"cat":"function","dur":18.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1076351}
+,{"cat":"function","dur":171.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1076449}
+,{"cat":"function","dur":71.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1076694}
+,{"cat":"function","dur":15205.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1061619}
+,{"cat":"function","dur":15700.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1061173}
+,{"cat":"function","dur":34.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1076921}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1077006}
+,{"cat":"function","dur":51.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1077052}
+,{"cat":"function","dur":15964.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1077176}
+,{"cat":"function","dur":404.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1093335}
+,{"cat":"function","dur":16.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1093846}
+,{"cat":"function","dur":165.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1093928}
+,{"cat":"function","dur":57,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1094161}
+,{"cat":"function","dur":17212.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1077051}
+,{"cat":"function","dur":17390.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1076920}
+,{"cat":"function","dur":38.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1094374}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1094489}
+,{"cat":"function","dur":86.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1094538}
+,{"cat":"function","dur":14456.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1094754}
+,{"cat":"function","dur":507.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1109915}
+,{"cat":"function","dur":26.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1110582}
+,{"cat":"function","dur":250.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1110724}
+,{"cat":"function","dur":81.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1111093}
+,{"cat":"function","dur":16928.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1094538}
+,{"cat":"function","dur":17236.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1094373}
+,{"cat":"function","dur":47.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1111698}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1111836}
+,{"cat":"function","dur":70.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1111926}
+,{"cat":"function","dur":13663.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1112134}
+,{"cat":"function","dur":379.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1126034}
+,{"cat":"function","dur":24.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1126514}
+,{"cat":"function","dur":199.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1126630}
+,{"cat":"function","dur":77.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1126933}
+,{"cat":"function","dur":15151.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1111925}
+,{"cat":"function","dur":15420.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1111696}
+,{"cat":"function","dur":47.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1127156}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1127248}
+,{"cat":"function","dur":74.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1127290}
+,{"cat":"function","dur":15066.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1127432}
+,{"cat":"function","dur":347.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1142701}
+,{"cat":"function","dur":16.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1143145}
+,{"cat":"function","dur":175.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1143219}
+,{"cat":"function","dur":63.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1143450}
+,{"cat":"function","dur":16288.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1127289}
+,{"cat":"function","dur":16458.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1127155}
+,{"cat":"function","dur":29.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1143648}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1143716}
+,{"cat":"function","dur":64.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1143753}
+,{"cat":"function","dur":14484,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1143878}
+,{"cat":"function","dur":299.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1158558}
+,{"cat":"function","dur":16.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1158992}
+,{"cat":"function","dur":160.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1159071}
+,{"cat":"function","dur":89.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1159288}
+,{"cat":"function","dur":15669.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1143752}
+,{"cat":"function","dur":15810.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1143648}
+,{"cat":"function","dur":30.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1159493}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1159562}
+,{"cat":"function","dur":60.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1159600}
+,{"cat":"function","dur":15980.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1159738}
+,{"cat":"function","dur":441.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1176002}
+,{"cat":"function","dur":31.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1176651}
+,{"cat":"function","dur":229.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1176799}
+,{"cat":"function","dur":98.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1177127}
+,{"cat":"function","dur":17712.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1159599}
+,{"cat":"function","dur":17888.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1159492}
+,{"cat":"function","dur":48.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1177450}
+,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1177928}
+,{"cat":"function","dur":107.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1178068}
+,{"cat":"function","dur":13404.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1178327}
+,{"cat":"function","dur":400.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1192028}
+,{"cat":"function","dur":16.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1192558}
+,{"cat":"function","dur":176.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1192636}
+,{"cat":"function","dur":82.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1192899}
+,{"cat":"function","dur":14960.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1178067}
+,{"cat":"function","dur":15616.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1177449}
+,{"cat":"function","dur":29.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1193102}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1193170}
+,{"cat":"function","dur":64,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1193208}
+,{"cat":"function","dur":15102.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1193415}
+,{"cat":"function","dur":297,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1208708}
+,{"cat":"function","dur":15.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1209097}
+,{"cat":"function","dur":158.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1209193}
+,{"cat":"function","dur":59.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1209406}
+,{"cat":"function","dur":16328,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1193207}
+,{"cat":"function","dur":16469.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1193101}
+,{"cat":"function","dur":31.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1209618}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1209690}
+,{"cat":"function","dur":91.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1210027}
+,{"cat":"function","dur":15284.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1210209}
+,{"cat":"function","dur":473.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1225722}
+,{"cat":"function","dur":25.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1226355}
+,{"cat":"function","dur":241.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1226495}
+,{"cat":"function","dur":85,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1226839}
+,{"cat":"function","dur":16954.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1210027}
+,{"cat":"function","dur":17415.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1209617}
+,{"cat":"function","dur":34.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1227073}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1227162}
+,{"cat":"function","dur":44.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1227205}
+,{"cat":"function","dur":14347.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1227334}
+,{"cat":"function","dur":287.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1241865}
+,{"cat":"function","dur":14.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1242238}
+,{"cat":"function","dur":172,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1242347}
+,{"cat":"function","dur":86.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1242605}
+,{"cat":"function","dur":15565.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1227204}
+,{"cat":"function","dur":15758.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1227071}
+,{"cat":"function","dur":34.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1242894}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1242986}
+,{"cat":"function","dur":104.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1243024}
+,{"cat":"function","dur":15341.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1243210}
+,{"cat":"function","dur":441.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1258890}
+,{"cat":"function","dur":18.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1259481}
+,{"cat":"function","dur":194.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1259585}
+,{"cat":"function","dur":72,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1259844}
+,{"cat":"function","dur":16957.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1243024}
+,{"cat":"function","dur":17128.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1242893}
+,{"cat":"function","dur":30.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1260060}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1260132}
+,{"cat":"function","dur":88.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1260172}
+,{"cat":"function","dur":15388.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1260343}
+,{"cat":"function","dur":429.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1275993}
+,{"cat":"function","dur":26.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1276603}
+,{"cat":"function","dur":229.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1276735}
+,{"cat":"function","dur":100.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1277054}
+,{"cat":"function","dur":17064.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1260171}
+,{"cat":"function","dur":17239.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1260059}
+,{"cat":"function","dur":42.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1277370}
+,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1277479}
+,{"cat":"function","dur":67.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1277544}
+,{"cat":"function","dur":14028.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1277875}
+,{"cat":"function","dur":430.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1292141}
+,{"cat":"function","dur":22.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1292714}
+,{"cat":"function","dur":198.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1292851}
+,{"cat":"function","dur":79,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1293141}
+,{"cat":"function","dur":15720.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1277543}
+,{"cat":"function","dur":15932.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1277369}
+,{"cat":"function","dur":31.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1293338}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1293407}
+,{"cat":"function","dur":80.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1293445}
+,{"cat":"function","dur":15054.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1293596}
+,{"cat":"function","dur":331.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1308831}
+,{"cat":"function","dur":17.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1309286}
+,{"cat":"function","dur":177.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1309368}
+,{"cat":"function","dur":94,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1309636}
+,{"cat":"function","dur":16354,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1293444}
+,{"cat":"function","dur":16499.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1293337}
+,{"cat":"function","dur":38.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1309877}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1309965}
+,{"cat":"function","dur":64.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1310013}
+,{"cat":"function","dur":14705.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1310159}
+,{"cat":"function","dur":332,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1325055}
+,{"cat":"function","dur":16.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1325508}
+,{"cat":"function","dur":166.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1325587}
+,{"cat":"function","dur":427.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1325822}
+,{"cat":"function","dur":16355,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1310012}
+,{"cat":"function","dur":16532.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1309876}
+,{"cat":"function","dur":33.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1326447}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1326524}
+,{"cat":"function","dur":82.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1326566}
+,{"cat":"function","dur":15245.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1326755}
+,{"cat":"function","dur":440.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1342231}
+,{"cat":"function","dur":24.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1342829}
+,{"cat":"function","dur":226.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1342960}
+,{"cat":"function","dur":101,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1343276}
+,{"cat":"function","dur":16879.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1326565}
+,{"cat":"function","dur":17060.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1326446}
+,{"cat":"function","dur":42.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1343569}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1343695}
+,{"cat":"function","dur":69.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1343760}
+,{"cat":"function","dur":14509.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1343955}
+,{"cat":"function","dur":307.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1358634}
+,{"cat":"function","dur":29.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1359064}
+,{"cat":"function","dur":162.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1359155}
+,{"cat":"function","dur":98.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1359398}
+,{"cat":"function","dur":15787,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1343759}
+,{"cat":"function","dur":16013.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1343568}
+,{"cat":"function","dur":29.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1359618}
+,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1359689}
+,{"cat":"function","dur":47,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1359727}
+,{"cat":"function","dur":15637.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1359847}
+,{"cat":"function","dur":385.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1375712}
+,{"cat":"function","dur":23.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1376255}
+,{"cat":"function","dur":201.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1376374}
+,{"cat":"function","dur":93.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1376655}
+,{"cat":"function","dur":17087,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1359726}
+,{"cat":"function","dur":17251.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1359617}
+,{"cat":"function","dur":41.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1376933}
+,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1377036}
+,{"cat":"function","dur":60.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1377097}
+,{"cat":"function","dur":14279.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1377294}
+,{"cat":"function","dur":347.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1391728}
+,{"cat":"function","dur":15.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1392174}
+,{"cat":"function","dur":232.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1392259}
+,{"cat":"function","dur":88.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1392621}
+,{"cat":"function","dur":15694.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1377096}
+,{"cat":"function","dur":15931.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1376931}
+,{"cat":"function","dur":38.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1392939}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1393070}
+,{"cat":"function","dur":113.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1393145}
+,{"cat":"function","dur":15941.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1393371}
+,{"cat":"function","dur":502.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1409537}
+,{"cat":"function","dur":24.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1410200}
+,{"cat":"function","dur":206,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1410330}
+,{"cat":"function","dur":77.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1410636}
+,{"cat":"function","dur":17641.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1393144}
+,{"cat":"function","dur":17908.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1392938}
+,{"cat":"function","dur":119097,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1410914}
+,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1530153}
+,{"cat":"function","dur":86.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1530206}
+,{"cat":"function","dur":36,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1530391}
+,{"cat":"function","dur":357.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1530512}
+,{"cat":"function","dur":16.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1530953}
+,{"cat":"function","dur":193.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1531025}
+,{"cat":"function","dur":206.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1531308}
+,{"cat":"function","dur":1358.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1530205}
+,{"cat":"function","dur":0.3,"name":"OnEvent","ph":"X","pid":0,"tid":0,"ts":1531615}
+,{"cat":"function","dur":39.3,"name":"EmitEvent","ph":"X","pid":0,"tid":0,"ts":1531613}
+,{"cat":"function","dur":120773,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1410913}
+
+]}

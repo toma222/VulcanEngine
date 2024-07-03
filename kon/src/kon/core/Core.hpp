@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include <cstdint>
+
 namespace kon
 {
     // these values will change depending on the system (32 or 64 bit)
@@ -12,7 +14,7 @@ namespace kon
     using i64 = long long int;
 
 	using u8 = unsigned char;
-	using u32 = unsigned long int;
+	using u32 = uint32_t;
 }
 
 #define KN_STRINGIFY(x) #x

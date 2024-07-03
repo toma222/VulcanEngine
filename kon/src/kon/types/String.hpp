@@ -40,6 +40,11 @@ namespace kon
         // size+1 for the null terminating byte
         void ResizeBuffer(i32 size);
 
+        bool operator ==(const String &string) const
+        {
+            return (strcmp(string.m_buffer, m_buffer) == 0);
+        }
+
     private:
         char *m_buffer {nullptr};
         i32 m_size {0};
