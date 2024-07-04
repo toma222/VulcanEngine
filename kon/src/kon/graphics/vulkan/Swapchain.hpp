@@ -43,6 +43,8 @@ namespace kon
         void CreateColorResources();
         void CreateDepthResources();
 
+        std::vector<ImageView*> &GetSwapchainImageViews() { return m_swapChainImageViews; }
+
     private:
         VkSwapchainKHR m_swapChain;
         std::vector<VkImage> m_swapChainImages;
