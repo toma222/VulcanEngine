@@ -3,13 +3,14 @@
 
 #include "kon/graphics/vulkan/Device.hpp"
 #include "vulkan/vulkan_core.h"
+#include <kon/types/ArrayList.hpp>
 
 namespace kon
 {
 	class ShaderModule
 	{
 	public:
-		ShaderModule(Device *device, std::vector<char> &code);
+		ShaderModule(Device *device, char *code, size_t size);
 		~ShaderModule();
 
 		VkShaderModule Get() { return m_module; }

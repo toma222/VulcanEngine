@@ -1350,6 +1350,7 @@ namespace kon
 
     void VulkanGraphicsCommands::RecordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex)
     {
+        /*
         VkCommandBufferBeginInfo beginInfo{};
         beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
         beginInfo.flags = 0; // Optional
@@ -1414,6 +1415,7 @@ namespace kon
 		{
             assert("failed to record command buffer!");
         }
+        */
     }
 
     void VulkanGraphicsCommands::CreateSyncObjects()
@@ -1776,6 +1778,7 @@ namespace kon
 
     void VulkanGraphicsCommands::Init()
     {
+        
         KN_INSTRUMENT_FUNCTION()
         KN_TRACE("VulkanGraphicsCommands::Init()");
 
@@ -1783,6 +1786,8 @@ namespace kon
         m_device = new Device(m_instance);
 		m_commandPool = new CommandPool(m_device, MAX_FRAMES_IN_FLIGHT);
 		m_swapchain = new Swapchain(m_instance, m_device, m_commandPool, m_window);
+        
+        /*
 		m_renderPass = new RenderPass(m_device, AttachmentArray(m_device, m_swapchain->GetSwapchainFormat()));
 		m_swapchain->BindRenderPass(m_renderPass);
 		m_swapchain->CreateFramebuffers();
@@ -1796,18 +1801,6 @@ namespace kon
         
         // CreateTextureImage();
         // CreateTextureImageView();
-
-		/*
-        int texWidth, texHeight, texChannels;
-        stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
-        if (!pixels) {
-             KN_ERROR("failed to load texture image!");
-        }
-	
-		m_textureImage = new TextureImage(m_device, m_commandPool, pixels,
-				TextureData{texWidth, texHeight,
-							static_cast<VkDeviceSize>(texWidth * texHeight * 4)});
-		*/
 		
 		ResourceImage image;
 		image.LoadResource(TEXTURE_PATH.c_str());
@@ -1890,6 +1883,7 @@ namespace kon
 
         // CreateCommandBuffer();
         CreateSyncObjects();
+        */
     }
 
     void VulkanGraphicsCommands::UpdateUniformBuffer(uint32_t currentImage)

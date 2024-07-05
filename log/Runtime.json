@@ -1,1125 +1,215 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":1786.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":4580}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":6437}
-,{"cat":"function","dur":14.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":6469}
-,{"cat":"function","dur":40.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":6546}
-,{"cat":"function","dur":1639.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":6690}
-,{"cat":"function","dur":19.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":8415}
-,{"cat":"function","dur":127.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":8489}
-,{"cat":"function","dur":69.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":8651}
-,{"cat":"function","dur":2280.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":6469}
-,{"cat":"function","dur":4194.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":4579}
-,{"cat":"function","dur":1498,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":8797}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":10387}
-,{"cat":"function","dur":29.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":10425}
-,{"cat":"function","dur":41,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":10495}
-,{"cat":"function","dur":737.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":10689}
-,{"cat":"function","dur":13.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":11572}
-,{"cat":"function","dur":184.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":11639}
-,{"cat":"function","dur":79.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":11872}
-,{"cat":"function","dur":1567.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":10425}
-,{"cat":"function","dur":3220.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":8797}
-,{"cat":"function","dur":207.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":12039}
-,{"cat":"function","dur":0.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":12296}
-,{"cat":"function","dur":14,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":12325}
-,{"cat":"function","dur":27.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":12370}
-,{"cat":"function","dur":738,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":12475}
-,{"cat":"function","dur":10.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":13316}
-,{"cat":"function","dur":197.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":13384}
-,{"cat":"function","dur":120.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":13641}
-,{"cat":"function","dur":1504.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":12324}
-,{"cat":"function","dur":1827.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":12038}
-,{"cat":"function","dur":34.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":13899}
-,{"cat":"function","dur":0.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":13970}
-,{"cat":"function","dur":37.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":13996}
-,{"cat":"function","dur":21.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":14108}
-,{"cat":"function","dur":374.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":14192}
-,{"cat":"function","dur":13.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":14662}
-,{"cat":"function","dur":157.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":14732}
-,{"cat":"function","dur":73.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":14958}
-,{"cat":"function","dur":1092.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":13996}
-,{"cat":"function","dur":1223.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":13899}
-,{"cat":"function","dur":43.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":15149}
-,{"cat":"function","dur":0.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":15225}
-,{"cat":"function","dur":47.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":15251}
-,{"cat":"function","dur":9456.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":15347}
-,{"cat":"function","dur":365.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":24988}
-,{"cat":"function","dur":20.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":25525}
-,{"cat":"function","dur":116.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":25600}
-,{"cat":"function","dur":39.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":25758}
-,{"cat":"function","dur":10591.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":15250}
-,{"cat":"function","dur":10718.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":15149}
-,{"cat":"function","dur":185,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":25891}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":26122}
-,{"cat":"function","dur":92.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":26151}
-,{"cat":"function","dur":15793.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":26288}
-,{"cat":"function","dur":442.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":42326}
-,{"cat":"function","dur":14.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":42901}
-,{"cat":"function","dur":165.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":42977}
-,{"cat":"function","dur":78.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":43200}
-,{"cat":"function","dur":17176.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":26150}
-,{"cat":"function","dur":17476.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":25891}
-,{"cat":"function","dur":29.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":43406}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":43496}
-,{"cat":"function","dur":54.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":43538}
-,{"cat":"function","dur":15072.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":43648}
-,{"cat":"function","dur":314.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":58883}
-,{"cat":"function","dur":14.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":59352}
-,{"cat":"function","dur":263.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":59429}
-,{"cat":"function","dur":115.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":59786}
-,{"cat":"function","dur":16466.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":43537}
-,{"cat":"function","dur":16658.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":43405}
-,{"cat":"function","dur":35.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":60104}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":60196}
-,{"cat":"function","dur":53.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":60241}
-,{"cat":"function","dur":15010,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":60403}
-,{"cat":"function","dur":313.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":75561}
-,{"cat":"function","dur":23.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":76025}
-,{"cat":"function","dur":209.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":76207}
-,{"cat":"function","dur":73.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":76530}
-,{"cat":"function","dur":16413.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":60240}
-,{"cat":"function","dur":16608.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":60103}
-,{"cat":"function","dur":539,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":77098}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":77758}
-,{"cat":"function","dur":59.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":77792}
-,{"cat":"function","dur":14019.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":77927}
-,{"cat":"function","dur":358,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":92165}
-,{"cat":"function","dur":15.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":92628}
-,{"cat":"function","dur":162,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":92717}
-,{"cat":"function","dur":72.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":92948}
-,{"cat":"function","dur":15274.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":77791}
-,{"cat":"function","dur":16018.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":77097}
-,{"cat":"function","dur":511.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":93161}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":93818}
-,{"cat":"function","dur":66.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":93889}
-,{"cat":"function","dur":14492.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":94036}
-,{"cat":"function","dur":310.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":108705}
-,{"cat":"function","dur":15.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":109125}
-,{"cat":"function","dur":171.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":109207}
-,{"cat":"function","dur":57.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":109476}
-,{"cat":"function","dur":15692,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":93888}
-,{"cat":"function","dur":16458.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":93160}
-,{"cat":"function","dur":488.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":109681}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":110266}
-,{"cat":"function","dur":57.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":110299}
-,{"cat":"function","dur":14880.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":110421}
-,{"cat":"function","dur":470.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":125514}
-,{"cat":"function","dur":13.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":126119}
-,{"cat":"function","dur":165.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":126195}
-,{"cat":"function","dur":74.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":126421}
-,{"cat":"function","dur":16245.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":110298}
-,{"cat":"function","dur":16906.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":109680}
-,{"cat":"function","dur":505.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":126629}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":127255}
-,{"cat":"function","dur":84.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":127307}
-,{"cat":"function","dur":14399.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":127460}
-,{"cat":"function","dur":298.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":142174}
-,{"cat":"function","dur":16.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":142805}
-,{"cat":"function","dur":266.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":142899}
-,{"cat":"function","dur":57.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":143259}
-,{"cat":"function","dur":16059.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":127307}
-,{"cat":"function","dur":16788.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":126628}
-,{"cat":"function","dur":521.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":143465}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":144111}
-,{"cat":"function","dur":54.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":144170}
-,{"cat":"function","dur":14248.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":144286}
-,{"cat":"function","dur":311.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":158703}
-,{"cat":"function","dur":14.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":159128}
-,{"cat":"function","dur":181.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":159209}
-,{"cat":"function","dur":52.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":159460}
-,{"cat":"function","dur":15387.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":144169}
-,{"cat":"function","dur":16136.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":143464}
-,{"cat":"function","dur":492.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":159640}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":160256}
-,{"cat":"function","dur":61.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":160316}
-,{"cat":"function","dur":15447.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":160475}
-,{"cat":"function","dur":420.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":176154}
-,{"cat":"function","dur":13.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":176686}
-,{"cat":"function","dur":159.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":176757}
-,{"cat":"function","dur":83.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":176974}
-,{"cat":"function","dur":16791.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":160315}
-,{"cat":"function","dur":17507.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":159639}
-,{"cat":"function","dur":145.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":177189}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":177413}
-,{"cat":"function","dur":48.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":177455}
-,{"cat":"function","dur":14804.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":177560}
-,{"cat":"function","dur":367.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":192509}
-,{"cat":"function","dur":10.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":192952}
-,{"cat":"function","dur":398.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":193002}
-,{"cat":"function","dur":60.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":193513}
-,{"cat":"function","dur":16174.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":177455}
-,{"cat":"function","dur":16485.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":177189}
-,{"cat":"function","dur":542.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":193716}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":194414}
-,{"cat":"function","dur":75.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":194483}
-,{"cat":"function","dur":13868,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":194641}
-,{"cat":"function","dur":461.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":209231}
-,{"cat":"function","dur":11.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":209904}
-,{"cat":"function","dur":158.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":209988}
-,{"cat":"function","dur":72.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":210209}
-,{"cat":"function","dur":15845.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":194482}
-,{"cat":"function","dur":16652.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":193715}
-,{"cat":"function","dur":29.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":210404}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":210496}
-,{"cat":"function","dur":57.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":210538}
-,{"cat":"function","dur":14623.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":210666}
-,{"cat":"function","dur":709.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":225451}
-,{"cat":"function","dur":21.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":226325}
-,{"cat":"function","dur":179,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":226487}
-,{"cat":"function","dur":61.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":226740}
-,{"cat":"function","dur":16315.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":210538}
-,{"cat":"function","dur":16493.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":210403}
-,{"cat":"function","dur":37.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":226971}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":227059}
-,{"cat":"function","dur":51.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":227104}
-,{"cat":"function","dur":14964.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":227216}
-,{"cat":"function","dur":309.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":242343}
-,{"cat":"function","dur":16.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":242745}
-,{"cat":"function","dur":191.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":242978}
-,{"cat":"function","dur":47,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":243264}
-,{"cat":"function","dur":16240.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":227103}
-,{"cat":"function","dur":16400.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":226970}
-,{"cat":"function","dur":471.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":243395}
-,{"cat":"function","dur":1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":243996}
-,{"cat":"function","dur":60,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":244050}
-,{"cat":"function","dur":14389.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":244173}
-,{"cat":"function","dur":661.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":258728}
-,{"cat":"function","dur":72.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":259523}
-,{"cat":"function","dur":177.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":259669}
-,{"cat":"function","dur":76.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":259912}
-,{"cat":"function","dur":15987.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":244050}
-,{"cat":"function","dur":16681.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":243394}
-,{"cat":"function","dur":502.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":260113}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":260747}
-,{"cat":"function","dur":61.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":260801}
-,{"cat":"function","dur":14175.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":260932}
-,{"cat":"function","dur":314.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":275490}
-,{"cat":"function","dur":14.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":275926}
-,{"cat":"function","dur":152.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":276000}
-,{"cat":"function","dur":73,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":276237}
-,{"cat":"function","dur":15561.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":260800}
-,{"cat":"function","dur":16292.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":260112}
-,{"cat":"function","dur":529.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":276446}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":277106}
-,{"cat":"function","dur":68.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":277163}
-,{"cat":"function","dur":15518.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":277300}
-,{"cat":"function","dur":449.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":292990}
-,{"cat":"function","dur":14.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":293546}
-,{"cat":"function","dur":132,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":293631}
-,{"cat":"function","dur":48.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":293845}
-,{"cat":"function","dur":16766.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":277162}
-,{"cat":"function","dur":17508.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":276445}
-,{"cat":"function","dur":477,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":293978}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":294614}
-,{"cat":"function","dur":74.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":294734}
-,{"cat":"function","dur":15422.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":294917}
-,{"cat":"function","dur":548.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":310582}
-,{"cat":"function","dur":25.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":311318}
-,{"cat":"function","dur":253.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":311461}
-,{"cat":"function","dur":103.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":311823}
-,{"cat":"function","dur":17727.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":294732}
-,{"cat":"function","dur":18817.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":293977}
-,{"cat":"function","dur":51.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":312930}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":313073}
-,{"cat":"function","dur":115.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":313161}
-,{"cat":"function","dur":13715.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":313432}
-,{"cat":"function","dur":542.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":327393}
-,{"cat":"function","dur":27.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":328108}
-,{"cat":"function","dur":252.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":328244}
-,{"cat":"function","dur":110.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":328586}
-,{"cat":"function","dur":15623.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":313160}
-,{"cat":"function","dur":15922.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":312928}
-,{"cat":"function","dur":56.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":328930}
-,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":329060}
-,{"cat":"function","dur":81.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":329127}
-,{"cat":"function","dur":13792.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":329361}
-,{"cat":"function","dur":501.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":343396}
-,{"cat":"function","dur":25.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":344054}
-,{"cat":"function","dur":444.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":344186}
-,{"cat":"function","dur":91.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":344750}
-,{"cat":"function","dur":15794.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":329126}
-,{"cat":"function","dur":16070,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":328929}
-,{"cat":"function","dur":39.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":345073}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":345184}
-,{"cat":"function","dur":75.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":345253}
-,{"cat":"function","dur":14477.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":345452}
-,{"cat":"function","dur":682.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":360176}
-,{"cat":"function","dur":25,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":361050}
-,{"cat":"function","dur":238.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":361193}
-,{"cat":"function","dur":89.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":361567}
-,{"cat":"function","dur":16492.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":345252}
-,{"cat":"function","dur":16741.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":345071}
-,{"cat":"function","dur":2345.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":361880}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":364420}
-,{"cat":"function","dur":93.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":364517}
-,{"cat":"function","dur":12169.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":364718}
-,{"cat":"function","dur":523.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":377131}
-,{"cat":"function","dur":24.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":377820}
-,{"cat":"function","dur":244.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":377961}
-,{"cat":"function","dur":88.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":378328}
-,{"cat":"function","dur":13977.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":364516}
-,{"cat":"function","dur":16681.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":361878}
-,{"cat":"function","dur":764.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":378622}
-,{"cat":"function","dur":1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":379581}
-,{"cat":"function","dur":101.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":379690}
-,{"cat":"function","dur":13576.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":379949}
-,{"cat":"function","dur":563.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":393786}
-,{"cat":"function","dur":27,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":394531}
-,{"cat":"function","dur":256.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":394674}
-,{"cat":"function","dur":89.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":395029}
-,{"cat":"function","dur":15547.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":379689}
-,{"cat":"function","dur":16689.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":378621}
-,{"cat":"function","dur":692.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":395393}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":396267}
-,{"cat":"function","dur":872.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":396419}
-,{"cat":"function","dur":12884.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":397446}
-,{"cat":"function","dur":696.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":410575}
-,{"cat":"function","dur":23.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":411471}
-,{"cat":"function","dur":252.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":411610}
-,{"cat":"function","dur":98.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":411967}
-,{"cat":"function","dur":15699.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":396417}
-,{"cat":"function","dur":16784,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":395392}
-,{"cat":"function","dur":769.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":412218}
-,{"cat":"function","dur":1.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":413236}
-,{"cat":"function","dur":108.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":413366}
-,{"cat":"function","dur":12694.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":413596}
-,{"cat":"function","dur":488,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":426480}
-,{"cat":"function","dur":17.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":427079}
-,{"cat":"function","dur":521.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":427167}
-,{"cat":"function","dur":92,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":427794}
-,{"cat":"function","dur":14576.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":413365}
-,{"cat":"function","dur":15766.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":412216}
-,{"cat":"function","dur":711.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":428023}
-,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":428989}
-,{"cat":"function","dur":95.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":429108}
-,{"cat":"function","dur":13739.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":429337}
-,{"cat":"function","dur":618.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":443314}
-,{"cat":"function","dur":32.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":444139}
-,{"cat":"function","dur":280.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":444301}
-,{"cat":"function","dur":82.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":444694}
-,{"cat":"function","dur":15750.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":429106}
-,{"cat":"function","dur":16905.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":428022}
-,{"cat":"function","dur":44.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":444996}
-,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":445117}
-,{"cat":"function","dur":51,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":445194}
-,{"cat":"function","dur":14242.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":445372}
-,{"cat":"function","dur":487.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":459834}
-,{"cat":"function","dur":42.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":460443}
-,{"cat":"function","dur":214.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":460621}
-,{"cat":"function","dur":87.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":460961}
-,{"cat":"function","dur":15933.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":445193}
-,{"cat":"function","dur":16176.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":444995}
-,{"cat":"function","dur":637,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":461212}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":461989}
-,{"cat":"function","dur":76.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":462049}
-,{"cat":"function","dur":13503,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":462238}
-,{"cat":"function","dur":437.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":475900}
-,{"cat":"function","dur":16.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":476438}
-,{"cat":"function","dur":158.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":476515}
-,{"cat":"function","dur":82.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":476756}
-,{"cat":"function","dur":14834.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":462048}
-,{"cat":"function","dur":15710,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":461211}
-,{"cat":"function","dur":30.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":476956}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":477024}
-,{"cat":"function","dur":69.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":477061}
-,{"cat":"function","dur":14919.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":477182}
-,{"cat":"function","dur":378.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":492290}
-,{"cat":"function","dur":15.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":492777}
-,{"cat":"function","dur":170.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":492858}
-,{"cat":"function","dur":87.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":493112}
-,{"cat":"function","dur":16185.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":477061}
-,{"cat":"function","dur":16328.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":476955}
-,{"cat":"function","dur":574.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":493319}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":494012}
-,{"cat":"function","dur":76.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":494056}
-,{"cat":"function","dur":15040.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":494243}
-,{"cat":"function","dur":589.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":509512}
-,{"cat":"function","dur":22.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":510254}
-,{"cat":"function","dur":207.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":510376}
-,{"cat":"function","dur":77.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":510689}
-,{"cat":"function","dur":16785.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":494055}
-,{"cat":"function","dur":17578.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":493318}
-,{"cat":"function","dur":55.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":510955}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":511073}
-,{"cat":"function","dur":67.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":511130}
-,{"cat":"function","dur":13948.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":511325}
-,{"cat":"function","dur":439.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":525452}
-,{"cat":"function","dur":16.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":525999}
-,{"cat":"function","dur":157.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":526075}
-,{"cat":"function","dur":78.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":526287}
-,{"cat":"function","dur":15285.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":511130}
-,{"cat":"function","dur":15498.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":510954}
-,{"cat":"function","dur":123.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":526498}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":526714}
-,{"cat":"function","dur":50.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":526765}
-,{"cat":"function","dur":15495.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":526884}
-,{"cat":"function","dur":452.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":542606}
-,{"cat":"function","dur":23.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":543204}
-,{"cat":"function","dur":607.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":543340}
-,{"cat":"function","dur":77.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":544078}
-,{"cat":"function","dur":17461.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":526765}
-,{"cat":"function","dur":17792.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":526497}
-,{"cat":"function","dur":39,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":544347}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":544447}
-,{"cat":"function","dur":60.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":544507}
-,{"cat":"function","dur":14343.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":544690}
-,{"cat":"function","dur":390.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":559235}
-,{"cat":"function","dur":30.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":559729}
-,{"cat":"function","dur":230.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":559849}
-,{"cat":"function","dur":87.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":560200}
-,{"cat":"function","dur":15851,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":544506}
-,{"cat":"function","dur":16073.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":544346}
-,{"cat":"function","dur":41.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":560483}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":560590}
-,{"cat":"function","dur":74.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":560653}
-,{"cat":"function","dur":14487.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":560804}
-,{"cat":"function","dur":376.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":575451}
-,{"cat":"function","dur":15.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":575925}
-,{"cat":"function","dur":156.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":576000}
-,{"cat":"function","dur":98.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":576211}
-,{"cat":"function","dur":15702.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":560652}
-,{"cat":"function","dur":15909.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":560482}
-,{"cat":"function","dur":30.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":576428}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":576497}
-,{"cat":"function","dur":69.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":576535}
-,{"cat":"function","dur":14913.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":576659}
-,{"cat":"function","dur":480.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":591757}
-,{"cat":"function","dur":24.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":592410}
-,{"cat":"function","dur":263.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":592543}
-,{"cat":"function","dur":119.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":593016}
-,{"cat":"function","dur":16754.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":576534}
-,{"cat":"function","dur":16931.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":576427}
-,{"cat":"function","dur":47.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":593426}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":593547}
-,{"cat":"function","dur":83.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":593613}
-,{"cat":"function","dur":14806.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":593797}
-,{"cat":"function","dur":474.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":608851}
-,{"cat":"function","dur":24.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":609474}
-,{"cat":"function","dur":208.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":609603}
-,{"cat":"function","dur":75.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":609916}
-,{"cat":"function","dur":16450,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":593612}
-,{"cat":"function","dur":16701.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":593424}
-,{"cat":"function","dur":48.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":610188}
-,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":610307}
-,{"cat":"function","dur":60,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":610376}
-,{"cat":"function","dur":14760.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":610527}
-,{"cat":"function","dur":427.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":625465}
-,{"cat":"function","dur":17.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":626010}
-,{"cat":"function","dur":212.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":626094}
-,{"cat":"function","dur":104.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":626370}
-,{"cat":"function","dur":16147.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":610375}
-,{"cat":"function","dur":16376.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":610187}
-,{"cat":"function","dur":33.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":626604}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":626680}
-,{"cat":"function","dur":80.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":626722}
-,{"cat":"function","dur":14948.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":626862}
-,{"cat":"function","dur":422.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":642012}
-,{"cat":"function","dur":17.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":642542}
-,{"cat":"function","dur":177.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":642624}
-,{"cat":"function","dur":118.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":642863}
-,{"cat":"function","dur":16334.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":626721}
-,{"cat":"function","dur":16516.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":626603}
-,{"cat":"function","dur":43.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":643169}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":643260}
-,{"cat":"function","dur":70.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":643303}
-,{"cat":"function","dur":15592.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":643474}
-,{"cat":"function","dur":376.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":659227}
-,{"cat":"function","dur":16.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":659702}
-,{"cat":"function","dur":449.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":659789}
-,{"cat":"function","dur":78.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":660321}
-,{"cat":"function","dur":17142.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":643302}
-,{"cat":"function","dur":17313.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":643168}
-,{"cat":"function","dur":30.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":660517}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":660585}
-,{"cat":"function","dur":58,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":660627}
-,{"cat":"function","dur":14786.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":660762}
-,{"cat":"function","dur":583.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":675760}
-,{"cat":"function","dur":43.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":676506}
-,{"cat":"function","dur":262.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":676654}
-,{"cat":"function","dur":109.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":677072}
-,{"cat":"function","dur":16632.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":660625}
-,{"cat":"function","dur":16786.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":660516}
-,{"cat":"function","dur":54.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":677338}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":677436}
-,{"cat":"function","dur":53.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":677482}
-,{"cat":"function","dur":14563.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":677640}
-,{"cat":"function","dur":464.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":692461}
-,{"cat":"function","dur":23.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":693061}
-,{"cat":"function","dur":224.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":693261}
-,{"cat":"function","dur":76.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":693591}
-,{"cat":"function","dur":16261.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":677481}
-,{"cat":"function","dur":16469.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":677337}
-,{"cat":"function","dur":38,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":693868}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":693980}
-,{"cat":"function","dur":45.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":694053}
-,{"cat":"function","dur":14376.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":694189}
-,{"cat":"function","dur":364.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":708843}
-,{"cat":"function","dur":16.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":709304}
-,{"cat":"function","dur":166.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":709378}
-,{"cat":"function","dur":58.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":709600}
-,{"cat":"function","dur":15666.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":694051}
-,{"cat":"function","dur":15887.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":693867}
-,{"cat":"function","dur":50,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":709790}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":709879}
-,{"cat":"function","dur":56,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":709917}
-,{"cat":"function","dur":16056,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":710023}
-,{"cat":"function","dur":426.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":726300}
-,{"cat":"function","dur":24.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":726886}
-,{"cat":"function","dur":200.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":727014}
-,{"cat":"function","dur":70.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":727314}
-,{"cat":"function","dur":17544.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":709916}
-,{"cat":"function","dur":17734,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":709789}
-,{"cat":"function","dur":47.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":727587}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":727705}
-,{"cat":"function","dur":64.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":727777}
-,{"cat":"function","dur":14466.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":727959}
-,{"cat":"function","dur":350,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":742680}
-,{"cat":"function","dur":16.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":743155}
-,{"cat":"function","dur":222.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":743234}
-,{"cat":"function","dur":72.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":743562}
-,{"cat":"function","dur":15922.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":727776}
-,{"cat":"function","dur":16181.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":727586}
-,{"cat":"function","dur":42.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":743831}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":743950}
-,{"cat":"function","dur":82.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":744037}
-,{"cat":"function","dur":14468.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":744203}
-,{"cat":"function","dur":450.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":758923}
-,{"cat":"function","dur":24.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":759520}
-,{"cat":"function","dur":244.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":759652}
-,{"cat":"function","dur":79.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":759984}
-,{"cat":"function","dur":16086.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":744036}
-,{"cat":"function","dur":16330.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":743829}
-,{"cat":"function","dur":32,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":760197}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":760266}
-,{"cat":"function","dur":60.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":760303}
-,{"cat":"function","dur":14770.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":760493}
-,{"cat":"function","dur":358.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":775960}
-,{"cat":"function","dur":16.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":776412}
-,{"cat":"function","dur":187.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":776487}
-,{"cat":"function","dur":54.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":776768}
-,{"cat":"function","dur":16563,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":760303}
-,{"cat":"function","dur":16704.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":760196}
-,{"cat":"function","dur":31.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":776937}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":777011}
-,{"cat":"function","dur":72.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":777065}
-,{"cat":"function","dur":14461.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":777251}
-,{"cat":"function","dur":474.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":791915}
-,{"cat":"function","dur":17.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":792497}
-,{"cat":"function","dur":186.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":792579}
-,{"cat":"function","dur":97.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":792828}
-,{"cat":"function","dur":15909.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":777064}
-,{"cat":"function","dur":16079.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":776936}
-,{"cat":"function","dur":32.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":793055}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":793130}
-,{"cat":"function","dur":78.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":793170}
-,{"cat":"function","dur":15068,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":793305}
-,{"cat":"function","dur":443,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":808553}
-,{"cat":"function","dur":15.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":809092}
-,{"cat":"function","dur":161.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":809169}
-,{"cat":"function","dur":88.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":809388}
-,{"cat":"function","dur":16351,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":793170}
-,{"cat":"function","dur":16502.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":793054}
-,{"cat":"function","dur":30.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":809593}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":809661}
-,{"cat":"function","dur":64.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":809698}
-,{"cat":"function","dur":15189.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":809815}
-,{"cat":"function","dur":450.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":825209}
-,{"cat":"function","dur":15.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":825763}
-,{"cat":"function","dur":153.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":825839}
-,{"cat":"function","dur":72.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":826046}
-,{"cat":"function","dur":16463.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":809697}
-,{"cat":"function","dur":16605.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":809592}
-,{"cat":"function","dur":30.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":826233}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":826302}
-,{"cat":"function","dur":67.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":826339}
-,{"cat":"function","dur":15584.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":826531}
-,{"cat":"function","dur":443.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":842341}
-,{"cat":"function","dur":23.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":842918}
-,{"cat":"function","dur":204.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":843037}
-,{"cat":"function","dur":93.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":843322}
-,{"cat":"function","dur":17144.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":826339}
-,{"cat":"function","dur":17314.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":826233}
-,{"cat":"function","dur":41.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":843604}
-,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":843710}
-,{"cat":"function","dur":65.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":843772}
-,{"cat":"function","dur":14998.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":843967}
-,{"cat":"function","dur":436.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":859173}
-,{"cat":"function","dur":23.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":859741}
-,{"cat":"function","dur":211.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":859868}
-,{"cat":"function","dur":88.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":860163}
-,{"cat":"function","dur":16546.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":843771}
-,{"cat":"function","dur":16774,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":843602}
-,{"cat":"function","dur":54.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":860434}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":860571}
-,{"cat":"function","dur":60.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":860633}
-,{"cat":"function","dur":14539.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":860836}
-,{"cat":"function","dur":434.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":875564}
-,{"cat":"function","dur":16,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":876100}
-,{"cat":"function","dur":168.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":876176}
-,{"cat":"function","dur":59.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":876457}
-,{"cat":"function","dur":15947.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":860633}
-,{"cat":"function","dur":16184.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":860433}
-,{"cat":"function","dur":32.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":876653}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":876741}
-,{"cat":"function","dur":72.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":877078}
-,{"cat":"function","dur":14421.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":877237}
-,{"cat":"function","dur":543.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":891910}
-,{"cat":"function","dur":24.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":892592}
-,{"cat":"function","dur":198.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":892714}
-,{"cat":"function","dur":78.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":893011}
-,{"cat":"function","dur":16095.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":877077}
-,{"cat":"function","dur":16611,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":876652}
-,{"cat":"function","dur":43.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":893326}
-,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":893445}
-,{"cat":"function","dur":82.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":893513}
-,{"cat":"function","dur":14686.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":893707}
-,{"cat":"function","dur":428,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":908593}
-,{"cat":"function","dur":15.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":909117}
-,{"cat":"function","dur":165.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":909193}
-,{"cat":"function","dur":79.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":909449}
-,{"cat":"function","dur":16066.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":893512}
-,{"cat":"function","dur":16289.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":893325}
-,{"cat":"function","dur":32.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":909649}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":909719}
-,{"cat":"function","dur":46.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":909755}
-,{"cat":"function","dur":14550.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":909878}
-,{"cat":"function","dur":285.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":924593}
-,{"cat":"function","dur":9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":924944}
-,{"cat":"function","dur":107.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":924984}
-,{"cat":"function","dur":60.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":925137}
-,{"cat":"function","dur":15479.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":909755}
-,{"cat":"function","dur":15619.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":909648}
-,{"cat":"function","dur":28.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":925301}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":925362}
-,{"cat":"function","dur":67.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":925394}
-,{"cat":"function","dur":15527.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":925513}
-,{"cat":"function","dur":336.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":941246}
-,{"cat":"function","dur":16,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":941680}
-,{"cat":"function","dur":157.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":941761}
-,{"cat":"function","dur":52.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":941990}
-,{"cat":"function","dur":16701.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":925393}
-,{"cat":"function","dur":16837.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":925300}
-,{"cat":"function","dur":30.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":942180}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":942257}
-,{"cat":"function","dur":41.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":942304}
-,{"cat":"function","dur":15299.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":942405}
-,{"cat":"function","dur":284.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":957877}
-,{"cat":"function","dur":10.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":958240}
-,{"cat":"function","dur":123.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":958305}
-,{"cat":"function","dur":72.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":958489}
-,{"cat":"function","dur":16305.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":942303}
-,{"cat":"function","dur":16472.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":942179}
-,{"cat":"function","dur":30.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":958693}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":958770}
-,{"cat":"function","dur":46.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":958824}
-,{"cat":"function","dur":15763.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":958962}
-,{"cat":"function","dur":303,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":974910}
-,{"cat":"function","dur":11.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":975283}
-,{"cat":"function","dur":113.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":975335}
-,{"cat":"function","dur":45.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":975518}
-,{"cat":"function","dur":16777.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":958824}
-,{"cat":"function","dur":16935.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":958692}
-,{"cat":"function","dur":26,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":975653}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":975704}
-,{"cat":"function","dur":48.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":975729}
-,{"cat":"function","dur":15810.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":975829}
-,{"cat":"function","dur":312.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":991837}
-,{"cat":"function","dur":10.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":992230}
-,{"cat":"function","dur":120.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":992281}
-,{"cat":"function","dur":230.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":992469}
-,{"cat":"function","dur":17009.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":975728}
-,{"cat":"function","dur":17113.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":975652}
-,{"cat":"function","dur":35.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":992790}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":992855}
-,{"cat":"function","dur":32.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":992881}
-,{"cat":"function","dur":14842.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":992964}
-,{"cat":"function","dur":326.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1007988}
-,{"cat":"function","dur":10.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1008420}
-,{"cat":"function","dur":117,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1008473}
-,{"cat":"function","dur":56.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1008640}
-,{"cat":"function","dur":15861.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":992881}
-,{"cat":"function","dur":16000,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":992790}
-,{"cat":"function","dur":38.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1008827}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1008921}
-,{"cat":"function","dur":49.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1008949}
-,{"cat":"function","dur":15876.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1009035}
-,{"cat":"function","dur":398.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1025133}
-,{"cat":"function","dur":17.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1025653}
-,{"cat":"function","dur":178.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1025737}
-,{"cat":"function","dur":78.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1025977}
-,{"cat":"function","dur":17158.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1008948}
-,{"cat":"function","dur":17320.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1008826}
-,{"cat":"function","dur":33.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1026186}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1026263}
-,{"cat":"function","dur":68.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1026304}
-,{"cat":"function","dur":15476.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1026434}
-,{"cat":"function","dur":345.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1042114}
-,{"cat":"function","dur":17.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1042598}
-,{"cat":"function","dur":207.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1042691}
-,{"cat":"function","dur":92.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1042993}
-,{"cat":"function","dur":16833.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1026303}
-,{"cat":"function","dur":16990.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1026185}
-,{"cat":"function","dur":34.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1043216}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1043294}
-,{"cat":"function","dur":80.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1043337}
-,{"cat":"function","dur":14675.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1043512}
-,{"cat":"function","dur":371.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1058399}
-,{"cat":"function","dur":43.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1058895}
-,{"cat":"function","dur":220.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1059038}
-,{"cat":"function","dur":93.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1059364}
-,{"cat":"function","dur":16189.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1043336}
-,{"cat":"function","dur":16374.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1043215}
-,{"cat":"function","dur":62.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1059662}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1059792}
-,{"cat":"function","dur":76.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1059860}
-,{"cat":"function","dur":14950,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1060087}
-,{"cat":"function","dur":361.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1075245}
-,{"cat":"function","dur":16.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1075703}
-,{"cat":"function","dur":148.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1075778}
-,{"cat":"function","dur":60.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1075981}
-,{"cat":"function","dur":16246.3,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1059858}
-,{"cat":"function","dur":16481.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1059660}
-,{"cat":"function","dur":30.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1076178}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1076246}
-,{"cat":"function","dur":157.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1076283}
-,{"cat":"function","dur":15267.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1076546}
-,{"cat":"function","dur":482.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1092004}
-,{"cat":"function","dur":15.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1092584}
-,{"cat":"function","dur":167.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1092657}
-,{"cat":"function","dur":121.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1092881}
-,{"cat":"function","dur":16788.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1076282}
-,{"cat":"function","dur":16952,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1076177}
-,{"cat":"function","dur":53,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1093180}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1093299}
-,{"cat":"function","dur":80.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1093368}
-,{"cat":"function","dur":14904.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1093532}
-,{"cat":"function","dur":436,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1108639}
-,{"cat":"function","dur":16.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1109174}
-,{"cat":"function","dur":424.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1109252}
-,{"cat":"function","dur":83.1,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1109736}
-,{"cat":"function","dur":16612,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1093364}
-,{"cat":"function","dur":16851.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1093179}
-,{"cat":"function","dur":36.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1110069}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1110146}
-,{"cat":"function","dur":79.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1110185}
-,{"cat":"function","dur":14703.2,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1110345}
-,{"cat":"function","dur":381.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1125279}
-,{"cat":"function","dur":16.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1125762}
-,{"cat":"function","dur":165.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1125838}
-,{"cat":"function","dur":80.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1126059}
-,{"cat":"function","dur":16016.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1110184}
-,{"cat":"function","dur":16169.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1110068}
-,{"cat":"function","dur":31.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1126274}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1126344}
-,{"cat":"function","dur":74.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1126382}
-,{"cat":"function","dur":15713.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1126532}
-,{"cat":"function","dur":439.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1142467}
-,{"cat":"function","dur":23,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1143047}
-,{"cat":"function","dur":217.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1143174}
-,{"cat":"function","dur":74.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1143494}
-,{"cat":"function","dur":17257.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1126381}
-,{"cat":"function","dur":17425.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1126273}
-,{"cat":"function","dur":38,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1143759}
-,{"cat":"function","dur":0.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1143857}
-,{"cat":"function","dur":63.9,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1143920}
-,{"cat":"function","dur":14581.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1144117}
-,{"cat":"function","dur":428.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1158923}
-,{"cat":"function","dur":22.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1159485}
-,{"cat":"function","dur":208.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1159607}
-,{"cat":"function","dur":74.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1159920}
-,{"cat":"function","dur":16153.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1143919}
-,{"cat":"function","dur":16377.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1143758}
-,{"cat":"function","dur":43.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1160199}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1160311}
-,{"cat":"function","dur":66.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1160378}
-,{"cat":"function","dur":14312.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1160536}
-,{"cat":"function","dur":357.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1175069}
-,{"cat":"function","dur":14.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1175512}
-,{"cat":"function","dur":159,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1175607}
-,{"cat":"function","dur":82.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1175848}
-,{"cat":"function","dur":15601.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1160376}
-,{"cat":"function","dur":15817,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1160198}
-,{"cat":"function","dur":31.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1176049}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1176253}
-,{"cat":"function","dur":66.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1176316}
-,{"cat":"function","dur":15265.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1176465}
-,{"cat":"function","dur":460.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1191940}
-,{"cat":"function","dur":24.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1192554}
-,{"cat":"function","dur":186.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1192677}
-,{"cat":"function","dur":90.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1192950}
-,{"cat":"function","dur":16796.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1176315}
-,{"cat":"function","dur":17124.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1176048}
-,{"cat":"function","dur":61.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1193233}
-,{"cat":"function","dur":0.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1193358}
-,{"cat":"function","dur":96.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1193424}
-,{"cat":"function","dur":15168.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1193613}
-,{"cat":"function","dur":452.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1208970}
-,{"cat":"function","dur":16,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1209520}
-,{"cat":"function","dur":160.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1209595}
-,{"cat":"function","dur":88.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1209813}
-,{"cat":"function","dur":16522.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1193423}
-,{"cat":"function","dur":16751.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1193232}
-,{"cat":"function","dur":42.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1210020}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1210101}
-,{"cat":"function","dur":77.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1210140}
-,{"cat":"function","dur":14623.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1210277}
-,{"cat":"function","dur":405.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1225068}
-,{"cat":"function","dur":17,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1225616}
-,{"cat":"function","dur":420.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1225693}
-,{"cat":"function","dur":59.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1226172}
-,{"cat":"function","dur":16157.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1210139}
-,{"cat":"function","dur":16313.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1210019}
-,{"cat":"function","dur":33.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1226367}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1226439}
-,{"cat":"function","dur":106.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1226476}
-,{"cat":"function","dur":15972.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1226636}
-,{"cat":"function","dur":715.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1242867}
-,{"cat":"function","dur":30.3,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1243793}
-,{"cat":"function","dur":285.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1243959}
-,{"cat":"function","dur":129.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1244384}
-,{"cat":"function","dur":18122,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1226476}
-,{"cat":"function","dur":18298.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1226366}
-,{"cat":"function","dur":52.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1244741}
-,{"cat":"function","dur":0.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1244868}
-,{"cat":"function","dur":104.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1244950}
-,{"cat":"function","dur":13967,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1245186}
-,{"cat":"function","dur":522.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1259582}
-,{"cat":"function","dur":21,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1260266}
-,{"cat":"function","dur":192.1,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1260361}
-,{"cat":"function","dur":86.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1260648}
-,{"cat":"function","dur":15837,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1244949}
-,{"cat":"function","dur":16086.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1244739}
-,{"cat":"function","dur":41,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1260867}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1260951}
-,{"cat":"function","dur":73,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1260993}
-,{"cat":"function","dur":14232.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1261151}
-,{"cat":"function","dur":609.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1275631}
-,{"cat":"function","dur":25.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1276473}
-,{"cat":"function","dur":242.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1276623}
-,{"cat":"function","dur":82.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1276986}
-,{"cat":"function","dur":16154.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1260992}
-,{"cat":"function","dur":16342.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1260866}
-,{"cat":"function","dur":37.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1277251}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1277353}
-,{"cat":"function","dur":79.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1277423}
-,{"cat":"function","dur":14305.3,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1277594}
-,{"cat":"function","dur":355.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1292129}
-,{"cat":"function","dur":17.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1292610}
-,{"cat":"function","dur":184.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1292694}
-,{"cat":"function","dur":92.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1292969}
-,{"cat":"function","dur":15691.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1277422}
-,{"cat":"function","dur":15904.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1277250}
-,{"cat":"function","dur":34.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1293195}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1293272}
-,{"cat":"function","dur":79.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1293317}
-,{"cat":"function","dur":15089,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1293487}
-,{"cat":"function","dur":380.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1308781}
-,{"cat":"function","dur":18.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1309272}
-,{"cat":"function","dur":187.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1309358}
-,{"cat":"function","dur":91.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1309639}
-,{"cat":"function","dur":16468.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1293316}
-,{"cat":"function","dur":16630.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1293194}
-,{"cat":"function","dur":33.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1309865}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1309942}
-,{"cat":"function","dur":77.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1309987}
-,{"cat":"function","dur":14796.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1310160}
-,{"cat":"function","dur":309.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1325127}
-,{"cat":"function","dur":12.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1325511}
-,{"cat":"function","dur":147.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1325568}
-,{"cat":"function","dur":64.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1325759}
-,{"cat":"function","dur":15983.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1309986}
-,{"cat":"function","dur":16154.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1309864}
-,{"cat":"function","dur":29,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1326049}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1326111}
-,{"cat":"function","dur":57.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1326141}
-,{"cat":"function","dur":14602,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1326262}
-,{"cat":"function","dur":317.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1341298}
-,{"cat":"function","dur":12.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1341718}
-,{"cat":"function","dur":159.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1341793}
-,{"cat":"function","dur":54.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1342022}
-,{"cat":"function","dur":15979.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1326140}
-,{"cat":"function","dur":16111.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1326048}
-,{"cat":"function","dur":28.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1342197}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1342265}
-,{"cat":"function","dur":64.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1342305}
-,{"cat":"function","dur":15262.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1342424}
-,{"cat":"function","dur":306,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1357845}
-,{"cat":"function","dur":11,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1358233}
-,{"cat":"function","dur":113,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1358282}
-,{"cat":"function","dur":61,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1358445}
-,{"cat":"function","dur":16241.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1342305}
-,{"cat":"function","dur":16378.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1342196}
-,{"cat":"function","dur":26.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1358600}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1358652}
-,{"cat":"function","dur":49.6,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1358677}
-,{"cat":"function","dur":15865.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1358782}
-,{"cat":"function","dur":344.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1374845}
-,{"cat":"function","dur":15.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1375294}
-,{"cat":"function","dur":152.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1375374}
-,{"cat":"function","dur":56.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1375597}
-,{"cat":"function","dur":17025.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1358677}
-,{"cat":"function","dur":17144.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1358599}
-,{"cat":"function","dur":30.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1375781}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1375853}
-,{"cat":"function","dur":66.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1375920}
-,{"cat":"function","dur":14861.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1376074}
-,{"cat":"function","dur":298.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1391076}
-,{"cat":"function","dur":11.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1391498}
-,{"cat":"function","dur":105,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1391548}
-,{"cat":"function","dur":39.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1391689}
-,{"cat":"function","dur":15855.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1375919}
-,{"cat":"function","dur":16019.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1375781}
-,{"cat":"function","dur":24.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1391824}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1391984}
-,{"cat":"function","dur":92.4,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1392026}
-,{"cat":"function","dur":16359.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1392172}
-,{"cat":"function","dur":416.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1408768}
-,{"cat":"function","dur":18,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1409292}
-,{"cat":"function","dur":179.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1409374}
-,{"cat":"function","dur":83.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1409621}
-,{"cat":"function","dur":17746.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1392026}
-,{"cat":"function","dur":17990.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1391823}
-,{"cat":"function","dur":32.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1409853}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1409929}
-,{"cat":"function","dur":84.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1409970}
-,{"cat":"function","dur":14659.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1410148}
-,{"cat":"function","dur":348.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1425016}
-,{"cat":"function","dur":16.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1425472}
-,{"cat":"function","dur":169.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1425548}
-,{"cat":"function","dur":72,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1425774}
-,{"cat":"function","dur":15923.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1409969}
-,{"cat":"function","dur":16078.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1409852}
-,{"cat":"function","dur":29.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1425967}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1426036}
-,{"cat":"function","dur":63.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1426074}
-,{"cat":"function","dur":15556.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1426194}
-,{"cat":"function","dur":501.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1441958}
-,{"cat":"function","dur":17.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1442568}
-,{"cat":"function","dur":186.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1442652}
-,{"cat":"function","dur":97.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1442902}
-,{"cat":"function","dur":16977.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1426073}
-,{"cat":"function","dur":17124.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1425966}
-,{"cat":"function","dur":33.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1443130}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1443206}
-,{"cat":"function","dur":138.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1443583}
-,{"cat":"function","dur":14852,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1443843}
-,{"cat":"function","dur":589.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1458918}
-,{"cat":"function","dur":26.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1459665}
-,{"cat":"function","dur":231.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1459798}
-,{"cat":"function","dur":87.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1460156}
-,{"cat":"function","dur":16736.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1443582}
-,{"cat":"function","dur":17255.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1443129}
-,{"cat":"function","dur":45.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1460450}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1460564}
-,{"cat":"function","dur":86,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1460631}
-,{"cat":"function","dur":14316.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1460809}
-,{"cat":"function","dur":473.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1475341}
-,{"cat":"function","dur":16,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1475926}
-,{"cat":"function","dur":165.2,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1476003}
-,{"cat":"function","dur":90.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1476224}
-,{"cat":"function","dur":15729.4,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1460630}
-,{"cat":"function","dur":15946.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1460449}
-,{"cat":"function","dur":30.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1476431}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1476501}
-,{"cat":"function","dur":78.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1476538}
-,{"cat":"function","dur":15558.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1476677}
-,{"cat":"function","dur":464.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1492464}
-,{"cat":"function","dur":28.5,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1493069}
-,{"cat":"function","dur":217.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1493197}
-,{"cat":"function","dur":75.7,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1493516}
-,{"cat":"function","dur":17124.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1476537}
-,{"cat":"function","dur":17292.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1476430}
-,{"cat":"function","dur":41,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1493783}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1493886}
-,{"cat":"function","dur":66.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1493947}
-,{"cat":"function","dur":14318.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1494140}
-,{"cat":"function","dur":431.1,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1508640}
-,{"cat":"function","dur":16.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1509174}
-,{"cat":"function","dur":168.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1509251}
-,{"cat":"function","dur":84.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1509509}
-,{"cat":"function","dur":15698.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1493946}
-,{"cat":"function","dur":15899.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1493782}
-,{"cat":"function","dur":31.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1509718}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1509788}
-,{"cat":"function","dur":46.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1509825}
-,{"cat":"function","dur":15147.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1509962}
-,{"cat":"function","dur":463.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1525308}
-,{"cat":"function","dur":16.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1525870}
-,{"cat":"function","dur":166.5,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1525945}
-,{"cat":"function","dur":98.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1526168}
-,{"cat":"function","dur":16496,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1509824}
-,{"cat":"function","dur":16639.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1509717}
-,{"cat":"function","dur":30.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1526392}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1526461}
-,{"cat":"function","dur":60.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1526498}
-,{"cat":"function","dur":14947.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1526697}
-,{"cat":"function","dur":341.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1541851}
-,{"cat":"function","dur":17,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1542297}
-,{"cat":"function","dur":160.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1542381}
-,{"cat":"function","dur":56.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1542627}
-,{"cat":"function","dur":16241.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1526497}
-,{"cat":"function","dur":16392.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1526391}
-,{"cat":"function","dur":29.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1542825}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1542899}
-,{"cat":"function","dur":52,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1542945}
-,{"cat":"function","dur":14680.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1543057}
-,{"cat":"function","dur":325,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1557895}
-,{"cat":"function","dur":12.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1558299}
-,{"cat":"function","dur":131.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1558354}
-,{"cat":"function","dur":248.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1558527}
-,{"cat":"function","dur":15878,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1542944}
-,{"cat":"function","dur":16026.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1542824}
-,{"cat":"function","dur":29.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1558879}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1558938}
-,{"cat":"function","dur":50.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1558965}
-,{"cat":"function","dur":15499.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1559077}
-,{"cat":"function","dur":363.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1574727}
-,{"cat":"function","dur":17.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1575215}
-,{"cat":"function","dur":150.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1575307}
-,{"cat":"function","dur":57.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1575519}
-,{"cat":"function","dur":16671.6,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1558965}
-,{"cat":"function","dur":16785.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1558878}
-,{"cat":"function","dur":26.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1575689}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1575744}
-,{"cat":"function","dur":49.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1575771}
-,{"cat":"function","dur":15933.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1575883}
-,{"cat":"function","dur":350.2,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1592107}
-,{"cat":"function","dur":11.9,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1592538}
-,{"cat":"function","dur":123.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1592594}
-,{"cat":"function","dur":58.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1592759}
-,{"cat":"function","dur":17077.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1575771}
-,{"cat":"function","dur":17195.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1575688}
-,{"cat":"function","dur":23,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1592910}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1592962}
-,{"cat":"function","dur":55.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1592988}
-,{"cat":"function","dur":14925.7,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1593083}
-,{"cat":"function","dur":294,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1608179}
-,{"cat":"function","dur":14.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1608554}
-,{"cat":"function","dur":138,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1608638}
-,{"cat":"function","dur":63.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1608815}
-,{"cat":"function","dur":15925.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1592988}
-,{"cat":"function","dur":16031.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1592910}
-,{"cat":"function","dur":25.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1608975}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1609034}
-,{"cat":"function","dur":135.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1609060}
-,{"cat":"function","dur":15263.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1609271}
-,{"cat":"function","dur":373.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1624754}
-,{"cat":"function","dur":17.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1625232}
-,{"cat":"function","dur":153,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1625323}
-,{"cat":"function","dur":76.3,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1625536}
-,{"cat":"function","dur":16605.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1609060}
-,{"cat":"function","dur":16735.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1608974}
-,{"cat":"function","dur":30.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1625755}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1625833}
-,{"cat":"function","dur":265.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1625879}
-,{"cat":"function","dur":15271.8,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1626245}
-,{"cat":"function","dur":364.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1641714}
-,{"cat":"function","dur":16.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1642186}
-,{"cat":"function","dur":185.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1642294}
-,{"cat":"function","dur":56.4,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1642562}
-,{"cat":"function","dur":16789.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1625878}
-,{"cat":"function","dur":16956.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1625754}
-,{"cat":"function","dur":27.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1642752}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1642823}
-,{"cat":"function","dur":58.2,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1642878}
-,{"cat":"function","dur":15093.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1642995}
-,{"cat":"function","dur":376.7,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1658260}
-,{"cat":"function","dur":17.2,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1658757}
-,{"cat":"function","dur":152,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1658848}
-,{"cat":"function","dur":44,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1659059}
-,{"cat":"function","dur":16273.5,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1642877}
-,{"cat":"function","dur":16427.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1642751}
-,{"cat":"function","dur":26.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1659204}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1659259}
-,{"cat":"function","dur":58.5,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1659287}
-,{"cat":"function","dur":15193.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1659398}
-,{"cat":"function","dur":305.4,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1674760}
-,{"cat":"function","dur":11.4,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1675154}
-,{"cat":"function","dur":306,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1675224}
-,{"cat":"function","dur":113.5,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1675579}
-,{"cat":"function","dur":16487.8,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1659286}
-,{"cat":"function","dur":16613.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1659204}
-,{"cat":"function","dur":26.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1675874}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1675932}
-,{"cat":"function","dur":91.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1675959}
-,{"cat":"function","dur":15441.4,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1676109}
-,{"cat":"function","dur":384,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1691751}
-,{"cat":"function","dur":16.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1692260}
-,{"cat":"function","dur":158.7,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1692351}
-,{"cat":"function","dur":58.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1692583}
-,{"cat":"function","dur":16734.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1675959}
-,{"cat":"function","dur":16863.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1675874}
-,{"cat":"function","dur":28.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1692779}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1692851}
-,{"cat":"function","dur":71.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1692898}
-,{"cat":"function","dur":14805.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1693031}
-,{"cat":"function","dur":355.6,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1707985}
-,{"cat":"function","dur":12.1,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1708422}
-,{"cat":"function","dur":130.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1708475}
-,{"cat":"function","dur":59.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1708647}
-,{"cat":"function","dur":15840,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1692898}
-,{"cat":"function","dur":15985,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1692778}
-,{"cat":"function","dur":26.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1708788}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1708843}
-,{"cat":"function","dur":45.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1708870}
-,{"cat":"function","dur":16288,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1708972}
-,{"cat":"function","dur":653.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1725403}
-,{"cat":"function","dur":11.6,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1726137}
-,{"cat":"function","dur":115,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1726191}
-,{"cat":"function","dur":62.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1726344}
-,{"cat":"function","dur":17579.2,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1708869}
-,{"cat":"function","dur":17687.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1708788}
-,{"cat":"function","dur":24.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1726501}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1726554}
-,{"cat":"function","dur":55.1,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1726581}
-,{"cat":"function","dur":14688.5,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1726701}
-,{"cat":"function","dur":363.5,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1741551}
-,{"cat":"function","dur":27,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1742057}
-,{"cat":"function","dur":153.8,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1742149}
-,{"cat":"function","dur":50.2,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1742383}
-,{"cat":"function","dur":15888,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1726580}
-,{"cat":"function","dur":15993.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1726500}
-,{"cat":"function","dur":22.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1742520}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1742570}
-,{"cat":"function","dur":49.3,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1742597}
-,{"cat":"function","dur":15518.6,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1742702}
-,{"cat":"function","dur":332.8,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1758422}
-,{"cat":"function","dur":16.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1758856}
-,{"cat":"function","dur":152.6,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1758941}
-,{"cat":"function","dur":59.9,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1759203}
-,{"cat":"function","dur":16727.7,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1742596}
-,{"cat":"function","dur":16848.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1742519}
-,{"cat":"function","dur":30.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1759410}
-,{"cat":"function","dur":0.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1759489}
-,{"cat":"function","dur":49,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1759534}
-,{"cat":"function","dur":16628.9,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1759679}
-,{"cat":"function","dur":398.9,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1776475}
-,{"cat":"function","dur":17,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1776975}
-,{"cat":"function","dur":149.4,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1777062}
-,{"cat":"function","dur":70.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1777267}
-,{"cat":"function","dur":17851.1,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1759533}
-,{"cat":"function","dur":18016.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1759410}
-,{"cat":"function","dur":695.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1777485}
-,{"cat":"function","dur":0.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1778310}
-,{"cat":"function","dur":69.7,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":1778350}
-,{"cat":"function","dur":13988.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":1778493}
-,{"cat":"function","dur":329.3,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":1792674}
-,{"cat":"function","dur":16.8,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":1793101}
-,{"cat":"function","dur":429.9,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":1793187}
-,{"cat":"function","dur":57.6,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":1793692}
-,{"cat":"function","dur":15451.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":1778350}
-,{"cat":"function","dur":16360.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1777484}
-,{"cat":"function","dur":206304,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1793887}
-,{"cat":"function","dur":0.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":2000349}
-,{"cat":"function","dur":73.8,"name":"vkWaitForFences","ph":"X","pid":0,"tid":0,"ts":2000430}
-,{"cat":"function","dur":44.1,"name":"vkAcquireNextImageKHR","ph":"X","pid":0,"tid":0,"ts":2000592}
-,{"cat":"function","dur":454,"name":"vkResetCommandBuffer","ph":"X","pid":0,"tid":0,"ts":2000749}
-,{"cat":"function","dur":23.7,"name":"UpdateUniformBuffer","ph":"X","pid":0,"tid":0,"ts":2001323}
-,{"cat":"function","dur":230.3,"name":"vkQueueSubmit","ph":"X","pid":0,"tid":0,"ts":2001448}
-,{"cat":"function","dur":101.8,"name":"Present Result","ph":"X","pid":0,"tid":0,"ts":2001766}
-,{"cat":"function","dur":1507.9,"name":"DrawFrame","ph":"X","pid":0,"tid":0,"ts":2000429}
-,{"cat":"function","dur":0.3,"name":"OnEvent","ph":"X","pid":0,"tid":0,"ts":2002000}
-,{"cat":"function","dur":57.8,"name":"EmitEvent","ph":"X","pid":0,"tid":0,"ts":2001998}
-,{"cat":"function","dur":208225,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1793886}
+{"cat":"function","dur":684.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":4248}
+,{"cat":"function","dur":16173.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":4987}
+,{"cat":"function","dur":16975,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":4247}
+,{"cat":"function","dur":535.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":21242}
+,{"cat":"function","dur":16986.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":21820}
+,{"cat":"function","dur":17633.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":21241}
+,{"cat":"function","dur":202.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":38893}
+,{"cat":"function","dur":15868.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":39133}
+,{"cat":"function","dur":16168.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":38892}
+,{"cat":"function","dur":19,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":55078}
+,{"cat":"function","dur":15672.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":55110}
+,{"cat":"function","dur":15786.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":55077}
+,{"cat":"function","dur":41,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":70889}
+,{"cat":"function","dur":16232.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":70946}
+,{"cat":"function","dur":16388.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":70888}
+,{"cat":"function","dur":20.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":87295}
+,{"cat":"function","dur":16162.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":87326}
+,{"cat":"function","dur":16279,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":87294}
+,{"cat":"function","dur":23.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":103593}
+,{"cat":"function","dur":15212.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":103634}
+,{"cat":"function","dur":15386.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":103593}
+,{"cat":"function","dur":254.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":119008}
+,{"cat":"function","dur":16807.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":119315}
+,{"cat":"function","dur":17172.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":119008}
+,{"cat":"function","dur":19.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":136198}
+,{"cat":"function","dur":15480.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":136233}
+,{"cat":"function","dur":15573.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":136197}
+,{"cat":"function","dur":22.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":151790}
+,{"cat":"function","dur":16490.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":151826}
+,{"cat":"function","dur":16585.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":151789}
+,{"cat":"function","dur":20.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":168395}
+,{"cat":"function","dur":18207.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":168434}
+,{"cat":"function","dur":18310,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":168395}
+,{"cat":"function","dur":110.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":186723}
+,{"cat":"function","dur":16725.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":186859}
+,{"cat":"function","dur":16918.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":186722}
+,{"cat":"function","dur":18,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":203656}
+,{"cat":"function","dur":16717.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":203684}
+,{"cat":"function","dur":16830.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":203656}
+,{"cat":"function","dur":28.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":220506}
+,{"cat":"function","dur":35080.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":220550}
+,{"cat":"function","dur":35208.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":220505}
+,{"cat":"function","dur":44.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":255745}
+,{"cat":"function","dur":19343.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":255826}
+,{"cat":"function","dur":19550.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":255744}
+,{"cat":"function","dur":92.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":275459}
+,{"cat":"function","dur":16085.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":275659}
+,{"cat":"function","dur":16371.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":275458}
+,{"cat":"function","dur":38.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":291854}
+,{"cat":"function","dur":15823.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":291910}
+,{"cat":"function","dur":15984,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":291853}
+,{"cat":"function","dur":28.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":307874}
+,{"cat":"function","dur":15571.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":307920}
+,{"cat":"function","dur":15702,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":307873}
+,{"cat":"function","dur":30.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":323600}
+,{"cat":"function","dur":16140.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":323648}
+,{"cat":"function","dur":16265.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":323600}
+,{"cat":"function","dur":19.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":339880}
+,{"cat":"function","dur":16546.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":339909}
+,{"cat":"function","dur":16665.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":339879}
+,{"cat":"function","dur":30.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":356576}
+,{"cat":"function","dur":17421.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":356632}
+,{"cat":"function","dur":17594.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":356575}
+,{"cat":"function","dur":36.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":374202}
+,{"cat":"function","dur":18204.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":374263}
+,{"cat":"function","dur":18328.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":374202}
+,{"cat":"function","dur":105.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":392550}
+,{"cat":"function","dur":18513.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":392685}
+,{"cat":"function","dur":18732.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":392549}
+,{"cat":"function","dur":24.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":411298}
+,{"cat":"function","dur":27114.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":411339}
+,{"cat":"function","dur":27226.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":411298}
+,{"cat":"function","dur":39.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":438551}
+,{"cat":"function","dur":20937.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":438634}
+,{"cat":"function","dur":21089.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":438551}
+,{"cat":"function","dur":18.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":459662}
+,{"cat":"function","dur":21442.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":459699}
+,{"cat":"function","dur":21541.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":459661}
+,{"cat":"function","dur":929.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":481225}
+,{"cat":"function","dur":20485.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":482218}
+,{"cat":"function","dur":21540.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":481224}
+,{"cat":"function","dur":489.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":502786}
+,{"cat":"function","dur":19299.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":503350}
+,{"cat":"function","dur":19927.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":502785}
+,{"cat":"function","dur":450.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":522733}
+,{"cat":"function","dur":19035.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":523220}
+,{"cat":"function","dur":19604.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":522732}
+,{"cat":"function","dur":1035.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":542363}
+,{"cat":"function","dur":16903.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":543457}
+,{"cat":"function","dur":18090.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":542362}
+,{"cat":"function","dur":1178.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":560491}
+,{"cat":"function","dur":19412.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":561742}
+,{"cat":"function","dur":20874.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":560490}
+,{"cat":"function","dur":333.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":581411}
+,{"cat":"function","dur":28193.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":581796}
+,{"cat":"function","dur":28658.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":581410}
+,{"cat":"function","dur":1027.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":610094}
+,{"cat":"function","dur":23153.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":611186}
+,{"cat":"function","dur":24327.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":610093}
+,{"cat":"function","dur":54,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":634446}
+,{"cat":"function","dur":23171,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":634534}
+,{"cat":"function","dur":23345.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":634445}
+,{"cat":"function","dur":67.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":657825}
+,{"cat":"function","dur":31507.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":657925}
+,{"cat":"function","dur":31713,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":657824}
+,{"cat":"function","dur":36.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":689568}
+,{"cat":"function","dur":28843.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":689633}
+,{"cat":"function","dur":28993.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":689567}
+,{"cat":"function","dur":47,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":718592}
+,{"cat":"function","dur":30076.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":718673}
+,{"cat":"function","dur":30248.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":718591}
+,{"cat":"function","dur":51.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":748872}
+,{"cat":"function","dur":29867.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":748983}
+,{"cat":"function","dur":30065.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":748872}
+,{"cat":"function","dur":26.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":778966}
+,{"cat":"function","dur":31968.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":779023}
+,{"cat":"function","dur":32129.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":778965}
+,{"cat":"function","dur":1026,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":811144}
+,{"cat":"function","dur":32828.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":812280}
+,{"cat":"function","dur":34053.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":811143}
+,{"cat":"function","dur":698.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":845227}
+,{"cat":"function","dur":31011.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":846103}
+,{"cat":"function","dur":31974.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":845226}
+,{"cat":"function","dur":605.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":877235}
+,{"cat":"function","dur":32003,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":877884}
+,{"cat":"function","dur":32730.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":877233}
+,{"cat":"function","dur":860.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":909996}
+,{"cat":"function","dur":33614,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":910914}
+,{"cat":"function","dur":34612,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":909995}
+,{"cat":"function","dur":617.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":944639}
+,{"cat":"function","dur":35294.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":945310}
+,{"cat":"function","dur":36045.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":944638}
+,{"cat":"function","dur":262.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":980710}
+,{"cat":"function","dur":25291.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":981063}
+,{"cat":"function","dur":25709.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":980709}
+,{"cat":"function","dur":254.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1006442}
+,{"cat":"function","dur":19381.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1006731}
+,{"cat":"function","dur":19738.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1006441}
+,{"cat":"function","dur":116,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1026206}
+,{"cat":"function","dur":19332.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1026357}
+,{"cat":"function","dur":19604.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1026206}
+,{"cat":"function","dur":29.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1046037}
+,{"cat":"function","dur":18678.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1046149}
+,{"cat":"function","dur":18899.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1046036}
+,{"cat":"function","dur":18.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1064954}
+,{"cat":"function","dur":16665.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1064989}
+,{"cat":"function","dur":16762.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1064954}
+,{"cat":"function","dur":44.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1081757}
+,{"cat":"function","dur":16108.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1081874}
+,{"cat":"function","dur":16300.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1081757}
+,{"cat":"function","dur":22.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1098074}
+,{"cat":"function","dur":18955.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1098111}
+,{"cat":"function","dur":19052.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1098074}
+,{"cat":"function","dur":20,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1117145}
+,{"cat":"function","dur":18678.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1117179}
+,{"cat":"function","dur":18791.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1117145}
+,{"cat":"function","dur":21.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1135958}
+,{"cat":"function","dur":18705.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1135998}
+,{"cat":"function","dur":18808.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1135958}
+,{"cat":"function","dur":20.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1154785}
+,{"cat":"function","dur":19748.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1154822}
+,{"cat":"function","dur":19846.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1154784}
+,{"cat":"function","dur":489.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1174650}
+,{"cat":"function","dur":17040.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1175182}
+,{"cat":"function","dur":17635.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1174650}
+,{"cat":"function","dur":372.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1192304}
+,{"cat":"function","dur":17610.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1192708}
+,{"cat":"function","dur":18107.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1192303}
+,{"cat":"function","dur":484.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1210449}
+,{"cat":"function","dur":17306.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1210991}
+,{"cat":"function","dur":17909.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1210448}
+,{"cat":"function","dur":282.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1228374}
+,{"cat":"function","dur":17453.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1228686}
+,{"cat":"function","dur":17841.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1228374}
+,{"cat":"function","dur":553.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1246235}
+,{"cat":"function","dur":19629.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1246848}
+,{"cat":"function","dur":20324,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1246235}
+,{"cat":"function","dur":42.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1266590}
+,{"cat":"function","dur":31134.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1266666}
+,{"cat":"function","dur":31280.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1266589}
+,{"cat":"function","dur":649.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1298003}
+,{"cat":"function","dur":20180.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1298730}
+,{"cat":"function","dur":20970.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1298002}
+,{"cat":"function","dur":1127.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1318993}
+,{"cat":"function","dur":18501.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1320186}
+,{"cat":"function","dur":19765.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1318993}
+,{"cat":"function","dur":398,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1338777}
+,{"cat":"function","dur":16336.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1339230}
+,{"cat":"function","dur":16848.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1338776}
+,{"cat":"function","dur":19.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1355642}
+,{"cat":"function","dur":15779.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1355678}
+,{"cat":"function","dur":15871.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1355642}
+,{"cat":"function","dur":17.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1371530}
+,{"cat":"function","dur":16793.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1371563}
+,{"cat":"function","dur":16884.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1371530}
+,{"cat":"function","dur":17.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1388433}
+,{"cat":"function","dur":15766.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1388461}
+,{"cat":"function","dur":15877.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1388432}
+,{"cat":"function","dur":20.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1404333}
+,{"cat":"function","dur":14460.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1404370}
+,{"cat":"function","dur":14575.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1404333}
+,{"cat":"function","dur":341.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1418928}
+,{"cat":"function","dur":15065.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1419297}
+,{"cat":"function","dur":15491.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1418927}
+,{"cat":"function","dur":20.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1434438}
+,{"cat":"function","dur":17443,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1434474}
+,{"cat":"function","dur":17540,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1434437}
+,{"cat":"function","dur":91124.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1451995}
+,{"cat":"function","dur":39754,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1543231}
+,{"cat":"function","dur":0.4,"name":"OnEvent","ph":"X","pid":0,"tid":0,"ts":1583090}
+,{"cat":"function","dur":41.7,"name":"EmitEvent","ph":"X","pid":0,"tid":0,"ts":1583088}
+,{"cat":"function","dur":131163,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1451995}
 
 ]}

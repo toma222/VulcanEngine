@@ -13,18 +13,20 @@ namespace kon
         KN_INSTRUMENT_FUNCTION();
         KN_TRACE("Application created");
         m_window = new Window(context, 500, 500, "Vulkan Window");
-        Graphics::Get()->BindWindow(m_window->GetHandle());
-        Graphics::Get()->Init();
+        // Graphics::Get()->BindWindow(m_window->GetHandle());
+        // Graphics::Get()->Init();
         // Graphics::Init(GraphicsAPI::VULKAN);
         m_engine = new Engine(context);
-        // context->AddListener(this);
+
+        m_graphicsSystem = new GraphicsSystem(context, m_window->GetHandle());
+        context->AddSystem(static_cast<System*>(m_graphicsSystem));
     }
 
     Application::~Application()
     {
         KN_INSTRUMENT_FUNCTION()
         KN_TRACE("Application destroyed");
-        Graphics::Clean();
+        // Graphics::Clean();
         delete m_window;
         delete m_engine;
     }
@@ -41,7 +43,7 @@ namespace kon
 
             m_window->PollEvents();
             m_engine->UpdateFrame();
-            Graphics::DrawFrame();
+            // Graphics::DrawFrame();
 
             if(m_window->ShouldWindowClose())
             {

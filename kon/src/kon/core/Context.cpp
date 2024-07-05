@@ -33,10 +33,18 @@ namespace kon
         KN_TRACE("Context Destroyed");
     }
 
-    void Context::AddModule(Object *object)
+    void Context::AddSystem(System *system)
     {
         KN_INSTRUMENT_FUNCTION()
-        modules.Add(object);
+        systems.Add(system);
+    }
+
+    void Context::SystemUpdate()
+    {
+        for(int i = 0; i < systems.Index(); i++)
+        {
+            systems.Get(i)->Update();
+        }
     }
 
     void Context::AddListener(Object *object, i16 classes)
@@ -64,10 +72,10 @@ namespace kon
         }
     }
 
-    void Context::ClearModules()
+    void Context::ClearSystems()
     {
         KN_INSTRUMENT_FUNCTION()
-        for(int i = 0; i < modules.Index(); i++)
-            delete modules.Get(i);
+        for(int i = 0; i < systems.Index(); i++)
+            delete systems.Get(i);
     }
 }

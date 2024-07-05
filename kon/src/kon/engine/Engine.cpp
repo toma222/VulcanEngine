@@ -13,21 +13,22 @@ namespace kon
         KN_TRACE("Engine created");
         context->AddListener(static_cast<Object*>(this), (i16)EventClass::Application);
         // init submodules here
-
-        m_context->AddModule(new Logging());
     }
 
     Engine::~Engine()
     {
         KN_INSTRUMENT_FUNCTION()
         KN_TRACE("Engine destroyed");
-        m_context->ClearModules();
+        m_context->ClearSystems();
         // delete all the submodules ig
     }
 
     void Engine::UpdateFrame()
     {
         KN_INSTRUMENT_FUNCTION()
+
+        // update the context systems
+        m_context->SystemUpdate();
     }
 
     void Engine::OnEvent(Event &event)

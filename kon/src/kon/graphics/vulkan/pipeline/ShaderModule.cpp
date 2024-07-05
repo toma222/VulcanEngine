@@ -5,14 +5,14 @@
 
 namespace kon
 {
-	ShaderModule::ShaderModule(Device *device, std::vector<char> &code)
+	ShaderModule::ShaderModule(Device *device, char *code, size_t size)
 		: m_device(device)
 	{
 		KN_INSTRUMENT_FUNCTION()
         VkShaderModuleCreateInfo createInfo {};
         createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
-        createInfo.codeSize = code.size();
-        createInfo.pCode = reinterpret_cast<const uint32_t*>(code.data());
+        createInfo.codeSize = size;
+        createInfo.pCode = reinterpret_cast<const uint32_t*>(code);
 
         if(vkCreateShaderModule(m_device->Get(), &createInfo, nullptr, &m_module) != VK_SUCCESS)
         {

@@ -5,6 +5,7 @@
 #include "kon/types/Pair.hpp"
 #include "Object.hpp"
 #include "kon/core/Core.hpp"
+#include <kon/core/System.hpp>
 
 namespace kon
 {
@@ -15,15 +16,17 @@ namespace kon
         Context();
         ~Context();
 
-        void AddModule(Object* object);
+        void AddSystem(System *system);
+        void SystemUpdate();
+
         void AddListener(Object *object, i16 classes);
 
         void EmitEvent(Event &event);
 
-        void ClearModules();
+        void ClearSystems();
 
     private:
-        ArrayList<Object*> modules;
+        ArrayList<System*> systems;
         ArrayList<Object*> eventRecievingObjects[KN_EVENT_CLASSES];
     };
 }

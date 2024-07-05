@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include <kon/graphics/pipelines/Renderer.hpp>
+#include <kon/graphics/pipelines/Pipeline.hpp>
 #include <kon/core/Context.hpp>
 #include <kon/core/Object.hpp>
 
@@ -21,16 +21,25 @@
 
 #include <glm/glm.hpp>
 
+#include <vulkan/vulkan.hpp>
+
 namespace kon
 {
-    class RendererShaded : public Renderer
+    class PipelineShaded : public Pipeline
     {
-    KN_OBJECT(RendererShaded, Renderer)
+    KN_OBJECT(PipelineShaded, Pipeline)
 
     public:
         struct PushConstant
         {
             glm::mat4 model;
+        };
+
+        struct UniformBufferData
+        {
+            glm::mat4 model;
+            glm::mat4 view;
+            glm::mat4 projection;
         };
 
         struct RenderPassResources
@@ -42,31 +51,51 @@ namespace kon
         };
 
     public:
-        RendererShaded(Context *context, Device *device, Swapchain *swapchain, CommandPool *commandPool);
-        ~RendererShaded() override;
+        PipelineShaded(Context *context, Device *device, Swapchain *swapchain, CommandPool *commandPool);
+        ~PipelineShaded() override;
 
-        void GetDrawCommands(CommandBuffer *buffer, const RenderFrameData &data) override;
+        void GetDrawCommands(VkCommandBuffer buffer, const RenderFrameData &data) override;
+        void Recreate(Swapchain *swapchain) override;
 
         void DrawMesh();
 
     private:
         inline void CreateRenderPass(Device *device, Swapchain *swapchain, CommandPool *commandPool);
         inline void CreateRenderPassResources(Device *device, Swapchain *swapchain, CommandPool *commandPool);
+        inline void CreateBuffers(Device *device, Swapchain *swapchain, CommandPool *commandpool);
+        inline void CreateDescriptors(Device *device);
+
+        inline void CreateRenderPipeline(Device *device, Swapchain *swapchain, CommandPool *commandPool);
+        inline void CreateRenderPipelineLayout(Device *device);
+
+        inline void CreateFramebuffers(Device *device, Swapchain *swapchain);
 
     private:
-        RenderPass *m_renderPass;
-        ArrayList<Framebuffer> *m_framebuffers;
+        inline void DestroyFramebuffers();
 
+    private:
+        
+
+        u32 m_indiciesCount {};
         IndexBuffer *m_indexBuffer;
         VertexBuffer *m_vertexBuffer;
 
+        TextureImage *m_textureImage;
+        TextureSampler *m_textureSampler;
+        UniformBuffer *m_uniformBuffer;
+
+        DescriptorPool *m_descriptorPool;
         DescriptorLayout *m_descriptorLayout;
         DescriptorSets *m_descriptorSets;
 
         ShaderModule *m_fragmentShader;
         ShaderModule *m_vertexShader;
 
-        RenderPipeline *m_renderPipeline;
+        ArrayList<Framebuffer*> m_framebuffers;
+        RenderPass *m_renderPass;
+        VkPipeline m_renderPipeline;
+        VkPipelineLayout m_renderPipelineLayout;
+
 
         RenderPassResources m_renderPassResources;
     };

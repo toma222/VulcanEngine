@@ -5,6 +5,7 @@
 #include "kon/core/Object.hpp"
 #include "kon/graphics/Window.hpp"
 #include "kon/core/Context.hpp"
+#include <kon/graphics/GraphicsSystem.hpp>
 
 namespace kon
 {
@@ -26,5 +27,8 @@ namespace kon
         Engine *m_engine;
         Context *m_context;
         Window *m_window;
+
+        // Systems
+        GraphicsSystem *m_graphicsSystem;
     }; 
 }

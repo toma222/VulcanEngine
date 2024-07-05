@@ -76,9 +76,7 @@ namespace kon
         CreateSwapchain();
 
         GetSwapchainImages();
-        CreateImageViews();		
-		CreateColorResources();
-		CreateDepthResources();
+        CreateImageViews();
     }
 
     Swapchain::~Swapchain()
@@ -95,9 +93,7 @@ namespace kon
 		CreateSwapchain();
         GetSwapchainImages();
         CreateImageViews();
-		CreateColorResources();
-		CreateDepthResources();
-		CreateFramebuffers();
+		// CreateFramebuffers();
 	}
 
     void Swapchain::CreateSwapchain()
@@ -180,6 +176,7 @@ namespace kon
         }
     }
 
+    /*
     void Swapchain::CreateColorResources()
     {
         KN_INSTRUMENT_FUNCTION()
@@ -211,10 +208,11 @@ namespace kon
 		m_depthImage->TransitionImageLayout(m_commandPool, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, 1);
 		
 
-        // CreateImage(m_swapChainExtent.width, m_swapChainExtent.height, 1, m_device->GetPhysicalDeviceProperties().mssaSamples, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, m_depthImage, m_depthImageMemory);
+        // CreateImage(m_swapChainEx.tent.width, m_swapChainExtent.height, 1, m_device->GetPhysicalDeviceProperties().mssaSamples, depthFormat, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, m_depthImage, m_depthImageMemory);
         // m_depthImageView = createImageView(m_depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT, 1);
         // transitionImageLayout(m_depthImage, depthFormat, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, 1);
     }
+    
 
     void Swapchain::CreateFramebuffers()
     {
@@ -234,18 +232,12 @@ namespace kon
                                                      m_renderPass->Get(), attachments.data(), 3);
         }
     }
+    */
 
     void Swapchain::DestroySwapchain()
     {
         KN_INSTRUMENT_FUNCTION()
         vkDeviceWaitIdle(m_device->Get());
-		
-
-		delete m_depthImage;
-		delete m_depthImageView;
-
-		delete m_colorImage;
-		delete m_colorImageView;
 
 		for (auto imageView : m_swapChainImageViews)
 		{
@@ -259,10 +251,5 @@ namespace kon
 
         vkDestroySwapchainKHR(m_device->Get(), m_swapChain, nullptr);
     }
-
-	void Swapchain::BindRenderPass(RenderPass *renderPass)
-	{
-		m_renderPass = renderPass;
-	}
 }
 

@@ -21,7 +21,6 @@ namespace kon
 		VkCommandPool Get() { return m_commandPool; }
 		std::vector<VkCommandBuffer> &GetBuffers() { return m_buffers; }
 		VkCommandBuffer GetBuffer(int i) { return m_buffers[i]; }
-		// VkCommandPool *Get() { return *m }
 
 		CommandBuffer StartSingleTimeCommands();
 

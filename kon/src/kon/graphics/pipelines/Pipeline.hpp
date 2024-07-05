@@ -5,6 +5,7 @@
 
 #include <kon/graphics/vulkan/commands/CommandPool.hpp>
 #include <kon/graphics/vulkan/image/Framebuffer.hpp>
+#include <kon/graphics/vulkan/Swapchain.hpp>
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -17,15 +18,17 @@ namespace kon
         VkExtent2D renderExtent;
     };
 
-    class Renderer : public Object
+    // Creates a vk pipeline that manages
+    class Pipeline : public Object
     {
-    KN_OBJECT(Renderer, Object)
+    KN_OBJECT(Pipeline, Object)
 
     public:
-        Renderer() = default;
-        virtual ~Renderer() = default;
+        Pipeline() = default;
+        virtual ~Pipeline() = default;
 
-        virtual void GetDrawCommands(CommandBuffer *buffer, const RenderFrameData &data) = 0;
+        virtual void GetDrawCommands(VkCommandBuffer buffer, const RenderFrameData &data) = 0;
+        virtual void Recreate(Swapchain *swapchain) = 0;
 
         void SetRenderTarget(Framebuffer *target);
         const Framebuffer *GetRenderTarget() const;
