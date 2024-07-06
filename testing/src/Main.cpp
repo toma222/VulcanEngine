@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 	TestMaps();
 	TestResources();
 
-    return 0; //(new CoreUnitTest)->run();
+    return 0;
 }
 
 void TestResources()

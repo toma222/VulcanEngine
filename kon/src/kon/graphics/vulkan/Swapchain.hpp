@@ -49,7 +49,6 @@ namespace kon
         VkSwapchainKHR m_swapChain;
         std::vector<VkImage> m_swapChainImages;
         std::vector<ImageView*> m_swapChainImageViews;
-        std::vector<Framebuffer*> m_swapChainFramebuffers;
         VkFormat m_swapChainImageFormat;
         VkExtent2D m_swapChainExtent;
 

@@ -56,4 +56,46 @@ namespace kon
     public:
         ArrayList<Pair<u32, T>> m_hashes;
     };
+
+    // takes a type T and you enter it with a defined hash
+    template<typename T, typename Hash>
+    class HashMap
+    {
+    public:
+        using HashMapEntry = Pair<Hash, T>;
+
+    public:
+        HashMap() = default;
+        HashMap(u32 amount) { ReserveElements(amount); }
+        ~HashMap() = default;
+
+        void ReserveElements(u32 amount) { m_hashes.Reserve(amount); }
+
+        bool Enter(T t, Hash hash)
+        {
+            m_hashes.Add(
+                HashMapEntry(hash, t));
+            return true; // idk why this is here :3
+        }
+
+        T Get(Hash h) const
+        {
+            for(int i = 0; i < m_hashes.Index(); i++)
+                if(m_hashes.Get(i).first == h)
+                    return m_hashes.Get(i).second;
+            KN_WARN("Unordered map searched for value that does not exist");
+            return m_hashes.Get(0).second;
+        }
+
+        bool HasDuplicate(Hash h) const
+        {
+            for(int i = 0; i < m_hashes.Index(); i++)
+                if(m_hashes.Get(i).first == h)
+                    return true;
+            return false;
+        }
+
+    public:
+        ArrayList<HashMapEntry> m_hashes;
+    };
 }

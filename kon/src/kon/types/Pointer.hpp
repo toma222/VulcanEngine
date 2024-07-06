@@ -2,6 +2,8 @@
 #pragma once
 
 #include <kon/core/Logging.hpp>
+#include <kon/core/Object.hpp>
+#include <kon/core/RefCount.hpp>
 
 namespace kon
 {
@@ -34,5 +36,41 @@ namespace kon
         
     private:
         T *m_ref { nullptr };
+    };
+
+    // Must inherit from the object class
+    // NOT TESTED
+    template<typename T>
+    class SharedPointer
+    {
+    public:
+        SharedPointer(T *ref)
+            : m_ref(ref) {}
+
+        SharedPointer(const SharedPointer<T> &sp)
+        {
+            m_ref = sp.m_ref;
+            m_ref->AddRef();
+        }
+
+        ~SharedPointer()
+        {
+            // check if this is the last ref
+            if(m_ref->GetRefs() == 1)
+            {
+                delete m_ref;
+            }else{
+                m_ref->SubtractRef();
+            }
+        }
+
+        T *Get() const { return m_ref; }
+
+    public:
+        operator bool() const { return (m_ref == nullptr); }
+        T *operator->() const { return m_ref; }
+
+    private:
+        T *m_ref {nullptr};
     };
 }

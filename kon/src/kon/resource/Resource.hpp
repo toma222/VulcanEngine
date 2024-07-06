@@ -32,4 +32,12 @@ namespace kon
         String m_loadPath {};
         i32 m_stringHash {0};
     };
+
+    // its an array of resources
+    // you load them all with one function call
+    class LoadResourceArray
+    {
+    public:
+
+    };
 }

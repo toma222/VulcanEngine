@@ -79,4 +79,24 @@ namespace kon
         for(int i = 0; i < systems.Index(); i++)
             delete systems.GetCopy(i);
     }
+
+    Resource *Context::GetResource(String &path) const
+    {
+        return resourceMap.Get(path.Hash());
+    }
+
+    Resource *Context::GetResource(u32 hash) const
+    {
+        return resourceMap.Get(hash);
+    }
+
+    bool Context::HasResource(String &path) const
+    {
+        return resourceMap.HasDuplicate(path.Hash());
+    }
+
+    bool Context::HasResource(u32 hash) const
+    {
+        return resourceMap.HasDuplicate(hash);
+    }
 }

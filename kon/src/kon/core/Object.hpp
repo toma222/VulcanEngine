@@ -5,6 +5,7 @@
 // #include "kon/events/Event.hpp"
 #include "kon/events/ApplicationEvent.hpp"
 #include "kon/types/String.hpp"
+#include <kon/core/RefCount.hpp>
 
 namespace kon
 {
@@ -16,7 +17,7 @@ namespace kon
         const TypeInfo *m_parent;
     };
 
-    class knAPI Object
+    class knAPI Object : public RefCount
     {
     public:
         virtual ~Object() = default;

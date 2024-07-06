@@ -74,7 +74,6 @@ namespace kon
     {
         KN_INSTRUMENT_FUNCTION()
         CreateSwapchain();
-
         GetSwapchainImages();
         CreateImageViews();
     }
@@ -93,7 +92,6 @@ namespace kon
 		CreateSwapchain();
         GetSwapchainImages();
         CreateImageViews();
-		// CreateFramebuffers();
 	}
 
     void Swapchain::CreateSwapchain()
@@ -236,18 +234,11 @@ namespace kon
 
     void Swapchain::DestroySwapchain()
     {
-        KN_INSTRUMENT_FUNCTION()
-        vkDeviceWaitIdle(m_device->Get());
-
-		for (auto imageView : m_swapChainImageViews)
+        KN_TRACE("Destroying views");
+		for (ImageView *imageView : m_swapChainImageViews)
 		{
 			delete imageView;
 		}
-
-        for (auto framebuffer : m_swapChainFramebuffers)
-		{
-			delete framebuffer;
-        }
 
         vkDestroySwapchainKHR(m_device->Get(), m_swapChain, nullptr);
     }
