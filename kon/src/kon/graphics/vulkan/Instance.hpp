@@ -4,8 +4,13 @@
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
-#include <kon/graphics/Graphics.hpp>
 #include <vector>
+
+#ifdef KN_DEBUG
+    #define KN_ENABLE_VALIDATION true
+#else
+    #define KN_ENABLE_VALIDATION false
+#endif
 
 namespace kon
 {

@@ -2,7 +2,6 @@
 #include "Window.hpp"
 
 #include "kon/core/Logging.hpp"
-#include "Graphics.hpp"
 
 #include <kon/debug/Debug.hpp>
 
@@ -25,7 +24,7 @@ namespace kon
 
         glfwSetFramebufferSizeCallback(m_window, [](GLFWwindow *window, int w, int h)
         {
-            Graphics::Get()->Viewport(0, 0, w, h);
+            // Graphics::Get()->Viewport(0, 0, w, h);
         });
     }
 

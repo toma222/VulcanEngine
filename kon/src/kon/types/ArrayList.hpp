@@ -67,6 +67,11 @@ namespace kon
             return m_array[index];
         }
 
+        T GetCopy(u32 index) const
+        {
+            return m_array[index];
+        }
+
         void Set(u32 index, T element)
         {
             if(m_capacity >= index && index < 0) return; // outside bounds

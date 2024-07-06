@@ -5,7 +5,6 @@
 #include <vector>
 
 #include <kon/core/Logging.hpp>
-#include <kon/graphics/Graphics.hpp>
 #include <kon/debug/Debug.hpp>
 
 namespace kon

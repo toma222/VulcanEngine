@@ -10,11 +10,14 @@
 #include <kon/resource/ResourceImage.hpp>
 #include <kon/resource/ResourceRawfile.hpp>
 
+#include <vulkan/vulkan.hpp>
+
 // #include ""
 
 namespace kon
 {
     PipelineShaded::PipelineShaded(Context *context, Device *device, Swapchain *swapchain, CommandPool *commandPool)
+        : m_device(device)
     {
         // Create render pass
         CreateRenderPass(device, swapchain, commandPool);
@@ -72,6 +75,9 @@ namespace kon
 		delete m_fragmentShader;
 
         delete m_renderPass;
+
+        vkDestroyPipelineLayout(m_device->Get(), m_renderPipelineLayout, nullptr);
+        vkDestroyPipeline(m_device->Get(), m_renderPipeline, nullptr);
     }
 
     inline void PipelineShaded::DestroyFramebuffers()
@@ -236,8 +242,6 @@ namespace kon
 
     inline void PipelineShaded::CreateRenderPipeline(Device *device, Swapchain *swapchain, CommandPool *commandPool)
     {
-        CreateRenderPipelineLayout(device);
-
         // --=====================================--
         //              SHADER STAGES
         // --=====================================--

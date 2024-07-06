@@ -42,11 +42,25 @@ namespace kon
 
     GraphicsSystem::~GraphicsSystem()
     {
-        delete m_vulkanInstance;
-        delete m_device;
-        delete m_commandPool;
-        delete m_swapchain;
+        vkDeviceWaitIdle(m_device->Get());
+
         delete m_pipeline;
+
+        for (size_t i = 0; i < FRAMES_IN_FLIGHT; i++) {
+            vkDestroySemaphore(m_device->Get(), m_renderFinishedSemaphores[i], nullptr);
+            vkDestroySemaphore(m_device->Get(), m_imageAvailableSemaphores[i], nullptr);
+            vkDestroyFence(m_device->Get(), m_inFlightFences[i], nullptr);
+        }
+
+        delete m_swapchain;
+        delete m_commandPool;
+        delete m_device;
+        if(KN_ENABLE_VALIDATION)
+        {
+            // DestroyDebugUtilsMessengerEXT(m_instance, m_debugMessenger, nullptr);
+            m_vulkanInstance->DestroyDebugUtils();
+        }
+        delete m_vulkanInstance;
     }
 
     void GraphicsSystem::Update()

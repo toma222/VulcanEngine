@@ -75,7 +75,8 @@ namespace kon
     void Context::ClearSystems()
     {
         KN_INSTRUMENT_FUNCTION()
+        KN_TRACE("clear systems");
         for(int i = 0; i < systems.Index(); i++)
-            delete systems.Get(i);
+            delete systems.GetCopy(i);
     }
 }

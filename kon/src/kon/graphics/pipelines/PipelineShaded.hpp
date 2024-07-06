@@ -74,8 +74,6 @@ namespace kon
         inline void DestroyFramebuffers();
 
     private:
-        
-
         u32 m_indiciesCount {};
         IndexBuffer *m_indexBuffer;
         VertexBuffer *m_vertexBuffer;
@@ -96,7 +94,9 @@ namespace kon
         VkPipeline m_renderPipeline;
         VkPipelineLayout m_renderPipelineLayout;
 
-
         RenderPassResources m_renderPassResources;
+
+    private:
+        Device *m_device;
     };
 }
