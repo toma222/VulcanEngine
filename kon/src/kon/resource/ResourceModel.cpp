@@ -31,7 +31,6 @@ namespace kon
             KN_WARN("tinyobj loader error: %s\n warn %s\n", warn.c_str(), err.c_str());
         }
 
-        KN_TRACE("setting shape");
         m_shape.Set(new Shape());
 
         for(const auto &shape : shapes)
@@ -41,7 +40,6 @@ namespace kon
 
             for (const auto &index : shape.mesh.indices)
             {
-                // KN_TRACE("new vertex");
                 ModelVertex vertex {};
 
                 vertex.position = {

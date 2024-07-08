@@ -42,31 +42,24 @@ namespace kon
     {
         vkDeviceWaitIdle(m_device->Get());
 
-        KN_TRACE("semaphores and stuff");
         for (size_t i = 0; i < FRAMES_IN_FLIGHT; i++) {
             vkDestroySemaphore(m_device->Get(), m_renderFinishedSemaphores[i], nullptr);
             vkDestroySemaphore(m_device->Get(), m_imageAvailableSemaphores[i], nullptr);
             vkDestroyFence(m_device->Get(), m_inFlightFences[i], nullptr);
         }
-
-        KN_TRACE("pipeline");
-        delete m_pipeline;
-        KN_TRACE("swapchain");
+ 
+		delete m_pipeline;
         delete m_swapchain;
-        KN_TRACE("command pool");
         delete m_commandPool;
-        KN_TRACE("device");
         delete m_device;
 
-        KN_TRACE("debug utils");
         if(KN_ENABLE_VALIDATION)
         {
             // DestroyDebugUtilsMessengerEXT(m_instance, m_debugMessenger, nullptr);
             m_vulkanInstance->DestroyDebugUtils();
         }
 
-        KN_TRACE("instance");
-        delete m_vulkanInstance;
+		delete m_vulkanInstance;
     }
 
     void GraphicsSystem::Update()

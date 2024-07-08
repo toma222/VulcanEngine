@@ -82,12 +82,12 @@ namespace kon
 
     void Context::RegisterResource(Resource *resource, String path)
     {
-        resourceMap.Enter(resource, path.Hash());
+        resourceMap.Emplace(resource, path.Hash());
     }
 
     void Context::RegisterResource(Resource *resource, u32 path)
     {
-        resourceMap.Enter(resource, path);
+        resourceMap.Emplace(resource, path);
     }
 
     Resource *Context::GetResource(String path) const
@@ -102,11 +102,11 @@ namespace kon
 
     bool Context::HasResource(String &path) const
     {
-        return resourceMap.HasDuplicate(path.Hash());
+        return resourceMap.CheckCollision(path.Hash());
     }
 
     bool Context::HasResource(u32 hash) const
     {
-        return resourceMap.HasDuplicate(hash);
+        return resourceMap.CheckCollision(hash);
     }
 }

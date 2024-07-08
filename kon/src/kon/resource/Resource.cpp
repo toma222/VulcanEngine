@@ -9,7 +9,6 @@ namespace kon
 
     void LoadResourceArray::AddResource(Resource *r, String s)
     {
-        KN_TRACE("Add resource");
         m_resourceLoadList.Add(
                 Pair<kon::Resource*, kon::String>(r, s));
     }

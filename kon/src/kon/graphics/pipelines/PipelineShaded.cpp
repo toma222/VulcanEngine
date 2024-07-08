@@ -57,7 +57,7 @@ namespace kon
     PipelineShaded::~PipelineShaded()
     {
         DestroyFramebuffers();
-
+		
         delete m_textureImage;
 
 		delete m_uniformBuffer;
@@ -94,7 +94,7 @@ namespace kon
             delete m_framebuffers.Get(i);
         }
 
-        m_framebuffers.Reserve(0); // take it back to zero
+        // m_framebuffers.Reserve(0); // take it back to zero
     }
 
     inline void PipelineShaded::CreateDescriptors(Device *device)

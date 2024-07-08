@@ -2,6 +2,7 @@
 #include "kon/debug/Test.hpp"
 #include "kon/types/String.hpp"
 #include "kon/types/ArrayList.hpp"
+#include "kon/types/UUID.hpp"
 
 #include <kon/resource/Resource.hpp>
 #include <kon/resource/ResourceModel.hpp>
@@ -70,17 +71,37 @@ void TestMaps()
 		return map.HasDuplicate(String("im not in the list"));
 	});
 
-	KonCoreTest<int>("Better Hash Map", 4,
-	[](){
-		BetterHashMap<int, u32> map;
-		map.Emplace(2, 234523452);
-		map.Emplace(5, 121245222);
-		map.Emplace(4, 504943233);
-		//map.Remove(504943233);
-		map.Emplace(10,680998661);
-		map.Emplace(1, 387844444);
-		// map.Remove(504943233);
-		return map.Get(504943233);
+	HashMap<int, u64> map;
+	UUID n;
+
+	KonCoreTest<int>("Better Hash Map Emplace 10000", 4,
+	[&]() {
+		for(int i = 0; i < 10000; i++)
+		{
+			map.Emplace(i, UUID().uuid);
+		}
+
+		return 4;
+	});
+
+	KonCoreTest<int>("Better Hash Map Emplace 1", 4,
+	[&]() {
+		map.Emplace(101, n.uuid);
+		return 4;
+	});
+
+	KonCoreTest<int>("Better Hash Map Get", 101,
+	[&]() {
+		return map.Get(n.uuid);
+	});
+
+	KonCoreTest<int>("Better Hash Map Erase", 4,
+	[&]() {
+		// UUID id;
+		// map.Emplace(4, id.uuid);
+		map.Remove(n.uuid);
+
+		return 4; //map.Get(id.uuid);
 	});
 }
 

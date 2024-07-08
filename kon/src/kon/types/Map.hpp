@@ -58,55 +58,8 @@ namespace kon
         ArrayList<Pair<u32, T>> m_hashes;
     };
 
-    // takes a type T and you enter it with a defined hash
-	
-    template<typename T, typename Hash>
-    class HashMap
-    {
-    public:
-        using HashMapEntry = Pair<Hash, T>;
-
-    public:
-        HashMap() = default;
-        HashMap(u32 amount) { ReserveElements(amount); }
-        ~HashMap() = default;
-
-        void ReserveElements(u32 amount) { m_hashes.Reserve(amount); }
-
-        bool Enter(T t, Hash hash)
-        {
-            m_hashes.Add(
-                HashMapEntry(hash, t));
-            return true; // idk why this is here :3
-        }
-
-        T Get(Hash h) const
-        {
-            for(int i = 0; i < m_hashes.Index(); i++)
-                if(m_hashes.Get(i).first == h)
-                    return m_hashes.Get(i).second;
-
-            KN_WARN("Unordered map searched for value that does not exist");
-            return m_hashes.Get(0).second;
-        }
-
-        bool HasDuplicate(Hash h) const
-        {
-            for(int i = 0; i < m_hashes.Index(); i++)
-                if(m_hashes.Get(i).first == h)
-                    return true;
-            return false;
-        }
-
-		
-
-    public:
-        ArrayList<HashMapEntry> m_hashes;
-    };
-	
-
 	template<typename T, typename Hash>
-	class BetterHashMap
+	class HashMap
 	{
 	public:
 		struct KeyValuePair
@@ -124,8 +77,8 @@ namespace kon
 
 		struct Node
 		{
-			Node(T value, const Hash key)
-				: pair(value, key) {}
+			Node(Node *p, T value, const Hash key)
+				: pair(value, key), prev(p) {}
 			~Node()
 			{
 				// no seg faults
@@ -140,17 +93,17 @@ namespace kon
 			Node *b {nullptr};
 		};
 
-		BetterHashMap() = default;
-		~BetterHashMap()
+		HashMap() = default;
+		~HashMap()
 		{
 			delete m_head;
 		}
 
 		// returns a valid node pointer
-		Node *AllocateNode(T value, Hash hash)
+		Node *AllocateNode(Node *prev, T value, Hash hash)
 		{
 			// we need to write an allocator class at SOME point
-			return (new Node(value, hash));
+			return (new Node(prev, value, hash));
 		}
 
 		// returns wether or not the operation was successful
@@ -158,7 +111,7 @@ namespace kon
 		{
 			if(m_head == nullptr)
 			{
-				m_head = AllocateNode(value, hash);
+				m_head = AllocateNode(nullptr, value, hash);
 			}
 
 			Node *current = m_head;
@@ -172,7 +125,7 @@ namespace kon
 				{
 					if(current->b == nullptr)
 					{
-						current->b = AllocateNode(value, hash);
+						current->b = AllocateNode(current, value, hash);
 						found = true;
 					} else {
 						current = current->b;
@@ -181,7 +134,7 @@ namespace kon
 				}else{
 					if(current->a == nullptr)
 					{
-						current->a = AllocateNode(value, hash);
+						current->a = AllocateNode(current, value, hash);
 						found = true;
 					} else {
 						current = current->a;
@@ -193,29 +146,39 @@ namespace kon
 			return true;
 		}
 
-		T Get(Hash hash)
+		T Get(Hash hash) const
 		{
 			Node *n = FindNode(hash);
 			// assert(n != nullptr);
 			return n->pair.value;
 		}
 
+		bool CheckCollision(Hash hash) const
+		{
+			return (FindNode(hash) != nullptr);
+		}
+
 		// remove an entry from the table
 		void Remove(Hash hash)
 		{
 			Node *n = FindNode(hash);
+			if(n == nullptr) return;
 			
 			// make a copy of all the nodes UNDER n
-			BetterHashMap<T, Hash> copy;
-			CopyHashMap(copy, n);
+			HashMap<T, Hash> copy;
+			CopyHashMap(copy, n->a);
+			CopyHashMap(copy, n->b);
 
+			if(n->prev->a == n) n->prev->a = nullptr;
+			if(n->prev->b == n) n->prev->b = nullptr;
 			delete n;
 
-			EmplaceHashMap(m_head);
+			EmplaceHashMap(copy.m_head);
 		}
 
 		// including head node
-		void CopyHashMap(BetterHashMap<T, Hash> &dst, Node *head)
+		// i dont personaly think that recursion is that big of a deal ibh
+		void CopyHashMap(HashMap<T, Hash> &dst, Node *head)
 		{
 			// we have hit the bottom
 			if(head == nullptr) return;
@@ -233,24 +196,26 @@ namespace kon
 		}
 
 	private:
-		inline Node *FindNode(Hash hash)
+		inline Node *FindNode(Hash hash) const
 		{
 			Node *current = m_head;
 			// bool found = false;
-			while(true)
+			while(current != nullptr)
 			{
 				if(current->pair.key == hash) return current;
 
 				// Check if we found the correct bucket
 				if(current->pair.key > hash)
 				{
-					if(current->b == nullptr) return nullptr;
+					// if(current->b == nullptr) return nullptr;
 					current = current->b;
 				}else{
-					if(current->a == nullptr) return nullptr;
+					// if(current->a == nullptr) return nullptr;
 					current = current->a;
 				}
 			}
+
+			return current;
 		}
 
 	private:

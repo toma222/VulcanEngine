@@ -15,6 +15,7 @@ namespace kon
 
 	using u8 = unsigned char;
 	using u32 = uint32_t;
+	using u64 = uint64_t;
 }
 
 #define KN_STRINGIFY(x) #x
