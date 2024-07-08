@@ -20,8 +20,6 @@ namespace kon
         GraphicsContext();
         ~GraphicsContext();
 
-        
-
     private:
         ArrayList<Pipeline*> m_pipelines;
     };

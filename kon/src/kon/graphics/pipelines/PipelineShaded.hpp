@@ -97,6 +97,7 @@ namespace kon
         RenderPassResources m_renderPassResources;
 
     private:
+        Context *m_context;
         Device *m_device;
     };
 }

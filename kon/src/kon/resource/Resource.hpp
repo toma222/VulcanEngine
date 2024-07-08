@@ -5,9 +5,13 @@
 #include "kon/types/String.hpp"
 #include "kon/types/Allocator.hpp"
 #include "kon/core/Core.hpp"
+#include <kon/types/ArrayList.hpp>
+#include <kon/types/Pair.hpp>
 
 namespace kon
 {
+    class Context;
+
     class Resource : public Object
     {
     KN_OBJECT(Resource, Object)
@@ -38,6 +42,13 @@ namespace kon
     class LoadResourceArray
     {
     public:
+        LoadResourceArray();
+        ~LoadResourceArray();
 
+        void AddResource(Resource *r, String s);
+        void LoadResourceToContext(Context *context);
+
+    private:
+        ArrayList<Pair<Resource*, String>> m_resourceLoadList;
     };
 }

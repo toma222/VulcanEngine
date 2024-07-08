@@ -27,22 +27,22 @@ namespace kon
 		if(m_buffer != nullptr) delete[] m_buffer;
     }
 
-    void String::ResizeBuffer(i32 size)
+    void String::ResizeBuffer(u32 size)
     {
         if(m_buffer != nullptr) delete[] m_buffer;
         m_buffer = new char[size+1];
     }
 
-    i32 String::Hash() const
+    u32 String::Hash() const
     {
         constexpr int prime = 31;
-        i32 h = 0;
-        for(int c = 0; c < m_size; c++)
-            h += m_buffer[c] * pow(prime, c);
+        u32 h = 0;
+        for(u32 c = 1; c < m_size; c++)
+            h += (m_buffer[c] * (int)pow(31, c));
         return h;
     }
 
-    i32 String::Hash(const char *string)
+    u32 String::Hash(const char *string)
     {
         constexpr int prime = 31;
         i32 h = 0;

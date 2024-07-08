@@ -28,22 +28,12 @@ namespace kon
         void AddListener(Object *object, i16 classes);
         void EmitEvent(Event &event);
 
-        // Resources
-        // Resource *LoadOrGetResource(Resource **resource, const String &path)
-        template<typename R>
-        R *LoadOrGetResource(const String &path)
-        {
-            if(resourceMap.HasDuplicate(path.Hash())) 
-                return resourceMap.Get(path.Hash());
+        // assumes that the resource is already loaded
+        // it just takes the pointer and owenership over the pointer
+        void RegisterResource(Resource *resource, String path);
+        void RegisterResource(Resource *resource, u32 hash);
 
-            // i am aware just how epic this looks
-            // it also might be UB but idk
-            R *r = new R(path);
-            r->LoadResource(path);
-            resourceMap.Enter(r, path.Hash());
-        }
-
-        Resource *GetResource(String &path) const;
+        Resource *GetResource(String path) const;
         Resource *GetResource(u32 hash) const;
 
         bool HasResource(String &path) const;

@@ -1,6 +1,4 @@
 
-#pragma once
-
 #include "GraphicsSystem.hpp"
 
 namespace kon

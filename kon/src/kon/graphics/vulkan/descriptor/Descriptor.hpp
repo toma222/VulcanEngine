@@ -23,6 +23,7 @@ namespace kon
 		{
 			case kon::DescriptorType::Uniform : return VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
 			case kon::DescriptorType::TextureSampler : return VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+			default: return VkDescriptorType{};
 		}
 	}
 

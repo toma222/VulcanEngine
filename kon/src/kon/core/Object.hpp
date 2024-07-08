@@ -13,7 +13,7 @@ namespace kon
     {
         // TypeInfo(const String name, const i32 hash, TypeIngo)
         const String m_name;
-        const i32 m_hash;
+        const u32 m_hash;
         const TypeInfo *m_parent;
     };
 
@@ -26,7 +26,7 @@ namespace kon
         virtual const TypeInfo *GetTypeInfo() const = 0;
         virtual const TypeInfo *GetParentTypeInfo() const = 0;
 
-        bool IsInstanceOf(i32 hash);
+        bool IsInstanceOf(u32 hash);
         bool IsInstanceOf(const TypeInfo *info);
 
         template<typename T>

@@ -17,7 +17,7 @@
 namespace kon
 {
     PipelineShaded::PipelineShaded(Context *context, Device *device, Swapchain *swapchain, CommandPool *commandPool)
-        : m_device(device)
+        : m_context(context), m_device(device)
     {
         // Create render pass
         CreateRenderPass(device, swapchain, commandPool);
@@ -141,10 +141,9 @@ namespace kon
 
     inline void PipelineShaded::CreateBuffers(Device *device, Swapchain *swapchain, CommandPool *commandpool)
     {
-        ResourceModel model;
-		model.LoadResource("models/viking_room.obj");
-		auto &vertices = model.GetShape()->verticies;
-		auto &indices = model.GetShape()->indicies;
+        ResourceModel *model = static_cast<ResourceModel*>(m_context->GetResource("models/viking_room.obj"));
+		auto &vertices = model->GetShape()->verticies;
+		auto &indices = model->GetShape()->indicies;
         m_vertexBuffer = new VertexBuffer(device, commandpool, vertices.GetData(), vertices.Index() * sizeof(vertices.Get(0)));
 		VertexDescription description(sizeof(ResourceModel::ModelVertex), 4);
 			description.Add(ShaderType::Float3, offsetof(ResourceModel::ModelVertex, position));
@@ -155,25 +154,20 @@ namespace kon
 		m_indexBuffer = new IndexBuffer(device, commandpool, indices.GetData(), indices.Index() * sizeof(indices.Get(0)));
         m_indiciesCount = indices.Index();
 
-        ResourceImage image;
-		image.LoadResource("textures/viking_room.png");
-		int width = image.GetWidth();
-		int height = image.GetHeight();
+        ResourceImage *image = static_cast<ResourceImage*>(m_context->GetResource("textures/viking_room.png"));
+		int width = image->GetWidth();
+		int height = image->GetHeight();
 		// u8 *imageData = image->GetImageData();
-		m_textureImage = new TextureImage(device, commandpool, image.GetImageData(),
+		m_textureImage = new TextureImage(device, commandpool, image->GetImageData(),
 				TextureData{width, height,
 				static_cast<VkDeviceSize>(width * height * 4)});
         m_textureSampler = new TextureSampler(device);
         m_uniformBuffer = new UniformBuffer(device, commandpool, sizeof(UniformBufferData));
 
-        ResourceRawfile v;
-        v.LoadResource("shaders/vert.spv");
-		m_vertexShader = new ShaderModule(device, v.GetData(), v.GetSize());
-	    ResourceRawfile f;
-        f.LoadResource("shaders/frag.spv");
-		m_fragmentShader = new ShaderModule(device, f.GetData(), f.GetSize());
-
-        KN_TRACE("Dont");
+        ResourceRawfile *v = static_cast<ResourceRawfile*>(m_context->GetResource("shaders/vert.spv"));
+		m_vertexShader = new ShaderModule(device, v->GetData(), v->GetSize());
+	    ResourceRawfile *f = static_cast<ResourceRawfile*>(m_context->GetResource("shaders/frag.spv"));
+		m_fragmentShader = new ShaderModule(device, f->GetData(), f->GetSize());
     }
 
     inline void PipelineShaded::CreateRenderPass(Device *device, Swapchain *swapchain, CommandPool *commandPool)

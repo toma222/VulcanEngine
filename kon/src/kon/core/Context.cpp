@@ -80,7 +80,17 @@ namespace kon
             delete systems.GetCopy(i);
     }
 
-    Resource *Context::GetResource(String &path) const
+    void Context::RegisterResource(Resource *resource, String path)
+    {
+        resourceMap.Enter(resource, path.Hash());
+    }
+
+    void Context::RegisterResource(Resource *resource, u32 path)
+    {
+        resourceMap.Enter(resource, path);
+    }
+
+    Resource *Context::GetResource(String path) const
     {
         return resourceMap.Get(path.Hash());
     }

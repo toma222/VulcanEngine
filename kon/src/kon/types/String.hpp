@@ -27,18 +27,24 @@ namespace kon
             return *this;
         }
 
+        String &operator =(const String &s)
+        {
+            *this = (s.c_str());
+            return *this;
+        }
+
         char operator [](int i) const
         {
             return m_buffer[i];
         }
 
-        i32 GetSize() { return m_size; }
+        u32 GetSize() { return m_size; }
 
-        i32 Hash() const;
-        static i32 Hash(const char *string);
+        u32 Hash() const;
+        static u32 Hash(const char *string);
 
         // size+1 for the null terminating byte
-        void ResizeBuffer(i32 size);
+        void ResizeBuffer(u32 size);
 
         bool operator ==(const String &string) const
         {
@@ -47,6 +53,6 @@ namespace kon
 
     private:
         char *m_buffer {nullptr};
-        i32 m_size {0};
+        u32 m_size {0};
     };
 }

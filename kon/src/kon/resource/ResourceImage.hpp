@@ -33,7 +33,6 @@ namespace kon
 		    u8 *GetImageData() { return m_imageData; }
         ImageChannels GetChannels() { return m_channels; }
 
-
     private:
         bool m_valid {false};
         u8 *m_imageData;

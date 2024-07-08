@@ -3,7 +3,7 @@
 
 namespace kon
 {
-    bool Object::IsInstanceOf(i32 hash)
+    bool Object::IsInstanceOf(u32 hash)
     {
         return (GetTypeInfo()->m_hash == hash);
     }

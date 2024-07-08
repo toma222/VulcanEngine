@@ -27,6 +27,12 @@ namespace kon
         Pair() = default;
         ~Pair() = default;
 
+        void operator =(const Pair<T, U> &p)
+        {
+            first = p.first;
+            second = p.second;
+        }
+
         T first;
         U second;
     };

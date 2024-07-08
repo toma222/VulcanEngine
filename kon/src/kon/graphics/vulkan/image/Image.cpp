@@ -23,6 +23,8 @@ namespace kon
         }
 
         KN_WARN("could not find supported format");
+        
+        return VkFormat{};
     }
 
     void Image::TransitionImageLayout(CommandPool *pool, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout, uint32_t mipLevels)

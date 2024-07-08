@@ -83,6 +83,7 @@ namespace kon
             for(int i = 0; i < m_hashes.Index(); i++)
                 if(m_hashes.Get(i).first == h)
                     return m_hashes.Get(i).second;
+
             KN_WARN("Unordered map searched for value that does not exist");
             return m_hashes.Get(0).second;
         }

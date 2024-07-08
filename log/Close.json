@@ -1,14 +1,7 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":41.4,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":10008}
-,{"cat":"function","dur":202.4,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":10115}
-,{"cat":"function","dur":39.3,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":10375}
-,{"cat":"function","dur":2887.4,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":32977}
-,{"cat":"function","dur":33.5,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":37773}
-,{"cat":"function","dur":2293.1,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":39260}
-,{"cat":"function","dur":37837.7,"name":"ClearSystems","ph":"X","pid":0,"tid":0,"ts":3756}
-,{"cat":"function","dur":39350,"name":"~Engine","ph":"X","pid":0,"tid":0,"ts":2250}
-,{"cat":"function","dur":9747,"name":"~Window","ph":"X","pid":0,"tid":0,"ts":41607}
-,{"cat":"function","dur":51513.4,"name":"~Application","ph":"X","pid":0,"tid":0,"ts":2}
-,{"cat":"function","dur":47635.4,"name":"~Context","ph":"X","pid":0,"tid":0,"ts":51537}
-
-]}
+{"cat":"function","dur":37.7,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":6564}
+,{"cat":"function","dur":187.9,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":6660}
+,{"cat":"function","dur":17.7,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":6901}
+,{"cat":"function","dur":2775.7,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":30989}
+,{"cat":"function","dur":33.5,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":35629}
+,{"cat":"function","dur":1940.5,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":37203}

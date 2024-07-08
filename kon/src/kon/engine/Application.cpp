@@ -4,6 +4,11 @@
 #include "kon/core/Logging.hpp"
 #include <kon/debug/Debug.hpp>
 
+#include <kon/resource/Resource.hpp>
+#include <kon/resource/ResourceImage.hpp>
+#include <kon/resource/ResourceModel.hpp>
+#include <kon/resource/ResourceRawfile.hpp>
+
 namespace kon
 {
     Application::Application(Context *context)
@@ -13,6 +18,16 @@ namespace kon
         KN_TRACE("Application created");
         m_window = new Window(context, 500, 500, "Vulkan Window");
         m_engine = new Engine(context);
+
+        // Get resources and load them
+        LoadResourceArray lra;
+        lra.AddResource(static_cast<Resource*>(new ResourceImage()), "textures/viking_room.png");
+        lra.AddResource(static_cast<Resource*>(new ResourceModel()), "models/viking_room.obj");
+        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/vert.spv");
+        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/frag.spv");
+        lra.LoadResourceToContext(context);
+
+        
 
         m_graphicsSystem = new GraphicsSystem(context, m_window->GetHandle());
         context->AddSystem(static_cast<System*>(m_graphicsSystem));
