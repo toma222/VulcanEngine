@@ -3,6 +3,7 @@
 
 #include "kon/core/Core.hpp"
 #include "kon/core/Logging.hpp"
+#include <cstring>
 
 // #include <string>
 
@@ -51,17 +52,6 @@ namespace kon
             m_index++;
         }
 
-        // FIXME: ub lmao
-        /*
-        T Get(int index) const
-        {
-            // if(index <= m_capacity && index >= 0)
-            return m_array[index];
-            // else
-            //     return m_array[0]; // just return the first value
-        }
-        */
-
         T &Get(u32 index) const
         {
             return m_array[index];
@@ -82,6 +72,16 @@ namespace kon
         {
             if(m_index != 0) m_index--;
         }
+
+		void Erase(u32 i, u32 size=1)
+		{
+			MoveRange(i, i + size, m_capacity - i - size);
+		}
+
+		void MoveRange(u32 dest, u32 source, u32 count)
+		{
+			if(count) memmove(m_array+dest, m_array+source, count * sizeof(T));
+		}
         
         int Index() const { return m_index; };
         int Capacity() const { return m_capacity; }

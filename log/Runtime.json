@@ -1,236 +1,242 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":1361.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":3522}
-,{"cat":"function","dur":811.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":4933}
-,{"cat":"function","dur":2274.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":3521}
-,{"cat":"function","dur":837.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":5808}
-,{"cat":"function","dur":1828.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":6778}
-,{"cat":"function","dur":2848.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":5808}
-,{"cat":"function","dur":14.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":8670}
-,{"cat":"function","dur":2841.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":8694}
-,{"cat":"function","dur":2935.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":8669}
-,{"cat":"function","dur":22.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":11618}
-,{"cat":"function","dur":2501.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":11652}
-,{"cat":"function","dur":2588.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":11618}
-,{"cat":"function","dur":162.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":14226}
-,{"cat":"function","dur":2132.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":14520}
-,{"cat":"function","dur":2470.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":14224}
-,{"cat":"function","dur":17.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":16706}
-,{"cat":"function","dur":11830.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":16733}
-,{"cat":"function","dur":11906.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":16705}
-,{"cat":"function","dur":67.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":28624}
-,{"cat":"function","dur":15536.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":28714}
-,{"cat":"function","dur":15677.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":28624}
-,{"cat":"function","dur":20.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":44316}
-,{"cat":"function","dur":16410.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":44352}
-,{"cat":"function","dur":16497.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":44316}
-,{"cat":"function","dur":17.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":60826}
-,{"cat":"function","dur":16901.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":60855}
-,{"cat":"function","dur":16989.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":60826}
-,{"cat":"function","dur":40,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":77829}
-,{"cat":"function","dur":16395.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":77900}
-,{"cat":"function","dur":16523.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":77829}
-,{"cat":"function","dur":21.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":94365}
-,{"cat":"function","dur":16457.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":94400}
-,{"cat":"function","dur":16550,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":94365}
-,{"cat":"function","dur":20.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":110929}
-,{"cat":"function","dur":16644.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":110960}
-,{"cat":"function","dur":16713.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":110928}
-,{"cat":"function","dur":15.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":127649}
-,{"cat":"function","dur":16589.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":127675}
-,{"cat":"function","dur":16669.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":127649}
-,{"cat":"function","dur":19.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":144332}
-,{"cat":"function","dur":17116.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":144363}
-,{"cat":"function","dur":17210.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":144332}
-,{"cat":"function","dur":73.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":161562}
-,{"cat":"function","dur":16388.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":161655}
-,{"cat":"function","dur":16524.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":161561}
-,{"cat":"function","dur":16,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":178095}
-,{"cat":"function","dur":16299.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":178173}
-,{"cat":"function","dur":16464.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":178095}
-,{"cat":"function","dur":20.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":194576}
-,{"cat":"function","dur":16240.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":194620}
-,{"cat":"function","dur":16358.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":194576}
-,{"cat":"function","dur":27.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":210949}
-,{"cat":"function","dur":16648.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":210993}
-,{"cat":"function","dur":16764.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":210949}
-,{"cat":"function","dur":370.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":227726}
-,{"cat":"function","dur":15724.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":228146}
-,{"cat":"function","dur":16212,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":227725}
-,{"cat":"function","dur":16.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":243950}
-,{"cat":"function","dur":16862.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":243980}
-,{"cat":"function","dur":16945.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":243950}
-,{"cat":"function","dur":19,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":260910}
-,{"cat":"function","dur":16427.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":260938}
-,{"cat":"function","dur":16550.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":260909}
-,{"cat":"function","dur":19.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":277485}
-,{"cat":"function","dur":16519.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":277517}
-,{"cat":"function","dur":16604.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":277485}
-,{"cat":"function","dur":20.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":294102}
-,{"cat":"function","dur":17031.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":294134}
-,{"cat":"function","dur":17149.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":294102}
-,{"cat":"function","dur":17.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":311276}
-,{"cat":"function","dur":16338.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":311305}
-,{"cat":"function","dur":16415.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":311275}
-,{"cat":"function","dur":17.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":327699}
-,{"cat":"function","dur":16013.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":327723}
-,{"cat":"function","dur":16115.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":327699}
-,{"cat":"function","dur":195.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":343823}
-,{"cat":"function","dur":17085.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":344049}
-,{"cat":"function","dur":17369,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":343823}
-,{"cat":"function","dur":597.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":361205}
-,{"cat":"function","dur":15275.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":361872}
-,{"cat":"function","dur":15992.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":361204}
-,{"cat":"function","dur":276.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":377205}
-,{"cat":"function","dur":16905.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":377525}
-,{"cat":"function","dur":17277.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":377204}
-,{"cat":"function","dur":356.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":394491}
-,{"cat":"function","dur":16190.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":394892}
-,{"cat":"function","dur":16650.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":394491}
-,{"cat":"function","dur":264.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":411155}
-,{"cat":"function","dur":15993.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":411445}
-,{"cat":"function","dur":16323.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":411155}
-,{"cat":"function","dur":38.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":427487}
-,{"cat":"function","dur":16462.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":427543}
-,{"cat":"function","dur":16566.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":427487}
-,{"cat":"function","dur":12.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":444067}
-,{"cat":"function","dur":17358.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":444092}
-,{"cat":"function","dur":17437.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":444066}
-,{"cat":"function","dur":76.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":461519}
-,{"cat":"function","dur":15767.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":461608}
-,{"cat":"function","dur":15904.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":461518}
-,{"cat":"function","dur":128.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":477436}
-,{"cat":"function","dur":17276.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":477600}
-,{"cat":"function","dur":17491.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":477435}
-,{"cat":"function","dur":18.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":494939}
-,{"cat":"function","dur":16531.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":494967}
-,{"cat":"function","dur":16615,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":494938}
-,{"cat":"function","dur":19.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":511566}
-,{"cat":"function","dur":16102,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":511598}
-,{"cat":"function","dur":16184,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":511566}
-,{"cat":"function","dur":34.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":527763}
-,{"cat":"function","dur":16298.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":527813}
-,{"cat":"function","dur":16398.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":527763}
-,{"cat":"function","dur":17.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":544174}
-,{"cat":"function","dur":16289.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":544203}
-,{"cat":"function","dur":16356.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":544174}
-,{"cat":"function","dur":29.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":560542}
-,{"cat":"function","dur":16584.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":560578}
-,{"cat":"function","dur":16690.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":560541}
-,{"cat":"function","dur":12.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":577240}
-,{"cat":"function","dur":16933.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":577261}
-,{"cat":"function","dur":17023.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":577240}
-,{"cat":"function","dur":16.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":594276}
-,{"cat":"function","dur":16357.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":594302}
-,{"cat":"function","dur":16458,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":594275}
-,{"cat":"function","dur":16.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":610745}
-,{"cat":"function","dur":15948.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":610769}
-,{"cat":"function","dur":16010.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":610745}
-,{"cat":"function","dur":19,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":626763}
-,{"cat":"function","dur":16714.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":626797}
-,{"cat":"function","dur":16807.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":626763}
-,{"cat":"function","dur":29.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":643669}
-,{"cat":"function","dur":16355.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":643749}
-,{"cat":"function","dur":16510.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":643668}
-,{"cat":"function","dur":18.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":660189}
-,{"cat":"function","dur":16666.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":660218}
-,{"cat":"function","dur":16770.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":660189}
-,{"cat":"function","dur":21.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":676977}
-,{"cat":"function","dur":16658.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":677026}
-,{"cat":"function","dur":16802,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":676977}
-,{"cat":"function","dur":122.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":693795}
-,{"cat":"function","dur":16749.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":693994}
-,{"cat":"function","dur":17032.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":693795}
-,{"cat":"function","dur":517.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":710845}
-,{"cat":"function","dur":16296.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":711409}
-,{"cat":"function","dur":16913.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":710844}
-,{"cat":"function","dur":30.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":727794}
-,{"cat":"function","dur":17334.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":727846}
-,{"cat":"function","dur":17657.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":727793}
-,{"cat":"function","dur":45.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":745489}
-,{"cat":"function","dur":15212.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":745552}
-,{"cat":"function","dur":15372,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":745488}
-,{"cat":"function","dur":654.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":760870}
-,{"cat":"function","dur":16195.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":761579}
-,{"cat":"function","dur":17018,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":760870}
-,{"cat":"function","dur":614.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":777915}
-,{"cat":"function","dur":15360.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":778568}
-,{"cat":"function","dur":16050.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":777914}
-,{"cat":"function","dur":1410.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":793996}
-,{"cat":"function","dur":15410.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":795450}
-,{"cat":"function","dur":16993.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":793995}
-,{"cat":"function","dur":438.3,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":811010}
-,{"cat":"function","dur":16051.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":811506}
-,{"cat":"function","dur":16623.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":811009}
-,{"cat":"function","dur":924,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":827641}
-,{"cat":"function","dur":15283.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":828604}
-,{"cat":"function","dur":16534.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":827641}
-,{"cat":"function","dur":274.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":844276}
-,{"cat":"function","dur":16115.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":844586}
-,{"cat":"function","dur":16518.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":844275}
-,{"cat":"function","dur":27.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":860807}
-,{"cat":"function","dur":16315.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":860852}
-,{"cat":"function","dur":16419.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":860806}
-,{"cat":"function","dur":30.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":877247}
-,{"cat":"function","dur":16773.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":877300}
-,{"cat":"function","dur":16879.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":877246}
-,{"cat":"function","dur":27.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":894135}
-,{"cat":"function","dur":16437.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":894181}
-,{"cat":"function","dur":16546.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":894134}
-,{"cat":"function","dur":17,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":910765}
-,{"cat":"function","dur":17233.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":910812}
-,{"cat":"function","dur":17322.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":910765}
-,{"cat":"function","dur":49.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":928100}
-,{"cat":"function","dur":15641.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":928226}
-,{"cat":"function","dur":15878.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":928098}
-,{"cat":"function","dur":23.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":944085}
-,{"cat":"function","dur":16510,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":944118}
-,{"cat":"function","dur":16644.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":944084}
-,{"cat":"function","dur":302.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":960759}
-,{"cat":"function","dur":17139.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":961115}
-,{"cat":"function","dur":17601.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":960758}
-,{"cat":"function","dur":371.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":978369}
-,{"cat":"function","dur":14912.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":978779}
-,{"cat":"function","dur":15510,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":978368}
-,{"cat":"function","dur":765.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":993897}
-,{"cat":"function","dur":15634.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":994714}
-,{"cat":"function","dur":16563.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":993897}
-,{"cat":"function","dur":299.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1010541}
-,{"cat":"function","dur":16675.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1010913}
-,{"cat":"function","dur":17091.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1010540}
-,{"cat":"function","dur":444.4,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1027641}
-,{"cat":"function","dur":16184.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1028126}
-,{"cat":"function","dur":16717,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1027640}
-,{"cat":"function","dur":14.8,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1044368}
-,{"cat":"function","dur":16143,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1044392}
-,{"cat":"function","dur":16258.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1044368}
-,{"cat":"function","dur":22.6,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1060641}
-,{"cat":"function","dur":17413.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1060679}
-,{"cat":"function","dur":17497.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1060641}
-,{"cat":"function","dur":37.1,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1078162}
-,{"cat":"function","dur":15648.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1078224}
-,{"cat":"function","dur":15799.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1078162}
-,{"cat":"function","dur":17,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1093971}
-,{"cat":"function","dur":16390.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1093996}
-,{"cat":"function","dur":16506.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1093970}
-,{"cat":"function","dur":17.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1110488}
-,{"cat":"function","dur":17630.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1110513}
-,{"cat":"function","dur":17749.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1110487}
-,{"cat":"function","dur":28.7,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1128284}
-,{"cat":"function","dur":15899.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1128325}
-,{"cat":"function","dur":16020.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1128283}
-,{"cat":"function","dur":343.2,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1144319}
-,{"cat":"function","dur":16286.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1144743}
-,{"cat":"function","dur":16783.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1144318}
-,{"cat":"function","dur":18.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1161112}
-,{"cat":"function","dur":16851.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1161136}
-,{"cat":"function","dur":17001.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1161111}
-,{"cat":"function","dur":35.9,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1178165}
-,{"cat":"function","dur":16298.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1178222}
-,{"cat":"function","dur":16451.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1178164}
-,{"cat":"function","dur":127416,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1194649}
-,{"cat":"function","dur":334.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1322108}
-,{"cat":"function","dur":0.1,"name":"OnEvent","ph":"X","pid":0,"tid":0,"ts":1322463}
-,{"cat":"function","dur":9.5,"name":"EmitEvent","ph":"X","pid":0,"tid":0,"ts":1322462}
-,{"cat":"function","dur":127830,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1194649}
+{"cat":"function","dur":83.931,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":6}
+,{"cat":"function","dur":1572.63,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":94}
+,{"cat":"function","dur":1674.98,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":5}
+,{"cat":"function","dur":5.654,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1684}
+,{"cat":"function","dur":6489.05,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1693}
+,{"cat":"function","dur":6513.87,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1684}
+,{"cat":"function","dur":4.435,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":8201}
+,{"cat":"function","dur":5973.62,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":8207}
+,{"cat":"function","dur":6011.28,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":8200}
+,{"cat":"function","dur":4520.78,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":14217}
+,{"cat":"function","dur":819.206,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":18764}
+,{"cat":"function","dur":5378.54,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":14217}
+,{"cat":"function","dur":4.428,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":19599}
+,{"cat":"function","dur":5294.73,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":19605}
+,{"cat":"function","dur":5315.51,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":19598}
+,{"cat":"function","dur":3.028,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":24917}
+,{"cat":"function","dur":5764.13,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":24923}
+,{"cat":"function","dur":5785.72,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":24917}
+,{"cat":"function","dur":71.754,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":30707}
+,{"cat":"function","dur":5739.99,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":30782}
+,{"cat":"function","dur":5843.61,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":30706}
+,{"cat":"function","dur":50.519,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":36554}
+,{"cat":"function","dur":6576.48,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":36610}
+,{"cat":"function","dur":6650.31,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":36554}
+,{"cat":"function","dur":4.892,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":43207}
+,{"cat":"function","dur":5412.09,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":43213}
+,{"cat":"function","dur":5431.81,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":43207}
+,{"cat":"function","dur":38.154,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":48641}
+,{"cat":"function","dur":10355.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":48683}
+,{"cat":"function","dur":10423.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":48641}
+,{"cat":"function","dur":63.816,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":59067}
+,{"cat":"function","dur":22758.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":59135}
+,{"cat":"function","dur":22892.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":59067}
+,{"cat":"function","dur":900.315,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":81974}
+,{"cat":"function","dur":11852.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":82909}
+,{"cat":"function","dur":12855.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":81973}
+,{"cat":"function","dur":248.763,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":94842}
+,{"cat":"function","dur":16334.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":95108}
+,{"cat":"function","dur":16668.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":94841}
+,{"cat":"function","dur":447.276,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":111523}
+,{"cat":"function","dur":16166.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":111989}
+,{"cat":"function","dur":16698.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":111523}
+,{"cat":"function","dur":796.662,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":128234}
+,{"cat":"function","dur":15775.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":129065}
+,{"cat":"function","dur":16671.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":128233}
+,{"cat":"function","dur":670.693,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":144919}
+,{"cat":"function","dur":15752.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":145648}
+,{"cat":"function","dur":16548.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":144918}
+,{"cat":"function","dur":784.152,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":161481}
+,{"cat":"function","dur":16995.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":162300}
+,{"cat":"function","dur":17882,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":161480}
+,{"cat":"function","dur":277.321,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":179376}
+,{"cat":"function","dur":15594,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":179671}
+,{"cat":"function","dur":15953.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":179375}
+,{"cat":"function","dur":283.557,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":195343}
+,{"cat":"function","dur":16170.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":195645}
+,{"cat":"function","dur":16535.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":195342}
+,{"cat":"function","dur":867.789,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":211891}
+,{"cat":"function","dur":15303.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":212794}
+,{"cat":"function","dur":16270.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":211890}
+,{"cat":"function","dur":244.5,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":228175}
+,{"cat":"function","dur":21304.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":228457}
+,{"cat":"function","dur":21689,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":228174}
+,{"cat":"function","dur":18.892,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":249889}
+,{"cat":"function","dur":11382.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":249918}
+,{"cat":"function","dur":11479.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":249888}
+,{"cat":"function","dur":18.31,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":261381}
+,{"cat":"function","dur":16615.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":261409}
+,{"cat":"function","dur":16704.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":261380}
+,{"cat":"function","dur":17.251,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":278098}
+,{"cat":"function","dur":16526.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":278125}
+,{"cat":"function","dur":16614,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":278097}
+,{"cat":"function","dur":17.542,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":294725}
+,{"cat":"function","dur":16596.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":294753}
+,{"cat":"function","dur":16698.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":294724}
+,{"cat":"function","dur":22.242,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":311443}
+,{"cat":"function","dur":16465.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":311482}
+,{"cat":"function","dur":16564.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":311442}
+,{"cat":"function","dur":17.108,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":328020}
+,{"cat":"function","dur":16711.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":328047}
+,{"cat":"function","dur":16804.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":328019}
+,{"cat":"function","dur":17.107,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":344837}
+,{"cat":"function","dur":20156.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":344863}
+,{"cat":"function","dur":20252.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":344836}
+,{"cat":"function","dur":230.225,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":365104}
+,{"cat":"function","dur":10247.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":365357}
+,{"cat":"function","dur":10526.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":365103}
+,{"cat":"function","dur":5.637,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":375633}
+,{"cat":"function","dur":16546.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":375641}
+,{"cat":"function","dur":16576.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":375633}
+,{"cat":"function","dur":5.417,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":392212}
+,{"cat":"function","dur":16572.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":392241}
+,{"cat":"function","dur":16626.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":392212}
+,{"cat":"function","dur":5.919,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":408842}
+,{"cat":"function","dur":16604,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":408849}
+,{"cat":"function","dur":16636.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":408842}
+,{"cat":"function","dur":6.176,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":425482}
+,{"cat":"function","dur":16732.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":425490}
+,{"cat":"function","dur":16768.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":425481}
+,{"cat":"function","dur":5.744,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":442254}
+,{"cat":"function","dur":16519.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":442261}
+,{"cat":"function","dur":16550.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":442253}
+,{"cat":"function","dur":5.624,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":458807}
+,{"cat":"function","dur":16586,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":458815}
+,{"cat":"function","dur":16616.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":458807}
+,{"cat":"function","dur":5.452,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":475427}
+,{"cat":"function","dur":16779.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":475434}
+,{"cat":"function","dur":16811.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":475427}
+,{"cat":"function","dur":5.636,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":492242}
+,{"cat":"function","dur":16471.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":492250}
+,{"cat":"function","dur":16501.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":492242}
+,{"cat":"function","dur":4.902,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":508747}
+,{"cat":"function","dur":16927.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":508753}
+,{"cat":"function","dur":16960.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":508746}
+,{"cat":"function","dur":5.931,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":525711}
+,{"cat":"function","dur":16601.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":525719}
+,{"cat":"function","dur":16635.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":525710}
+,{"cat":"function","dur":6.302,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":542349}
+,{"cat":"function","dur":17049.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":542358}
+,{"cat":"function","dur":17090.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":542349}
+,{"cat":"function","dur":7.635,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":559444}
+,{"cat":"function","dur":18587.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":559455}
+,{"cat":"function","dur":18660.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":559444}
+,{"cat":"function","dur":18.006,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":578118}
+,{"cat":"function","dur":14102,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":578145}
+,{"cat":"function","dur":14153.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":578117}
+,{"cat":"function","dur":5.664,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":592275}
+,{"cat":"function","dur":16805.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":592282}
+,{"cat":"function","dur":16840.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":592274}
+,{"cat":"function","dur":6.18,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":609118}
+,{"cat":"function","dur":16418.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":609126}
+,{"cat":"function","dur":16473,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":609118}
+,{"cat":"function","dur":6.404,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":625594}
+,{"cat":"function","dur":19369,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":625603}
+,{"cat":"function","dur":19451.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":625594}
+,{"cat":"function","dur":18.739,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":645062}
+,{"cat":"function","dur":13783.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":645090}
+,{"cat":"function","dur":13843.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":645061}
+,{"cat":"function","dur":6.043,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":658908}
+,{"cat":"function","dur":16507.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":658916}
+,{"cat":"function","dur":16539.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":658908}
+,{"cat":"function","dur":6.294,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":675451}
+,{"cat":"function","dur":16876,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":675459}
+,{"cat":"function","dur":16911.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":675450}
+,{"cat":"function","dur":5.932,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":692366}
+,{"cat":"function","dur":16429.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":692374}
+,{"cat":"function","dur":16461.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":692366}
+,{"cat":"function","dur":157.29,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":708831}
+,{"cat":"function","dur":16532.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":708993}
+,{"cat":"function","dur":16719.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":708830}
+,{"cat":"function","dur":21.88,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":725553}
+,{"cat":"function","dur":19058.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":725578}
+,{"cat":"function","dur":19148.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":725553}
+,{"cat":"function","dur":109.269,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":744716}
+,{"cat":"function","dur":16519.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":744838}
+,{"cat":"function","dur":16708.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":744715}
+,{"cat":"function","dur":67.478,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":761437}
+,{"cat":"function","dur":16564.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":761516}
+,{"cat":"function","dur":16702,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":761436}
+,{"cat":"function","dur":66.808,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":778152}
+,{"cat":"function","dur":16703.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":778231}
+,{"cat":"function","dur":16848.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":778151}
+,{"cat":"function","dur":46.664,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":795014}
+,{"cat":"function","dur":16275.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":795072}
+,{"cat":"function","dur":16398.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":795013}
+,{"cat":"function","dur":37.488,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":811426}
+,{"cat":"function","dur":16892.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":811474}
+,{"cat":"function","dur":17006.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":811425}
+,{"cat":"function","dur":17.217,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":828445}
+,{"cat":"function","dur":16512.5,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":828472}
+,{"cat":"function","dur":16608.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":828445}
+,{"cat":"function","dur":18.917,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":845067}
+,{"cat":"function","dur":16214.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":845096}
+,{"cat":"function","dur":16302.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":845066}
+,{"cat":"function","dur":39.858,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":861382}
+,{"cat":"function","dur":16737,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":861432}
+,{"cat":"function","dur":16853.5,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":861381}
+,{"cat":"function","dur":16.834,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":878248}
+,{"cat":"function","dur":16422.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":878274}
+,{"cat":"function","dur":16513.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":878247}
+,{"cat":"function","dur":17.218,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":894775}
+,{"cat":"function","dur":17731.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":894802}
+,{"cat":"function","dur":17842.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":894774}
+,{"cat":"function","dur":19.025,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":912632}
+,{"cat":"function","dur":15414.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":912661}
+,{"cat":"function","dur":15518,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":912631}
+,{"cat":"function","dur":17.808,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":928165}
+,{"cat":"function","dur":16492.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":928192}
+,{"cat":"function","dur":16595.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":928164}
+,{"cat":"function","dur":37.434,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":944775}
+,{"cat":"function","dur":16508.1,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":944823}
+,{"cat":"function","dur":16620.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":944774}
+,{"cat":"function","dur":18.329,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":961410}
+,{"cat":"function","dur":16855.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":961438}
+,{"cat":"function","dur":16949.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":961409}
+,{"cat":"function","dur":17.542,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":978372}
+,{"cat":"function","dur":16608.3,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":978399}
+,{"cat":"function","dur":16709.9,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":978371}
+,{"cat":"function","dur":17.083,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":995096}
+,{"cat":"function","dur":16514.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":995123}
+,{"cat":"function","dur":16603.7,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":995095}
+,{"cat":"function","dur":17.123,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1011712}
+,{"cat":"function","dur":16354.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1011738}
+,{"cat":"function","dur":16442.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1011711}
+,{"cat":"function","dur":16.432,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1028167}
+,{"cat":"function","dur":16676.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1028193}
+,{"cat":"function","dur":16763.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1028166}
+,{"cat":"function","dur":18.63,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1044943}
+,{"cat":"function","dur":16548.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1044971}
+,{"cat":"function","dur":16643.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1044942}
+,{"cat":"function","dur":17.12,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1061599}
+,{"cat":"function","dur":16486.6,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1061626}
+,{"cat":"function","dur":16579.4,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1061598}
+,{"cat":"function","dur":322.544,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1078191}
+,{"cat":"function","dur":16239.7,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1078548}
+,{"cat":"function","dur":16660.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1078190}
+,{"cat":"function","dur":17.675,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1094864}
+,{"cat":"function","dur":16538.8,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1094892}
+,{"cat":"function","dur":16631.3,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1094864}
+,{"cat":"function","dur":17.514,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1111509}
+,{"cat":"function","dur":16683.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1111537}
+,{"cat":"function","dur":16787.6,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1111508}
+,{"cat":"function","dur":18.325,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1128314}
+,{"cat":"function","dur":16467,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1128342}
+,{"cat":"function","dur":16571.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1128313}
+,{"cat":"function","dur":18.252,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1144902}
+,{"cat":"function","dur":16523.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1144930}
+,{"cat":"function","dur":16651.1,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1144901}
+,{"cat":"function","dur":18.149,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1161569}
+,{"cat":"function","dur":16954.9,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1161597}
+,{"cat":"function","dur":17048,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1161568}
+,{"cat":"function","dur":16.721,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1178630}
+,{"cat":"function","dur":16384.4,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1178656}
+,{"cat":"function","dur":16476.2,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1178630}
+,{"cat":"function","dur":38.37,"name":"PollEvents","ph":"X","pid":0,"tid":0,"ts":1195120}
+,{"cat":"function","dur":16546.2,"name":"UpdateFrame","ph":"X","pid":0,"tid":0,"ts":1195169}
+,{"cat":"function","dur":0.376,"name":"OnEvent","ph":"X","pid":0,"tid":0,"ts":1211790}
+,{"cat":"function","dur":14.147,"name":"EmitEvent","ph":"X","pid":0,"tid":0,"ts":1211789}
+,{"cat":"function","dur":16693.8,"name":"App frame","ph":"X","pid":0,"tid":0,"ts":1195119}
 
 ]}

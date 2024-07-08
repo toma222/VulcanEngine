@@ -1,7 +1,4 @@
 {"otherData": {},"traceEvents":[
-{"cat":"function","dur":37.7,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":6564}
-,{"cat":"function","dur":187.9,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":6660}
-,{"cat":"function","dur":17.7,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":6901}
-,{"cat":"function","dur":2775.7,"name":"~Device","ph":"X","pid":0,"tid":0,"ts":30989}
-,{"cat":"function","dur":33.5,"name":"DestroyDebugUtils","ph":"X","pid":0,"tid":0,"ts":35629}
-,{"cat":"function","dur":1940.5,"name":"~Instance","ph":"X","pid":0,"tid":0,"ts":37203}
+{"cat":"function","dur":4301.65,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":6809}
+,{"cat":"function","dur":4844.83,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":11195}
+,{"cat":"function","dur":3475.72,"name":"Destroy","ph":"X","pid":0,"tid":0,"ts":16150}

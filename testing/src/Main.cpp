@@ -69,5 +69,18 @@ void TestMaps()
 		map.Enter(String("what up")); // temp
 		return map.HasDuplicate(String("im not in the list"));
 	});
+
+	KonCoreTest<int>("Better Hash Map", 4,
+	[](){
+		BetterHashMap<int, u32> map;
+		map.Emplace(2, 234523452);
+		map.Emplace(5, 121245222);
+		map.Emplace(4, 504943233);
+		//map.Remove(504943233);
+		map.Emplace(10,680998661);
+		map.Emplace(1, 387844444);
+		// map.Remove(504943233);
+		return map.Get(504943233);
+	});
 }
 

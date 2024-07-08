@@ -5,12 +5,6 @@
 
 namespace kon
 {
-    class Component
-    {
-    public:
-        Component() = default;
-        virtual ~Component() = default;
-
-        // virtual u32 GetString() { return String::Hash(""); }
-    };
+	using Entity = u32;
+	constexpr u32 knMaxEntities = 64;
 }
