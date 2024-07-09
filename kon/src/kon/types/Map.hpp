@@ -112,13 +112,17 @@ namespace kon
 			if(m_head == nullptr)
 			{
 				m_head = AllocateNode(nullptr, value, hash);
+				return true;
 			}
 
 			Node *current = m_head;
 			bool found = false;
 			while(found == false)
 			{
-				if(current->pair.key == hash) return false;
+				if(current->pair.key == hash)
+				{
+					return false;
+				}
 
 				// Check if we found the correct bucket
 				if(current->pair.key > hash)
@@ -149,6 +153,7 @@ namespace kon
 		T Get(Hash hash) const
 		{
 			Node *n = FindNode(hash);
+			// if(n == nullptr) KN_WARN("could not find hash");
 			// assert(n != nullptr);
 			return n->pair.value;
 		}
@@ -202,7 +207,10 @@ namespace kon
 			// bool found = false;
 			while(current != nullptr)
 			{
-				if(current->pair.key == hash) return current;
+				if(current->pair.key == hash)
+				{
+					return current;
+				}
 
 				// Check if we found the correct bucket
 				if(current->pair.key > hash)

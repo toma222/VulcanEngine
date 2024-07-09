@@ -20,6 +20,9 @@ namespace kon
     /*
         holds the instance, device, swapchain, and command pool
     */
+		
+	constexpr const char *GRAPHICS_SYSTEM_PATH = "systems/graphics/";
+
     class GraphicsSystem : public System
     {
     KN_OBJECT(GraphicsSystem, System)
@@ -29,6 +32,7 @@ namespace kon
         ~GraphicsSystem() override;
 
         void Update() override;
+		static void RegisterResources(Context *context, LoadResourceArray &lra);
 
         // void DrawFrame();
 

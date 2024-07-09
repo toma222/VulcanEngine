@@ -141,7 +141,7 @@ namespace kon
 
     inline void PipelineShaded::CreateBuffers(Device *device, Swapchain *swapchain, CommandPool *commandpool)
     {
-        ResourceModel *model = static_cast<ResourceModel*>(m_context->GetResource("models/viking_room.obj"));
+        ResourceModel *model = static_cast<ResourceModel*>(m_context->GetResource("viking_room.obj"));
 		auto &vertices = model->GetShape()->verticies;
 		auto &indices = model->GetShape()->indicies;
         m_vertexBuffer = new VertexBuffer(device, commandpool, vertices.GetData(), vertices.Index() * sizeof(vertices.Get(0)));
@@ -154,7 +154,7 @@ namespace kon
 		m_indexBuffer = new IndexBuffer(device, commandpool, indices.GetData(), indices.Index() * sizeof(indices.Get(0)));
         m_indiciesCount = indices.Index();
 
-        ResourceImage *image = static_cast<ResourceImage*>(m_context->GetResource("textures/viking_room.png"));
+        ResourceImage *image = static_cast<ResourceImage*>(m_context->GetResource("viking_room.png"));
 		int width = image->GetWidth();
 		int height = image->GetHeight();
 		// u8 *imageData = image->GetImageData();
@@ -164,9 +164,9 @@ namespace kon
         m_textureSampler = new TextureSampler(device);
         m_uniformBuffer = new UniformBuffer(device, commandpool, sizeof(UniformBufferData));
 
-        ResourceRawfile *v = static_cast<ResourceRawfile*>(m_context->GetResource("shaders/vert.spv"));
+        ResourceRawfile *v = static_cast<ResourceRawfile*>(m_context->GetResource("vert.spv"));
 		m_vertexShader = new ShaderModule(device, v->GetData(), v->GetSize());
-	    ResourceRawfile *f = static_cast<ResourceRawfile*>(m_context->GetResource("shaders/frag.spv"));
+	    ResourceRawfile *f = static_cast<ResourceRawfile*>(m_context->GetResource("frag.spv"));
 		m_fragmentShader = new ShaderModule(device, f->GetData(), f->GetSize());
     }
 

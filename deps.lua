@@ -8,5 +8,5 @@ LibraryDir = {}
 LibraryDir["VulkanSDK"] = "%{VULKAN_SDK}/lib"
 
 Library = {}
-Library["Vulkan"] = "%{LibraryDir.VulkanSDK}/vulkan.lib"
+Library["Vulkan"] = "%{LibraryDir.VulkanSDK}/vulkan"
 Library["VulkanUtils"] = "%{LibraryDir.VulkanSDK}/VkLayer_utils.lib"

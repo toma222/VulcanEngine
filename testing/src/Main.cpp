@@ -1,4 +1,5 @@
 
+#include "kon/core/Logging.hpp"
 #include "kon/debug/Test.hpp"
 #include "kon/types/String.hpp"
 #include "kon/types/ArrayList.hpp"
@@ -51,6 +52,35 @@ void TestMaps()
 		map.Enter(s);
 		map.Enter(String("what up")); // temp
 		return map.Get(s.Hash());
+	});
+
+	KonCoreTest<String>("AppendString", "Hello World", 
+	[](){
+		String a("Hello");
+		String b(" World");
+		String concat = a.AppendString(b);
+		return concat;
+	});
+
+	KonCoreTest<String>("Substring", "Hello", 
+	[](){
+		String a("HelloWorld");
+		String concat = a.SubString(0, 5);
+		return concat;
+	});
+
+	KonCoreTest<int>("Index of char", 4, 
+	[](){
+		String a("Hello");
+
+		return a.IndexOfChar('o');
+	});
+
+	KonCoreTest<int>("Index of string", 6, 
+	[](){
+		String a("Hello World");
+
+		return a.IndexOfString("World");
 	});
 
 	KonCoreTest<bool>("HasDuplicate", true, 

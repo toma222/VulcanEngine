@@ -1,5 +1,8 @@
 
 #include "GraphicsSystem.hpp"
+#include "kon/resource/ResourceImage.hpp"
+#include "kon/resource/ResourceModel.hpp"
+#include "kon/resource/ResourceRawfile.hpp"
 
 namespace kon
 {
@@ -37,6 +40,17 @@ namespace kon
             }
         }
     }
+
+	void GraphicsSystem::RegisterResources(Context *context, LoadResourceArray &lra)
+	{
+		
+		lra.AddResource(static_cast<Resource*>(new ResourceImage()), "textures/viking_room.png");
+		// Path graphicsPath = context->GetProjectPath() += GRAPHICS_SYSTEM_PATH;
+		// lra.AddResource(static_cast<Resource*>(new ResourceImage()), graphicsPath += "textures/viking_room.png");
+        lra.AddResource(static_cast<Resource*>(new ResourceModel()), "models/viking_room.obj");
+        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/vert.spv");
+        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/frag.spv");
+	}
 
     GraphicsSystem::~GraphicsSystem()
     {

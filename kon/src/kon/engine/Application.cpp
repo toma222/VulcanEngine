@@ -2,6 +2,7 @@
 #include "Application.hpp"
 
 #include "kon/core/Logging.hpp"
+#include "kon/graphics/GraphicsSystem.hpp"
 #include <kon/debug/Debug.hpp>
 
 #include <kon/resource/Resource.hpp>
@@ -20,14 +21,9 @@ namespace kon
         m_engine = new Engine(context);
 
         // Get resources and load them
-        LoadResourceArray lra;
-        lra.AddResource(static_cast<Resource*>(new ResourceImage()), "textures/viking_room.png");
-        lra.AddResource(static_cast<Resource*>(new ResourceModel()), "models/viking_room.obj");
-        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/vert.spv");
-        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/frag.spv");
-        lra.LoadResourceToContext(context);
-
-        
+		LoadResourceArray lra;
+		GraphicsSystem::RegisterResources(context, lra);
+		lra.LoadResourceToContext(context);
 
         m_graphicsSystem = new GraphicsSystem(context, m_window->GetHandle());
         context->AddSystem(static_cast<System*>(m_graphicsSystem));

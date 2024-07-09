@@ -1,6 +1,7 @@
 
 #pragma once
 
+#include "kon/resource/Resource.hpp"
 #include <kon/core/Object.hpp>
 
 namespace kon
@@ -14,5 +15,6 @@ namespace kon
         virtual ~System() = default;
 
         virtual void Update() = 0;
+		// virtual void RegisterResources(LoadResourceArray &lra) const = 0;
     };
 }

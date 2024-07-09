@@ -10,21 +10,11 @@
 
 namespace kon
 {
-    Context::Context()
+    Context::Context(Path projectPath)
+		: m_projectPath(projectPath)
     {
         KN_INSTRUMENT_FUNCTION()
         KN_TRACE("Context Created");
-
-        // Create all the event stuff
-        for(int i = 0; i < (KN_EVENT_CLASSES); i++)
-        {
-            // KN_TRACE("ok");
-            // eventRecievingObjects.Add(
-            //     Pair<EventClass, ArrayList<Object*>>(static_cast<EventClass>(KN_BIT(i))));
-        }   
-
-        // ArrayList<Pair<EventClass, ArrayList<Object*>>> test;
-        // eventRecievingObjects.Add(Pair<EventClass, ArrayList<Object*>>(EventClass::Application));
     }
 
     Context::~Context()
@@ -50,7 +40,7 @@ namespace kon
     void Context::AddListener(Object *object, i16 classes)
     {
         KN_INSTRUMENT_FUNCTION()
-        KN_TRACE("Adding listener");
+		KN_TRACE("Adding listener [%s]", object->GetTypeInfo()->m_name.c_str());
 
         for(int i = 0; i < KN_EVENT_CLASSES; i++)
         {
@@ -82,12 +72,14 @@ namespace kon
 
     void Context::RegisterResource(Resource *resource, String path)
     {
-        resourceMap.Emplace(resource, path.Hash());
+		String fileName = path.SubString(path.LastIndexOfChar('/')+1, path.GetSize());
+		resourceMap.Emplace(resource, fileName.Hash());
     }
 
     void Context::RegisterResource(Resource *resource, u32 path)
     {
-        resourceMap.Emplace(resource, path);
+		KN_WARN("register resource (resource, hash) might not work");
+        // resourceMap.Emplace(resource, path);
     }
 
     Resource *Context::GetResource(String path) const

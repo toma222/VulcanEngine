@@ -5,6 +5,7 @@
 #include "kon/types/Pair.hpp"
 #include "Object.hpp"
 #include "kon/core/Core.hpp"
+#include "kon/types/Path.hpp"
 
 #include <kon/types/Map.hpp>
 #include <kon/core/System.hpp>
@@ -16,7 +17,7 @@ namespace kon
     class knAPI Context
     {
     public:
-        Context();
+        Context(Path projectPath);
         ~Context();
 
         // Systems
@@ -39,9 +40,12 @@ namespace kon
         bool HasResource(String &path) const;
         bool HasResource(u32 hash) const;
 
+		Path GetProjectPath() const { return m_projectPath; }
+
     private:
         ArrayList<System*> systems;
         ArrayList<Object*> eventRecievingObjects[KN_EVENT_CLASSES];
         HashMap<Resource*, u32> resourceMap;
+		Path m_projectPath;
     };
 }

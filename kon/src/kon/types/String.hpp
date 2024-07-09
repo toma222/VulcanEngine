@@ -17,13 +17,19 @@ namespace kon
 
         const char *c_str() const {return m_buffer; }
 
+		String SubString(int index, int len) const;
+		String SubString(int len) const;
+		int IndexOfString(String str) const;
+		int IndexOfChar(char c) const;
+		String AppendString(const String &s) const;
+		int LastIndexOfChar(char c) const;
+
         // from c_string
         String &operator =(const char *str)
         {
             m_size = strlen(str);
             ResizeBuffer(m_size);
             strcpy(m_buffer, str);
-            // m_buffer[m_size+1] = '\0';
             return *this;
         }
 
