@@ -19,7 +19,7 @@ namespace kon
         for(int i = 0; i < resources; i++)
         {
             Pair<kon::Resource*, kon::String> &rl =  m_resourceLoadList.Get(i);
-            KN_TRACE("Loading Resource %i/%i [%s]", i, resources, rl.second.c_str());
+            KN_TRACE("Loading Resource %i/%i [%s]", i+1, resources, rl.second.c_str());
             rl.first->LoadResource(rl.second);
             context->RegisterResource(rl.first, rl.second);
         }

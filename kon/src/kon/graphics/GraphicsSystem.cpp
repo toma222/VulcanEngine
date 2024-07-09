@@ -44,12 +44,16 @@ namespace kon
 	void GraphicsSystem::RegisterResources(Context *context, LoadResourceArray &lra)
 	{
 		
-		lra.AddResource(static_cast<Resource*>(new ResourceImage()), "textures/viking_room.png");
-		// Path graphicsPath = context->GetProjectPath() += GRAPHICS_SYSTEM_PATH;
-		// lra.AddResource(static_cast<Resource*>(new ResourceImage()), graphicsPath += "textures/viking_room.png");
-        lra.AddResource(static_cast<Resource*>(new ResourceModel()), "models/viking_room.obj");
-        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/vert.spv");
-        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), "shaders/frag.spv");
+		// lra.AddResource(static_cast<Resource*>(new ResourceImage()), "textures/viking_room.png");
+		Path graphicsPath = context->GetProjectPath() += GRAPHICS_SYSTEM_PATH;
+		lra.AddResource(static_cast<Resource*>(new ResourceImage()), graphicsPath += "textures/viking_room.png");
+		lra.AddResource(static_cast<Resource*>(new ResourceImage()), graphicsPath += "textures/checker-map_tho.png");
+		lra.AddResource(static_cast<Resource*>(new ResourceImage()), graphicsPath += "textures/512X512.png");
+        lra.AddResource(static_cast<Resource*>(new ResourceModel()), graphicsPath += "models/viking_room.obj");
+		lra.AddResource(static_cast<Resource*>(new ResourceModel()), graphicsPath += "models/cube.obj");
+		lra.AddResource(static_cast<Resource*>(new ResourceModel()), graphicsPath += "models/suzanne.obj");
+        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), graphicsPath += "shaders/vert.spv");
+        lra.AddResource(static_cast<Resource*>(new ResourceRawfile()), graphicsPath += "shaders/frag.spv");
 	}
 
     GraphicsSystem::~GraphicsSystem()

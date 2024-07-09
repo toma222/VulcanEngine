@@ -46,6 +46,7 @@ namespace kon
         ArrayList<System*> systems;
         ArrayList<Object*> eventRecievingObjects[KN_EVENT_CLASSES];
         HashMap<Resource*, u32> resourceMap;
+		ArrayList<Resource*> resourceArray;
 		Path m_projectPath;
     };
 }

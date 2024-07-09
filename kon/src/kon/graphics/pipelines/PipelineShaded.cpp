@@ -141,7 +141,7 @@ namespace kon
 
     inline void PipelineShaded::CreateBuffers(Device *device, Swapchain *swapchain, CommandPool *commandpool)
     {
-        ResourceModel *model = static_cast<ResourceModel*>(m_context->GetResource("viking_room.obj"));
+        ResourceModel *model = static_cast<ResourceModel*>(m_context->GetResource("cube.obj"));
 		auto &vertices = model->GetShape()->verticies;
 		auto &indices = model->GetShape()->indicies;
         m_vertexBuffer = new VertexBuffer(device, commandpool, vertices.GetData(), vertices.Index() * sizeof(vertices.Get(0)));
@@ -154,7 +154,7 @@ namespace kon
 		m_indexBuffer = new IndexBuffer(device, commandpool, indices.GetData(), indices.Index() * sizeof(indices.Get(0)));
         m_indiciesCount = indices.Index();
 
-        ResourceImage *image = static_cast<ResourceImage*>(m_context->GetResource("viking_room.png"));
+        ResourceImage *image = static_cast<ResourceImage*>(m_context->GetResource("checker-map_tho.png"));
 		int width = image->GetWidth();
 		int height = image->GetHeight();
 		// u8 *imageData = image->GetImageData();

@@ -20,6 +20,10 @@ namespace kon
     Context::~Context()
     {
         KN_INSTRUMENT_FUNCTION()
+
+		for(int i = 0; i < resourceArray.Index(); i++)
+			delete resourceArray.Get(i);
+
         KN_TRACE("Context Destroyed");
     }
 
@@ -74,6 +78,7 @@ namespace kon
     {
 		String fileName = path.SubString(path.LastIndexOfChar('/')+1, path.GetSize());
 		resourceMap.Emplace(resource, fileName.Hash());
+		resourceArray.Add(resource);
     }
 
     void Context::RegisterResource(Resource *resource, u32 path)
