@@ -12,6 +12,7 @@ namespace kon
     u32 Hash(T &hash);
 
     // thought that it would be fun to implement a simple unordered map and ordered map
+	/*
     template<typename T>
     struct UnorderedMap
     {
@@ -57,6 +58,45 @@ namespace kon
     public:
         ArrayList<Pair<u32, T>> m_hashes;
     };
+	*/
+
+	template<typename T, typename Hash>
+	class UnorderedMap
+	{
+	public:
+		UnorderedMap() = default;
+		~UnorderedMap() = default;
+		UnorderedMap(u32 size)
+			: m_array(size) {}
+
+		T Get(Hash hash)
+		{
+			for(int i = 0; i < m_array.Index(); i++)
+				if(m_array.Get(i).second == hash)
+					return m_array[i].first;
+
+			return m_array[0].first;
+		}
+
+		void Enter(T value, Hash hash)
+		{
+			m_array.Add(Pair<T, Hash>(value, hash));
+		}
+
+		bool HasDuplicate(Hash hash)
+		{
+			for(int i = 0; i < m_array.Index(); i++)
+				if(m_array.Get(i).second == hash)
+					return true;
+
+			return false;
+		}
+
+		// T &operator[](int i) { return m_array.Get(i); }
+
+	private:
+		ArrayList<Pair<T, Hash>> m_array;
+	};
 
 	template<typename T, typename Hash>
 	class HashMap
@@ -181,6 +221,11 @@ namespace kon
 			EmplaceHashMap(copy.m_head);
 		}
 
+		bool HasHash(Hash hash)
+		{
+			return (FindNode(hash) == nullptr);
+		}
+
 		// including head node
 		// i dont personaly think that recursion is that big of a deal ibh
 		void CopyHashMap(HashMap<T, Hash> &dst, Node *head)
@@ -223,7 +268,7 @@ namespace kon
 				}
 			}
 
-			return current;
+			return nullptr;
 		}
 
 	private:

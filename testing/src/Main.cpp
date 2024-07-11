@@ -1,6 +1,10 @@
 
 #include "kon/core/Logging.hpp"
 #include "kon/debug/Test.hpp"
+#include "kon/scene/ComponentList.hpp"
+#include "kon/scene/Components.hpp"
+#include "kon/scene/Entity.hpp"
+#include "kon/scene/Scene.hpp"
 #include "kon/types/String.hpp"
 #include "kon/types/ArrayList.hpp"
 #include "kon/types/UUID.hpp"
@@ -11,12 +15,19 @@
 void TestResources();
 void TestMaps();
 
+struct TestComponent
+{
+	TestComponent() = default;
+	TestComponent(int _i)
+		: i(_i) {}
+
+	int i{0};
+};
+
 int main(int argc, char const *argv[])
 {
 	TestMaps();
 	TestResources();
-
-    return 0;
 }
 
 void TestResources()
@@ -33,26 +44,10 @@ void TestResources()
 
 #include <kon/types/Map.hpp>
 
+
 void TestMaps()
 {
 	using namespace kon;
-
-	KonCoreTest<bool>("Enter", true, 
-	[](){
-		UnorderedMap<String> map;
-		String s("hows it going"); // stack
-		map.Enter(s);
-		return map.Enter(String("what up")); // temp
-	});
-
-	KonCoreTest<String>("Get", "hows it going", 
-	[](){
-		UnorderedMap<String> map;
-		String s("hows it going"); // stack
-		map.Enter(s);
-		map.Enter(String("what up")); // temp
-		return map.Get(s.Hash());
-	});
 
 	KonCoreTest<String>("AppendString", "Hello World", 
 	[](){
@@ -85,20 +80,20 @@ void TestMaps()
 
 	KonCoreTest<bool>("HasDuplicate", true, 
 	[](){
-		UnorderedMap<String> map;
+		UnorderedMap<String, u32> map;
 		String s("hows it going"); // stack
-		map.Enter(s);
-		map.Enter(String("what up")); // temp
-		return map.HasDuplicate(String("hows it going"));
+		map.Enter(s, s.Hash());
+		// map.Enter(String("what up")); // temp
+		return map.HasDuplicate(String("hows it going").Hash());
 	});
 
 	KonCoreTest<bool>("HasDuplicate(inv)", true, 
 	[](){
-		UnorderedMap<String> map;
+		UnorderedMap<String, u32> map;
 		String s("hows it going"); // stack
-		map.Enter(s);
-		map.Enter(String("what up")); // temp
-		return map.HasDuplicate(String("im not in the list"));
+		map.Enter(s, s.Hash());
+		// map.Enter(String("what up")); // temp
+		return map.HasDuplicate(String("im not in the list").Hash());
 	});
 
 	HashMap<int, u64> map;

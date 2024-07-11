@@ -7,11 +7,13 @@ namespace kon
 	class Array
 	{
 	public:
-		Array();
-		~Array();
+		Array() = default;
+		~Array() = default;
 
 		// gets T
 		T Get(int i) { return m_array[i]; }
+
+		T &operator[](int i) { return m_array[i]; }
 
 	private:
 		T m_array[Length];

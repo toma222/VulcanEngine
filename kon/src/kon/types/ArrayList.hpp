@@ -97,6 +97,8 @@ namespace kon
             m_array = swap;
         }
 
+		T &operator[](int i) { return m_array[i]; }
+
     private:
         T *m_array;
         u32 m_index;
