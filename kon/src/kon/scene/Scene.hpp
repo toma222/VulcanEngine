@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "kon/scene/Entity.hpp"
+// #include "kon/scene/Entity.hpp"
 #include "kon/types/Map.hpp"
 #include "kon/types/String.hpp"
 #include "kon/types/UUID.hpp"
@@ -12,16 +12,20 @@
 
 namespace kon
 {
+	class EntityHandle;
+
 	class Scene
 	{
 	public:
 		Scene();
 		~Scene();
 
-		Entity CreateEntity(const String &name, UUID id);
-		Entity CreateEntity(const String &name="entity");
+		EntityHandle CreateEntity(const String &name, UUID id);
+		EntityHandle CreateEntity(const String &name="entity");
 
-	private:
+	public:
 		entt::registry m_registry;
+
+		friend EntityHandle;
 	};
 }

@@ -14,6 +14,7 @@ project "runtime"
         "%{wks.location}/kon/src/",
         "%{wks.location}/external/glfw/include/",
         "%{wks.location}/external/glm",
+		"%{wks.location}/external",
         "%{IncludeDir.VulkanSDK}"
     }
 

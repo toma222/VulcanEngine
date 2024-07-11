@@ -1,13 +1,16 @@
 
 #include "Scene.hpp"
+#include "kon/scene/Components.hpp"
 
 #include <entt/entt.hpp>
+
+#include <kon/scene/Entity.hpp>
 
 namespace kon
 {
 	Scene::Scene()
 	{
-		// m_registry = new entt::registry();
+		
 	}
 
 	Scene::~Scene()
@@ -15,13 +18,16 @@ namespace kon
 
 	}
 
-	Entity Scene::CreateEntity(const String &name, UUID id)
+	EntityHandle Scene::CreateEntity(const String &name, UUID id)
 	{
-		// m_entityToComponentBits.Emplace(0, id.uuid);
-		return id.uuid;
+		EntityHandle handle{this, m_registry.create()};
+		handle.AddComponent<ComponentTransform>();
+		handle.AddComponent<ComponentID>(id, name);
+
+		return handle;
 	}
 
-	Entity Scene::CreateEntity(const String &name)
+	EntityHandle Scene::CreateEntity(const String &name)
 	{
 		return CreateEntity(name, UUID());
 	}

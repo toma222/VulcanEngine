@@ -15,6 +15,7 @@ project "kon"
         "%{wks.location}/external/glfw/include",
         "%{wks.location}/external/glm",
         "%{wks.location}/external/stb",
+		"%{wks.location}/external",
         "%{IncludeDir.VulkanSDK}"
     }
 

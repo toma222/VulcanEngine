@@ -1,10 +1,6 @@
 
 #include "kon/core/Logging.hpp"
 #include "kon/debug/Test.hpp"
-#include "kon/scene/ComponentList.hpp"
-#include "kon/scene/Components.hpp"
-#include "kon/scene/Entity.hpp"
-#include "kon/scene/Scene.hpp"
 #include "kon/types/String.hpp"
 #include "kon/types/ArrayList.hpp"
 #include "kon/types/UUID.hpp"
